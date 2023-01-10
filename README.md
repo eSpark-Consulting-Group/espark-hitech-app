@@ -4,7 +4,7 @@ We pride ourselves on our ability to source hard-to-find components, and our tea
 In addition to supplying electronic components, we also offer value-added services such as PCB assembly, testing and quality control, and logistics and supply chain management. Our team of experts will work with you to identify the best solutions for your needs and ensure that your project runs smoothly from start to finish.
 At eSpark Consulting Group, we are committed to providing our customers with the highest level of service and support. Whether you're a small startup or a large corporation, we have the expertise and resources to help you succeed. Trust us for all your electronic component needs and let us help you bring your project to life.
 
-# UI/Ux
+# UI/UX
 https://miro.com/app/board/uXjVPzwxqSA=/?share_link_id=792647083200
 
 # Team of this project
