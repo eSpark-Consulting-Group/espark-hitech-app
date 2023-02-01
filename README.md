@@ -9,3 +9,6 @@ https://miro.com/app/board/uXjVPzwxqSA=/?share_link_id=792647083200
 
 # Team of this project
 ![Untitled](https://user-images.githubusercontent.com/98744727/211661092-4962b280-8f5c-465d-a53f-667be291c613.png)
+
+#Main logo
+https://1drv.ms/u/s!Apy3jTlX9LUlg1JmVcowb9GxF3O_?e=CKIONs
