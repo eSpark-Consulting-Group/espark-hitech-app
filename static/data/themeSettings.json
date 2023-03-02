@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "type": "default",
+      "layout": "ltr",
+      "primaryColor": "#e22454",
+      "darkMode": false
+    },
+    {
+      "type": "userDefined",
+      "layout": "ltr",
+      "primaryColor": "#b7a9a9",
+      "darkMode": true,
+      "isSet": false
+    }
+  ]
+}
