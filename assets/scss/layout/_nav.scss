@@ -507,10 +507,12 @@ header {
           }
 
           &.dropdown {
-            .menu-title {
+            .menu-title, .caret {
               position: relative;
               padding-right: 18px;
 
+            }
+            .caret{
               &::after {
                 position: absolute;
                 content: "\f078";
@@ -520,6 +522,7 @@ header {
                 font-weight: 600;
                 font-size: 12px;
               }
+
             }
           }
 

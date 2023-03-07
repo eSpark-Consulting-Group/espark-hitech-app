@@ -89,6 +89,9 @@
 
             &:hover {
                 border-color: var(--theme-color);
+                svg{
+                    fill: var(--theme-color)
+                }
             }
 
             &:active {
@@ -96,7 +99,7 @@
                 border-color: transparent;
             }
 
-            .feather {
+            .feather, span {
                 width: 23px !important;
                 margin-right: 10px;
                 height: 17px;

@@ -6,7 +6,7 @@
     display: block;
     margin-bottom: -4px;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       padding: 0;
     }
 
@@ -54,7 +54,7 @@
   .product-box {
     overflow: hidden;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       direction: rtl;
     }
 
@@ -224,7 +224,7 @@
           left: 0;
           z-index: -1;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             left: unset;
             right: 0;
           }
@@ -248,6 +248,9 @@
         &:hover {
           background-color: transparent;
           color: $white;
+          svg {
+            fill: $white;
+          }
 
           &::after {
             transform: scale(1);
@@ -275,7 +278,7 @@
           text-decoration: line-through;
           margin-left: 4px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-left: 0;
             margin-right: 4px;
           }
@@ -338,7 +341,7 @@
       &-dark {
         left: 0;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           @include rtl(float, right, left);
           left: unset;
           right: 0;
@@ -348,7 +351,7 @@
       &-theme {
         margin-left: auto;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: auto;
         }
@@ -612,7 +615,7 @@
               padding-top: 15px;
               color: $white;
 
-              [dir="rtl"] & {
+              [dir='rtl'] & {
                 padding-top: unset;
                 padding-bottom: 15px;
               }
@@ -622,7 +625,7 @@
                 font-size: 13px;
                 padding-top: 10px;
 
-                [dir="rtl"] & {
+                [dir='rtl'] & {
                   padding-top: unset;
                   padding-bottom: 10px;
                 }
@@ -913,7 +916,7 @@
             15px + (30 - 15) * ((100vw - 320px) / (1920 - 320))
           );
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-left: unset !important;
             margin-right: calc(
               15px + (30 - 15) * ((100vw - 320px) / (1920 - 320))
@@ -923,7 +926,7 @@
           @include mq-max(xl) {
             margin-left: 15px;
 
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               margin-right: 15px;
             }
           }
@@ -972,7 +975,7 @@
           right: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
           top: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             right: unset;
             left: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
           }
@@ -983,7 +986,7 @@
             top: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
             left: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
 
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               left: unset;
               right: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
               transform: rotate(180deg);
@@ -1033,7 +1036,7 @@
             display: block !important;
             text-align: center;
 
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               text-align: right;
             }
           }
@@ -1070,7 +1073,7 @@
             + li {
               margin-left: 0;
 
-              [dir="rtl"] & {
+              [dir='rtl'] & {
                 margin-left: unset;
                 margin-right: 0;
               }
@@ -1151,14 +1154,14 @@
       .product-title {
         text-align: left;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           text-align: right;
         }
 
         @include mq-max(sm) {
           text-align: center;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             text-align: center;
           }
         }
@@ -1175,14 +1178,14 @@
       .main-price {
         text-align: right;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           text-align: left;
         }
 
         @include mq-max(sm) {
           text-align: center;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             text-align: center;
           }
         }
@@ -1218,7 +1221,7 @@
   .title-3 {
     margin-top: calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320)));
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       text-align: right;
     }
 
@@ -1232,7 +1235,7 @@
     display: flex;
     align-items: center;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       direction: rtl;
     }
 
@@ -1251,7 +1254,7 @@
       overflow: hidden;
       width: 100%;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         margin-left: 0;
         margin-right: 15px;
       }
@@ -1390,7 +1393,7 @@
       }
 
       button {
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           direction: rtl;
         }
       }
@@ -1708,7 +1711,7 @@
         h5 {
           margin-left: 0;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-left: unset;
             margin-right: 0;
           }
