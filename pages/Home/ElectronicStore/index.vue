@@ -9,7 +9,8 @@
     /> -->
     <OurCollections />
     <!-- :products="productsList" -->
-
+    <TopSellingCarousel />
+    <hurryUpBanner />
     <BrandCarousel />
   </layout>
 </template>
@@ -21,6 +22,8 @@ import CustomerServices from '../../../components/Section/Elements/HomePageEleme
 import TopBanner from '../../../components/Section/Elements/HomePageElements/Banners/TopBanner.vue'
 import OurCollections from '../../../components/Section/Elements/HomePageElements/Banners/OurCollections.vue'
 import BrandCarousel from '../../../components/Section/Elements/HomePageElements/Banners/Brands.vue'
+import TopSellingCarousel from '../../../components/Section/Elements/HomePageElements/Banners/TopSellingCarousel.vue'
+import hurryUpBanner from '../../../components/Section/Elements/HomePageElements/Banners/hurryUpBanner.vue'
 export default {
   head() {
     return {
@@ -35,6 +38,8 @@ export default {
     TopBanner,
     OurCollections,
     BrandCarousel,
+    TopSellingCarousel,
+    hurryUpBanner,
   },
   data() {
     return {
