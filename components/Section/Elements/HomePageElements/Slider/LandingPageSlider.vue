@@ -25,11 +25,11 @@ export default {
   data() {
     return {
       settings: {
-        dots: false,
+        dots: true,
         infinite: true,
-        speed: 500,
+        speed: 100,
         arrows: false,
-        autoplay: false,
+        autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,

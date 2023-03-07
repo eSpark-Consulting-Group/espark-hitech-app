@@ -66,7 +66,7 @@ export default {
             },
           },
           {
-            image: 'electronics/slider/1.jpg',
+            image: 'electronics/slider/banner2.jpg',
             left: {
               top: 'NEW OFFER',
               topdescription: 'Buy One Get One Free',
