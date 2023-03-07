@@ -41,7 +41,7 @@
         </div>
         <div class="col-md-6">
           <p class="mb-0 font-dark">
-            © 2022, Voxo Theme. Made with heart by Pixelstrap
+            © 2023, eSpark Hi-Tech Ecommerce Store. All rights reserved.
           </p>
         </div>
       </div>

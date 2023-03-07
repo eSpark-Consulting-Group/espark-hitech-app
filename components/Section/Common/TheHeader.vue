@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="home" :class="{ 'nav-down': scrollDown, 'nav-up': scrollUp }">
     <TopBar :offerCode="offerCode" />
     <div class="main-header navbar-searchbar">
       <div class="container-fluid-lg">

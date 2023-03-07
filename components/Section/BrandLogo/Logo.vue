@@ -2,7 +2,10 @@
   <div class="brand-logo">
     <nuxt-link to="/" class="footer-logo">
       <svg class="svg-icon">
-        <use class="fill-color" xlink:href="~assets/svg/logo1.svg#logo"></use>
+        <use
+          class="fill-color"
+          xlink:href="~assets/svg/BrandLogos/logo.svg#logo"
+        ></use>
       </svg>
       <img
         src="~assets/images/logo2.png"
