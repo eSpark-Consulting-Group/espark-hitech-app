@@ -1,7 +1,7 @@
-var boostrapCss = '/css/bootstrap.min.css'
+// var boostrapCss = '/css/bootstrap.min.css'
 import english from './static/data/en.json'
-import french from './static/data/fr.json'
-import spanish from './static/data/es.json'
+
+import chinies from './static/data/ch.json'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -33,12 +33,12 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap',
       },
-      {
-        rel: 'stylesheet',
-        id: 'bootstrap-link',
-        class: 'nuxt-bootstrap',
-        href: boostrapCss,
-      },
+      // {
+      //   rel: 'stylesheet',
+      //   id: 'bootstrap-link',
+      //   class: 'nuxt-bootstrap',
+      //   href: boostrapCss,
+      // },
     ],
   },
 
@@ -75,12 +75,8 @@ export default {
         name: 'English',
       },
       {
-        code: 'es',
-        name: 'Español',
-      },
-      {
-        code: 'fr',
-        name: 'Français',
+        code: 'ch',
+        name: 'Chinies',
       },
     ],
     defaultLocale: 'en',
@@ -88,8 +84,8 @@ export default {
       fallbackLocale: 'en',
       messages: {
         en: english.data,
-        fr: french.data,
-        es: spanish.data,
+
+        ch: chinies.data,
       },
     },
   },

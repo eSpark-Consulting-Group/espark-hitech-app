@@ -45,7 +45,7 @@ export default {
   //   },
   // },
   mounted() {
-    console.log(process.browser)
+    // console.log(process.browser)
     if (process.client) {
       window.addEventListener('scroll', this.handleScroll)
       this.noTapToTopArray.includes(this.$route.path)
