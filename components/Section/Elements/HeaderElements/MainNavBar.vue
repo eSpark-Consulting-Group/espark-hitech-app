@@ -57,6 +57,7 @@
                   >
 
                   <span v-if="items.title != 'VOXO PLUS'">
+                    <!-- {{ $t(items.title) }} -->
                     {{ items.title }}
                     <span
                       class="according-menu"
@@ -205,7 +206,7 @@ export default {
           active: false,
         },
         {
-          title: 'Contact US',
+          title: 'CONTACT US',
           active: false,
         },
       ],

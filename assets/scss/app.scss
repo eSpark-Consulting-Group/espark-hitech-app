@@ -22,10 +22,10 @@
 // @import "components/modal";
 @import 'components/ratio';
 @import 'components/slider';
-// @import "components/tab";
+@import 'components/tab';
 @import 'components/tap_to_top';
 // @import "components/timer";
-// @import "components/title";
+@import 'components/title';
 // @import "components/touchspin";
 @import 'components/skeleton_loader';
 // @import "components/product360";
@@ -42,7 +42,7 @@
 @include banner_common;
 @import 'layout/product';
 @include product_common;
-@import "layout/footer";
+@import 'layout/footer';
 // @import "layout/subscribe";
 
 // // pages

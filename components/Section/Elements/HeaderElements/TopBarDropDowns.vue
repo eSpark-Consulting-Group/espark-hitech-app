@@ -55,17 +55,17 @@ export default {
   data() {
     return {
       selectedDropdowns: {
-        // loginAndRegister: "",
+        loginAndRegister: '',
         currency: '',
         languages: '',
       },
       selectedLanguage: '',
       dropdowns: {
-        // loginAndRegister: {
-        //   title: "Login & Register",
-        //   active: false,
-        //   links: ["login", "register"],
-        // },
+        loginAndRegister: {
+          title: 'Login & Register',
+          active: false,
+          links: ['login', 'register'],
+        },
         currency: {
           title: 'Currency',
           active: false,
@@ -74,6 +74,7 @@ export default {
         languages: {
           title: 'Languages',
           active: false,
+          // links: this.$i18n.locales,
           links: [
             {
               code: 'en',
@@ -96,6 +97,36 @@ export default {
   methods: {
     toggleDropdown(key) {
       this.dropdowns[key].active = !this.dropdowns[key].active
+    },
+    handleDropdown(key, link) {
+      this.dropdowns[key].active = false
+      this.selectedDropdowns[key] != link &&
+        (this.selectedDropdowns[key] = link)
+      if (key === 'currency') {
+        // this.$store.dispatch("layout/setCurrency", { currency: link });
+      }
+      // this.$store.dispatch("products/currencyChanged");
+    },
+  },
+  watch: {
+    selectedDropdowns: {
+      handler: function () {
+        if (
+          this.selectedDropdowns.languages != '' &&
+          this.selectedLanguage != this.selectedDropdowns.languages
+        ) {
+          this.selectedLanguage = this.selectedDropdowns.languages
+        }
+      },
+      deep: true,
+    },
+    selectedLanguage: function () {
+      this.$router.replace(
+        this.switchLocalePath(this.selectedDropdowns.languages)
+      )
+      // this.$store.dispatch("layout/setLanguage", {
+      //   languageCode: this.selectedDropdowns.languages,
+      // });
     },
   },
   created() {

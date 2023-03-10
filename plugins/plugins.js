@@ -1,4 +1,4 @@
-// import Vue from 'vue'
+import Vue from 'vue'
 // // import { constants } from "../static/const";
 // // import { VueMasonryPlugin } from "vue-masonry";
 // // import PayPal from "vue-paypal-checkout";
