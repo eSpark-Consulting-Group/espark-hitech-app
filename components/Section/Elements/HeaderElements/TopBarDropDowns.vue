@@ -2,11 +2,7 @@
   <div class="col-auto">
     <ul class="border-list">
       <!-- asdsa -->
-      <li
-        id="link"
-        class="onhover-dropdown auth-dropdown"
-        style="text-align: start"
-      >
+      <li id="link" class="onhover-dropdown auth-dropdown" style="text-align: start">
         <div class="cart-media">
           <span class="mr-1">Welcome User</span>
           <icons name="user" size="sm" />
@@ -26,61 +22,23 @@
               <nuxt-link to="/page/login" class="d-block">Login</nuxt-link>
             </li>
             <li>
-              <a @click.prevent="signout" to="/page/login" class="d-block"
-                >logout</a
-              >
+              <a @click.prevent="signout" to="/page/login" class="d-block">logout</a>
             </li>
             <!-- <li v-if="$store.state.firebase.user === null"> -->
             <li>
-              <nuxt-link to="/page/register" class="d-block"
-                >Register</nuxt-link
-              >
+              <nuxt-link to="/page/register" class="d-block">Register</nuxt-link>
             </li>
           </ul>
         </div>
       </li>
-      <!-- asdsa -->
-      <li v-for="(index, key) in dropdowns" :key="key">
-        <div class="dropdown top-header-dropdown" ref="dropdowns">
-          <a
-            class="dropdown-toggle"
-            @click.prevent="toggleDropdown(key)"
-            href="javascript:void(0)"
-            role="button"
-            id="dropdownMenuLink"
-            data-bs-toggle="dropdown"
-          >
-            <span>{{
-              selectedDropdowns[key] == ''
-                ? dropdowns[key].title
-                : selectedDropdowns[key]
-            }}</span>
-            <i class="fas fa-chevron-down"></i>
-          </a>
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            :class="[{ show: dropdowns[key].active }]"
-            aria-labelledby="dropdownMenuLink"
-          >
-            <li
-              class="w-100"
-              v-for="(link, index) in dropdowns[key].links"
-              :key="'a' + index"
-            >
-              <a
-                href="javascript:void(0)"
-                class="dropdown-item"
-                @click.prevent="handleDropdown(key, link.code)"
-                v-if="link.name"
-                >{{ link.name }}</a
-              >
-              <a
-                v-else
-                href="javascript:void(0)"
-                class="dropdown-item"
-                @click.prevent="handleDropdown(key, link)"
-                >{{ link }}</a
-              >
+      <li id="link" class="onhover-dropdown auth-dropdown" style="text-align: start">
+        <div class="cart-media">
+          <span>{{ $t('name') }}</span>
+        </div>
+        <div class="onhover-div profile-dropdown">
+          <ul>
+            <li v-for="(locale) in availableLocales" :key="locale.code" @click="setLanguage(locale.code)">
+              {{ locale.code }}
             </li>
           </ul>
         </div>
@@ -135,9 +93,23 @@ export default {
       dropdownKeys: [],
     }
   },
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+    },
+    selectedLocale() {
+      return this.$i18n.locales.find(i => i.code === this.$i18n.locale)
+    },
+  },
   methods: {
     toggleDropdown(key) {
       this.dropdowns[key].active = !this.dropdowns[key].active
+    },
+    changeLanguage(locale) {
+      this.$i18n.setLocale(locale.code)
+    },
+    isLocaleSelected(locale) {
+      return this.$i18n.locale === locale.code
     },
     handleDropdown(key, link) {
       this.dropdowns[key].active = false
@@ -147,6 +119,9 @@ export default {
         // this.$store.dispatch("layout/setCurrency", { currency: link });
       }
       // this.$store.dispatch("products/currencyChanged");
+    },
+    setLanguage(language) {
+      this.$i18n.setLocale(language)
     },
   },
   watch: {
