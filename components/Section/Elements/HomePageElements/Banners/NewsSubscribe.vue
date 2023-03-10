@@ -38,7 +38,7 @@ export default {
     return {
       SubscribeOurNews: 'Subscribe Our News',
       SubscribeDescription:
-        'Subscribe and receive our newsletters to follow the news about our fresh and fantastic Shoes Products.',
+        'Subscribe and receive our newsletters to follow the news about our up coming Products.',
       Submit: 'Submit',
     }
   },
