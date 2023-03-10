@@ -1,4 +1,4 @@
-# Hi TECH APP
+# Hi TECH APP Store
 
 ## Build Setup
 
