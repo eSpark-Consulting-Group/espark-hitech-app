@@ -1,6 +1,6 @@
 <template>
   <layout :offer-code="'Helloasd'">
-    <Breadcrumb pageName="404" parent="404" />
+    <!-- <Breadcrumb pageName="404" parent="404" /> -->
     <section class="page-not-found section-b-space">
       <div class="container">
         <div class="row gx-md-2 gx-0 gy-md-0 gy-3">
@@ -36,10 +36,14 @@
 </template>
 <script>
 import layout from './layout.vue'
-import Breadcrumb from '../components/Section/Elements/Breadcrumbs/Breadcrumb.vue'
 import NewsSubscribe from '../components/Section/Elements/HomePageElements/Banners/NewsSubscribe.vue'
 export default {
-  components: { layout, Breadcrumb, NewsSubscribe },
+  components: { layout, NewsSubscribe },
+  head() {
+    return {
+      title: '404 - Not Found',
+    }
+  },
   data() {
     return {
       breadcrumb: true,
