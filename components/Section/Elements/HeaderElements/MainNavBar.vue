@@ -206,7 +206,7 @@ export default {
           active: false,
         },
         {
-          title: 'Contact US',
+          title: 'CONTACT US',
           active: false,
         },
       ],
