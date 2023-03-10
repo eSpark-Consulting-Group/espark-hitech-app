@@ -57,8 +57,8 @@
                   >
 
                   <span v-if="items.title != 'VOXO PLUS'">
-                    {{ $t(items.title) }}
-                    <!-- {{ items.title }} -->
+                    <!-- {{ $t(items.title) }} -->
+                    {{ items.title }}
                     <span
                       class="according-menu"
                       v-if="
