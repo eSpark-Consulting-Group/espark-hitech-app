@@ -36,7 +36,7 @@
 </template>
 <script>
 import layout from './layout.vue'
-import Breadcrumb from '../components/Section/Elements/Bread/Breadcrumbs.vue'
+import Breadcrumb from '../components/Section/Elements/Breadcrumbs/Breadcrumb.vue'
 import NewsSubscribe from '../components/Section/Elements/HomePageElements/Banners/NewsSubscribe.vue'
 export default {
   components: { layout, Breadcrumb, NewsSubscribe },
