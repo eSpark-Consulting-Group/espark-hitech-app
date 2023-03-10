@@ -74,21 +74,21 @@ export default {
         languages: {
           title: 'Languages',
           active: false,
-          links: this.$i18n.locales,
-          // [
-          //   {
-          //     code: 'en',
-          //     name: 'English',
-          //   },
-          //   {
-          //     code: 'es',
-          //     name: 'Español',
-          //   },
-          //   {
-          //     code: 'fr',
-          //     name: 'Français',
-          //   },
-          // ],
+          // links: this.$i18n.locales,
+          links: [
+            {
+              code: 'en',
+              name: 'English',
+            },
+            {
+              code: 'es',
+              name: 'Español',
+            },
+            {
+              code: 'fr',
+              name: 'Français',
+            },
+          ],
         },
       },
       dropdownKeys: [],

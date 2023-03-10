@@ -1,7 +1,4 @@
 var boostrapCss = '/css/bootstrap.min.css'
-import english from './static/data/en.json'
-import french from './static/data/fr.json'
-import spanish from './static/data/es.json'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -66,33 +63,8 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'nuxt-i18n',
   ],
-  i18n: {
-    locales: [
-      {
-        code: 'en',
-        name: 'English',
-      },
-      {
-        code: 'es',
-        name: 'Español',
-      },
-      {
-        code: 'fr',
-        name: 'Français',
-      },
-    ],
-    defaultLocale: 'en',
-    vueI18n: {
-      fallbackLocale: 'en',
-      messages: {
-        en: english.data,
-        fr: french.data,
-        es: spanish.data,
-      },
-    },
-  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
@@ -100,5 +72,9 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    babel: {
+      compact: true,
+    },
+  },
 }
