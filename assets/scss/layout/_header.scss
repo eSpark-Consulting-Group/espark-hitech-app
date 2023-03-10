@@ -955,6 +955,16 @@
                         }
                     }
                 }
+                .auth-dropdown{
+                    .profile-dropdown{
+                        a{
+                            color: var(--theme-color);
+                            &:hover{
+                                color: $theme-font-color;
+                            }
+                        }
+                    }
+                }
             }
 
             .dropdown {

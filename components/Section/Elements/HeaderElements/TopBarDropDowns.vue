@@ -1,6 +1,45 @@
 <template>
   <div class="col-auto">
     <ul class="border-list">
+      <!-- asdsa -->
+      <li
+        id="link"
+        class="onhover-dropdown auth-dropdown"
+        style="text-align: start"
+      >
+        <div class="cart-media">
+          <span class="mr-1">Welcome User</span>
+          <icons name="user" size="sm" />
+        </div>
+        <div class="onhover-div profile-dropdown">
+          <ul>
+            <li>
+              Welcome User
+              <!-- {{
+                  $store.state.firebase.user === null
+                    ? "User"
+                    : $store.state.firebase.user.email
+                }} -->
+            </li>
+            <!-- <li v-if="$store.state.firebase.user === null"> -->
+            <li>
+              <nuxt-link to="/page/login" class="d-block">Login</nuxt-link>
+            </li>
+            <li>
+              <a @click.prevent="signout" to="/page/login" class="d-block"
+                >logout</a
+              >
+            </li>
+            <!-- <li v-if="$store.state.firebase.user === null"> -->
+            <li>
+              <nuxt-link to="/page/register" class="d-block"
+                >Register</nuxt-link
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+      <!-- asdsa -->
       <li v-for="(index, key) in dropdowns" :key="key">
         <div class="dropdown top-header-dropdown" ref="dropdowns">
           <a
@@ -51,7 +90,9 @@
 </template>
 
 <script>
+import icons from '~/assets/icons.vue'
 export default {
+  components: { icons },
   data() {
     return {
       selectedDropdowns: {
@@ -61,11 +102,11 @@ export default {
       },
       selectedLanguage: '',
       dropdowns: {
-        loginAndRegister: {
-          title: 'Login & Register',
-          active: false,
-          links: ['login', 'register'],
-        },
+        // loginAndRegister: {
+        //   title: 'Login & Register',
+        //   active: false,
+        //   links: ['login', 'register'],
+        // },
         currency: {
           title: 'Currency',
           active: false,
