@@ -70,8 +70,11 @@
                 </ul>
               </div>
 
-              <ShopOptions :setCardsLayout="setCardsLayout" />
-              <!-- @changeCardLayout="changeCardLayout"  @changeProductsPerPage="changeProductsPerPage"-->
+              <ShopOptions
+                :setCardsLayout="setCardsLayout"
+                @changeCardLayout="changeCardLayout"
+              />
+              <!--   @changeProductsPerPage="changeProductsPerPage"-->
             </div>
             <!-- label and featured section -->
 
@@ -152,7 +155,7 @@
 import layout from '../../layouts/layout.vue'
 import Breadcrumb from '../../components/Section/Elements/HeaderElements/Breadcrumb.vue'
 import NewsSubscribe from '../../components/Section/Elements/HomePageElements/Banners/NewsSubscribe.vue'
-import ProductBox from '../../components/Section/Elements/ProductBox/ProductBox.vue'
+import ProductBox from '../../components/Section/Elements/ProductBox/ProductBox2.vue'
 import ProBoxSkeletonLoader from '../../components/Section/Elements/ProductBox/ProBoxSkeletonLoader.vue'
 import products from '../../static/DummyData/products.json'
 import ShopOptions from '../../components/Section/Elements/ShopElements/ShopOptions.vue'
@@ -217,6 +220,11 @@ export default {
   created() {
     // this.$store.dispatch("filters/setCategory", this.category);
     this.cards = this.initCards.filter((item) => item.category != 'vr')
+  },
+  methods: {
+    changeCardLayout(toLayout) {
+      this.cardsLayout = toLayout
+    },
   },
 }
 </script>

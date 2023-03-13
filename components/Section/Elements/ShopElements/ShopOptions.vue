@@ -45,7 +45,7 @@
       </div>
       <div class="grid-options d-sm-inline-block d-none">
         <ul class="d-flex">
-          <li class="two-grid" :class="cardsLayout == 2 ? 'active' : ''">
+          <!-- <li class="two-grid" :class="cardsLayout == 2 ? 'active' : ''">
             <a href="javascript:void(0)" @click.prevent="changeCardLayout(2)">
               <img src="~assets/svg/grid-2.svg" class="img-fluid" alt="" />
             </a>
@@ -57,7 +57,7 @@
             <a href="javascript:void(0)" @click.prevent="changeCardLayout(3)">
               <img src="~assets/svg/grid-3.svg" class="img-fluid" alt="" />
             </a>
-          </li>
+          </li> -->
           <li
             class="grid-btn d-lg-inline-block d-none"
             :class="cardsLayout == 4 ? 'active' : ''"
@@ -117,7 +117,7 @@ export default {
   methods: {
     changeCardLayout(layout) {
       this.cardsLayout = layout
-      // this.$emit("changeCardLayout", this.cardsLayout);
+      this.$emit('changeCardLayout', this.cardsLayout)
     },
     changeProductsPerPage(event) {
       // this.$emit("changeProductsPerPage", event.target.value);
