@@ -30,7 +30,12 @@
               :class="getClass(items.title)"
             >
               <client-only>
+                <!-- {{ items.path ? true : false }} -->
+                <nuxt-link v-if="items.path" :to="items.path">
+                  {{ items.title }}
+                </nuxt-link>
                 <a
+                  v-else
                   href="javascript:void(0)"
                   class="nav-link menu-title"
                   :class="[
@@ -142,6 +147,12 @@ export default {
           title: 'HOME',
           active: false,
           isHome: true,
+          path: '/',
+        },
+        {
+          title: 'Shop',
+          active: false,
+          path: '/shop',
         },
 
         {
@@ -204,10 +215,12 @@ export default {
         {
           title: 'BLOG',
           active: false,
+          path: '/blog',
         },
         {
           title: 'CONTACT US',
           active: false,
+          path: '/contantus',
         },
       ],
       openMobileNav: false,
@@ -253,6 +266,7 @@ export default {
     },
 
     changePage(path) {
+      console.log('clicked ', path)
       // document
       //   .getElementById('bootstrap-link')
       //   .setAttribute('href', '/css/bootstrap.min.css')
