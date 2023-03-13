@@ -4,7 +4,7 @@
     <section class="section-b-space">
       <div class="container">
         <div class="row">
-          <!-- <ShopFiltersbar :filterBarClasses="filterBarClasses" /> -->
+          <ShopFiltersbar />
           <!-- :showRating="showRating"
             :showPriceRange2="showPriceRange2"
             :showSizeListInComponent="showSizeListInComponent"
@@ -13,7 +13,6 @@
             :filterBarClasses="filterBarClasses"
             :showSidebarCarousel="showSidebarCarousel"
             :isMobileView="isMobileView" -->
-
           <div
             class="col-lg-9 col-12 ratio_30"
             :class="[{ 'col-lg-12': showFilters }]"
@@ -38,6 +37,7 @@
                   class="danger-button danger-center btn btn-sm filter-btn"
                   @click.prevent="toggleFilterBar"
                 >
+                  Icon
                   <!-- <vue-feather type="align-left"></vue-feather>Filter -->
                 </button>
               </div>
@@ -141,16 +141,6 @@
               </ul>
             </nav>
           </div>
-          <!-- <shopFilterbar
-          :showRating="showRating"
-          :showPriceRange2="showPriceRange2"
-          :showSizeListInComponent="showSizeListInComponent"
-          :showFilterBar="showFilters"
-          v-if="filterbarPosition === 'right'"
-          :filterBarClasses="filterBarClasses"
-          :showSidebarCarousel="showSidebarCarousel"
-          :isMobileView="isMobileView"
-        /> -->
         </div>
       </div>
     </section>
@@ -168,8 +158,12 @@ import products from '../../static/DummyData/products.json'
 import ShopOptions from '../../components/Section/Elements/ShopElements/ShopOptions.vue'
 import TopShopBanner from '../../components/Section/Elements/ShopElements/TopShopBanner.vue'
 import ShopFiltersbar from '../../components/Section/Elements/ShopElements/ShopFiltersBar.vue'
-
 export default {
+  head() {
+    return {
+      title: 'Shop - Category',
+    }
+  },
   components: {
     layout,
     Breadcrumb,
@@ -184,7 +178,7 @@ export default {
     'setCardsLayout',
     'showSidebarCarousel',
     'filterbarPosition',
-    'filterBarClasses',
+    // 'filterBarClasses',
     'filterHide',
     'showSizeListInComponent',
     'showRating',
