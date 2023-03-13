@@ -9,8 +9,11 @@
             <div class="materialContainer">
               <div class="material-details">
                 <div class="title title1 title-effect mb-1 title-left">
-                  <h2>Contactus</h2>
-                  <p class="ms-0 w-100">.EmailRequired</p>
+                  <h2>Contact Us</h2>
+                  <p class="ms-0 w-100">
+                    Your email address will not be published. Required fields
+                    are marked *
+                  </p>
                 </div>
               </div>
               <div class="row g-4 mt-md-1 mt-2">

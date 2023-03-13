@@ -25,7 +25,6 @@
           <div class="contact-title">
             <h4>{{ PhoneNumber }}</h4>
             <p>{{ num1 }}</p>
-            <p>{{ num2 }}</p>
           </div>
         </div>
 
@@ -36,7 +35,6 @@
           <div class="contact-title">
             <h4>Email Address :</h4>
             <p>{{ ThemeEmail }}</p>
-            <p>{{ ThemeEmail2 }}</p>
           </div>
         </div>
       </div>
@@ -53,12 +51,12 @@ export default {
     return {
       Address: 'Address :',
       ActualAddress:
-        ' Riv1418erwood Drive, Suite 3245 Cottonwood, CA 96052, United States',
+        ' 401/B 4th Floor, Blossom Trade Centre, Block 1 Gulistan-e-Johar, Karachi, 74300',
       PhoneNumber: 'Phone Number :',
-      num1: '+ 185659635',
-      num2: '+ 658651167',
-      ThemeEmail: 'voxo123@gmail.com',
-      ThemeEmail2: 'voxo158@gmail.com',
+      num1: '+92(333- 6006055)',
+
+      ThemeEmail: 'support@espark-hitech.com',
+
       LetTouch: "Let's get in touch",
       SuggestionDesc: "We're open for any suggestion or just to have a chat",
     }
