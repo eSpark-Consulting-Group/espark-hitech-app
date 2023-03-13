@@ -1,63 +1,23 @@
 <template>
-  <div
-    class="col-lg-3 col-md-4"
-    :class="[filterBarClasses, { show: showFilters && !isMobileView }]"
-  >
-    <div class="category-option" :class="[{ show: showFilters }]">
-      <div class="button-close mb-3">
+  <div class="col-lg-3 col-md-4">
+    <!-- :class="[{ show: showFilters && !isMobileView }]" -->
+    <div class="category-option">
+      <!-- <div class="button-close mb-3">
         <button class="btn p-0" @click.prevent="toggleFilterBar">
-          Close
-          <!-- <vue-feather type="arrow-left"></vue-feather> Close -->
+          Close icon
         </button>
-      </div>
-
-      <div class="accordion-item category-rating">
-        <h2 class="accordion-header" id="headingOne">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseCategoryList"
-          >
-            Category
-          </button>
-        </h2>
-        <div
-          id="collapseCategoryList"
-          class="accordion-collapse collapse show"
-          aria-labelledby="headingOne"
-        >
-          <div class="accordion-body category-scroll">
-            <ul class="category-list">
-              <li v-for="(category, index) in categories" :key="index">
-                <div class="form-check ps-0 custome-form-check">
-                  <input
-                    class="checkbox_animated check-it"
-                    type="radio"
-                    :value="category"
-                    v-model="selectedCategory"
-                    name="flexRadioDefault"
-                    :id="category"
-                  />
-                  <label class="form-check-label" :for="category"
-                    >{{ category }}
-                  </label>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      </div> -->
+      <FilterBars :items="initCards.map((r) => r.brand)" title="Brands" />
+      <FilterBars :items="initCards.map((r) => r.brand)" title="Category" />
     </div>
   </div>
 </template>
 
 <script>
 import products from '../../../../static/DummyData/products.json'
-
+import FilterBars from './FilterBars.vue'
 export default {
   props: [
-    'filterBarClasses',
     'showFilterBar',
     'showSidebarCarousel',
     'showSizeListInComponent',
@@ -65,7 +25,7 @@ export default {
     'showPriceRange2',
     'isMobileView',
   ],
-  components: {},
+  components: { FilterBars },
   data() {
     return {
       showSizeList: false,

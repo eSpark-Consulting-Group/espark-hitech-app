@@ -1,5 +1,5 @@
 @import 'vendors/font-awesome.scss';
-// // utils scss files
+// utils scss files
 @import './utils/variables';
 @import './utils/mixin/common';
 @import './utils/mixin/breakpoints';
@@ -7,16 +7,16 @@
 @import './sliderBackground.scss';
 @import './pageTransitions.scss';
 
-// // base scss files
+// base scss files
 @import './base/reset';
 @import './base/typography';
 
-// // components scss files
+// components scss files
 // @import "components/alert";
 @import 'components/breadcrumb';
 @import 'components/button';
 @import 'components/dropdown';
-// @import "components/form";
+@import "components/form";
 @import 'components/label';
 // @import "components/lazyload";
 // @import "components/modal";
