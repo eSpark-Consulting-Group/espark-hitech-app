@@ -155,62 +155,62 @@ export default {
           path: '/shop',
         },
 
-        {
-          title: 'PRODUCT',
-          active: false,
-          children: [
-            {
-              path: '/product/product_4_images',
-              title: 'Product 4 Images',
-              type: 'link',
-            },
-            {
-              path: '/product/product_360_view',
-              title: 'Product 360 View',
-              type: 'link',
-            },
-            {
-              path: '/product/product_bundle',
-              title: 'Product Bundle',
-              type: 'link',
-            },
-            {
-              path: '/product/product_left_sidebar',
-              title: 'Product Left Sidebar',
-              type: 'link',
-            },
-            {
-              path: '/product/product_left_thumbnail',
-              title: 'Product Left Thumbnail',
-              type: 'link',
-            },
-            {
-              path: '/product/product_no_sidebar',
-              title: 'Product No Sidebar',
-              type: 'link',
-            },
-            {
-              path: '/product/product_right_sidebar',
-              title: 'Product Right Sidebar',
-              type: 'link',
-            },
-            {
-              path: '/product/product_right_thumbnail',
-              title: 'Product Right Thumbnail',
-              type: 'link',
-            },
-            {
-              path: '/product/product_sticky',
-              title: 'Product Sticky',
-              type: 'link',
-            },
-            {
-              path: '/product/product_video_thumbnail',
-              title: 'Product Video Thumbnail',
-              type: 'link',
-            },
-          ],
-        },
+        // {
+        //   title: 'PRODUCT',
+        //   active: false,
+        //   children: [
+        //     {
+        //       path: '/product/product_4_images',
+        //       title: 'Product 4 Images',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_360_view',
+        //       title: 'Product 360 View',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_bundle',
+        //       title: 'Product Bundle',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_left_sidebar',
+        //       title: 'Product Left Sidebar',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_left_thumbnail',
+        //       title: 'Product Left Thumbnail',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_no_sidebar',
+        //       title: 'Product No Sidebar',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_right_sidebar',
+        //       title: 'Product Right Sidebar',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_right_thumbnail',
+        //       title: 'Product Right Thumbnail',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_sticky',
+        //       title: 'Product Sticky',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_video_thumbnail',
+        //       title: 'Product Video Thumbnail',
+        //       type: 'link',
+        //     },
+        //   ],
+        // },
 
         {
           title: 'BLOG',
@@ -220,7 +220,7 @@ export default {
         {
           title: 'CONTACT US',
           active: false,
-          path: '/contantus',
+          path: '/ContactUs',
         },
       ],
       openMobileNav: false,
