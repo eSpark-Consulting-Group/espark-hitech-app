@@ -5,9 +5,10 @@
         <div class="row">
           <div class="col-lg-8 col-md-6">
             <div class="subscribe-details">
-              <h2 class="mb-3">{{ SubscribeOurNews }}</h2>
+              <h2 class="mb-3">Subscribe Our News</h2>
               <h6>
-                {{ SubscribeDescription }}
+                Subscribe and receive our newsletters to follow the news about
+                our fresh and fantastic Shoes Products.
               </h6>
             </div>
           </div>
@@ -21,7 +22,7 @@
                   placeholder="Your Email Address"
                 />
                 <button class="btn btn-solid-default" type="button">
-                  {{ Submit }}
+                  Submit
                 </button>
               </div>
             </div>
@@ -33,14 +34,5 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      SubscribeOurNews: 'Subscribe Our News',
-      SubscribeDescription:
-        'Subscribe and receive our newsletters to follow the news about our up coming Products.',
-      Submit: 'Submit',
-    }
-  },
-}
+export default {}
 </script>
