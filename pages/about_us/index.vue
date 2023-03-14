@@ -1,20 +1,20 @@
 <template>
   <layout :offer-code="offerCode">
-    <Breadcrumb pageName="About Us" parent="About us" />
+    <Breadcrumb pageName="About Us" parent="About Us" />
     <!-- blogs -->
-    <AboutUS />
+    <AboutUs />
   </layout>
 </template>
 
 <script>
 import layout from '../../layouts/layout.vue'
 import Breadcrumb from '../../components/Section/Elements/HeaderElements/Breadcrumb.vue'
-import AboutUS from '../../components/Section/Elements/AboutUS/AboutUS.vue'
+import AboutUs from '../../components/Section/Elements/About_Us/About_Us.vue'
 export default {
   components: {
     layout,
     Breadcrumb,
-    AboutUS,
+    AboutUs,
   },
   head() {
     return {
@@ -25,6 +25,10 @@ export default {
     return {
       offerCode: 'DEF4526',
     }
+  },
+  mounted() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
   },
 }
 </script>
