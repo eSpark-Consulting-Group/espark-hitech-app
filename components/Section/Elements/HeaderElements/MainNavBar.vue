@@ -215,12 +215,12 @@ export default {
         {
           title: 'BLOG',
           active: false,
-          path: '/blog',
+          path: '/blogs',
         },
         {
           title: 'CONTACT US',
           active: false,
-          path: '/ContactUs',
+          path: '/Contact_Us',
         },
       ],
       openMobileNav: false,

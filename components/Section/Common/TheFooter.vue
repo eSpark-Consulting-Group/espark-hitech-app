@@ -100,19 +100,19 @@ export default {
             },
             {
               title: 'Shop',
-              path: '/shop/shop_left_sidebar',
+              path: '/shop',
             },
             {
               title: 'About Us',
-              path: '/page/about_us',
+              path: '/about_us',
             },
             {
               title: 'Blog',
-              path: '/blog/blog_details',
+              path: '/blogs',
             },
             {
               title: 'Contact',
-              path: '/blog/contact_us',
+              path: '/contact_us',
             },
           ],
         },

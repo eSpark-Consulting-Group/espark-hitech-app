@@ -22,16 +22,14 @@
             </li>
             <!-- <li v-if="$store.state.firebase.user === null"> -->
             <li>
-              <nuxt-link to="/page/login" class="d-block">Login</nuxt-link>
+              <nuxt-link to="/auth/login" class="d-block">Login</nuxt-link>
             </li>
-            <li>
-              <a @click.prevent="signout" to="/page/login" class="d-block"
-                >logout</a
-              >
-            </li>
+            <!-- <li>
+              <a @click.prevent="signout" to="/" class="d-block">logout</a>
+            </li> -->
             <!-- <li v-if="$store.state.firebase.user === null"> -->
             <li>
-              <nuxt-link to="/page/register" class="d-block"
+              <nuxt-link to="/auth/register" class="d-block"
                 >Register</nuxt-link
               >
             </li>
