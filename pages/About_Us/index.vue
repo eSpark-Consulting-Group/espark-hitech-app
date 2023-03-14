@@ -26,9 +26,5 @@ export default {
       offerCode: 'DEF4526',
     }
   },
-  mounted() {
-    document.body.scrollTop = 0
-    document.documentElement.scrollTop = 0
-  },
 }
 </script>

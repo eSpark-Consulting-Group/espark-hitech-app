@@ -26,6 +26,9 @@ export default {
       this.$nuxt.$loading.start()
       setTimeout(() => this.$nuxt.$loading.finish(), 1000)
     })
+    // scroll smoothly on top when call from footer
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
   },
 }
 </script>
