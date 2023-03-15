@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHeader />
+    <TheHeader :offerCode="offerCode" />
     <Breadcrumb v-if="this.$route.path != '/'" />
     <transition>
       <Nuxt />
@@ -30,6 +30,7 @@ export default {
   components: { TheHeader, TheFooter, Breadcrumb, NewsSubscribe, MobileMenu },
   data() {
     return {
+      offerCode: 'eSpark-Hi-Tech-15',
       showTapToTop: false,
       showDarkButton: true,
 

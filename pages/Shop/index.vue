@@ -183,7 +183,6 @@ export default {
       //   breadcrumb: true,
       HideFilter: 'Hide Filter',
       ShowFilter: 'Show Filter',
-      offerCode: 'DEF4526',
       showSkeletonLoad: true,
       showFilterBar: false,
       cardsLayout: 4,
