@@ -14,8 +14,7 @@ export default {
   },
   head() {
     return {
-      title: 'Fashion Store',
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '2.png' }],
+      title: 'Electronic Store',
     }
   },
 }

@@ -28,7 +28,6 @@ export default {
   head() {
     return {
       title: 'Electronic Store',
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '1.png' }],
     }
   },
   components: {
