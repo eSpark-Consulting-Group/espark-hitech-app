@@ -139,7 +139,7 @@
 
 <script>
 export default {
-  components: {},
+  layout: 'authLayout',
   asyncData() {
     return {
       Alreadyhaveanaccount: 'Already have an account?',

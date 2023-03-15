@@ -1,26 +1,21 @@
 <template>
-  <layout :offer-code="offerCode">
-    <Breadcrumb pageName="Blog" parent="Blog" />
-    <!-- blogs -->
-    <BlogDetails />
-  </layout>
+  <BlogDetails />
 </template>
 
 <script>
-import layout from '../../layouts/layout.vue'
-
-import Breadcrumb from '../../components/Section/Elements/HeaderElements/Breadcrumb.vue'
 import BlogDetails from '../../components/Section/Elements/Blog/BlogDetailsPage/BlogDetails.vue'
 export default {
-  components: {
-    layout,
-    Breadcrumb,
-    BlogDetails,
-  },
   head() {
     return {
       title: 'Blog Details',
     }
+  },
+  components: { BlogDetails },
+  created() {
+    this.setBreadcrumbs({
+      pageParent: 'Blog Details',
+      pageName: 'Blog Details',
+    })
   },
   data() {
     return {

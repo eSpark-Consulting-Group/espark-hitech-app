@@ -13,9 +13,11 @@ import Vuex from 'vuex'
 // import layout from "./modules/layout";
 // import firebase from "./modules/firebase";
 // import banners from "./modules/banners";
+import breadcrumbs from './modules/breadcrumbs'
 const createStore = () => {
   return new Vuex.Store({
     modules: {
+      breadcrumbs,
       // clickEvents,
       // layout,
       // firebase,

@@ -38,6 +38,7 @@
 
 <script>
 export default {
+  layout: 'authLayout',
   data() {
     return {
       themeCss: '/demo2.css',

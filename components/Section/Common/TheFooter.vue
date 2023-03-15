@@ -179,7 +179,7 @@ export default {
             },
             {
               title: 'Shopping FAQS',
-              path: '/pages/faq',
+              path: '/Support/FAQs',
             },
           ],
         },

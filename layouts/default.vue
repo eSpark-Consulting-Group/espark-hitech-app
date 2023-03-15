@@ -1,8 +1,13 @@
 <template>
   <div>
+    <TheHeader />
+    <Breadcrumb v-if="this.$route.path != '/'" />
     <transition>
-      <nuxt id="body-content" />
+      <Nuxt />
     </transition>
+    <NewsSubscribe v-if="this.$route.path != '/'" />
+    <TheFooter />
+    <MobileMenu />
     <!-- v-scroll-to="'#body-content'" -->
     <div class="tap-to-top" :class="showTapToTop ? 'show' : ''">
       <a @click="scrollOnTop">
@@ -16,7 +21,13 @@
 </template>
 
 <script>
+import TheHeader from '../components/Section/Common/TheHeader.vue'
+import Breadcrumb from '../components/Section/Elements/HeaderElements/Breadcrumb.vue'
+import NewsSubscribe from '../components/Section/Elements/HomePageElements/Banners/NewsSubscribe.vue'
+import TheFooter from '../components/Section/Common/TheFooter.vue'
+import MobileMenu from '../components/Section/Elements/Navigation/MobileMenu.vue'
 export default {
+  components: { TheHeader, TheFooter, Breadcrumb, NewsSubscribe, MobileMenu },
   data() {
     return {
       showTapToTop: false,

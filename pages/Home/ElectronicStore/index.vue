@@ -1,5 +1,5 @@
 <template>
-  <layout :offerCode="offerCode">
+  <div>
     <LandingPageSlider :slides="slides" />
     <CustomerServices serviceClasses="service-style-2 section-b-space" />
     <TopBanner />
@@ -12,11 +12,10 @@
     <TopSellingCarousel />
     <hurryUpBanner />
     <BrandCarousel />
-  </layout>
+  </div>
 </template>
 
 <script>
-import layout from '~/layouts/layout.vue'
 import LandingPageSlider from '../../../components/Section/Elements/HomePageElements/Slider/LandingPageSlider.vue'
 import CustomerServices from '../../../components/Section/Elements/HomePageElements/Banners/CustomerServices'
 import TopBanner from '../../../components/Section/Elements/HomePageElements/Banners/TopBanner.vue'
@@ -31,7 +30,6 @@ export default {
     }
   },
   components: {
-    layout,
     LandingPageSlider,
     CustomerServices,
     TopBanner,
@@ -42,7 +40,6 @@ export default {
   },
   data() {
     return {
-      offerCode: 'DEF4526',
       sliderData: {
         slides: [
           {

@@ -1,7 +1,5 @@
 <template>
-  <layout :offer-code="offerCode">
-    <Breadcrumb pageName="Contact Us" parent="Contact Us" />
-
+  <div>
     <section class="contact-section">
       <div class="container">
         <div class="row g-4">
@@ -94,24 +92,24 @@
         </div>
       </div>
     </section>
-  </layout>
+  </div>
 </template>
 
 <script>
-import layout from '../../layouts/layout.vue'
-import Breadcrumb from '../../components/Section/Elements/HeaderElements/Breadcrumb.vue'
 import ContactUsSideSection from '../../components/Section/Elements/ContactUs/ContactUsSideSection'
 
 export default {
-  components: {
-    layout,
-    Breadcrumb,
-    ContactUsSideSection,
-  },
   head() {
     return {
       title: 'Contact Us',
     }
+  },
+  components: { ContactUsSideSection },
+  created() {
+    this.setBreadcrumbs({
+      pageParent: 'Contact Us',
+      pageName: 'Contact Us',
+    })
   },
   data() {
     return {
