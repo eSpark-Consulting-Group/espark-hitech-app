@@ -44,6 +44,12 @@ export default {
       ],
     }
   },
+  watch: {
+    $route(n, o) {
+      // when route change scroll on top
+      this.scrollOnTop()
+    },
+  },
   // watch: {
   //   windowScroll: function () {
   //     console.log(this.windowScroll)
@@ -72,7 +78,6 @@ export default {
   },
   methods: {
     scrollOnTop() {
-      console.log('asdasda', document)
       document.body.scrollTop = 0
       document.documentElement.scrollTop = 0
     },
