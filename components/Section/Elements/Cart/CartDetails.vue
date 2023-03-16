@@ -92,7 +92,7 @@
                   </h6>
                 </div>
                 <div class="bottom-details">
-                  <nuxt-link to="/page/checkout">
+                  <nuxt-link to="/checkout">
                     <!-- {{ $const.ProcessCheckout }} -->
                     ProcessCheckout
                   </nuxt-link>

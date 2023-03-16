@@ -134,8 +134,10 @@
           <div class="cart-menu" v-else>
             <div class="cart-title">
               <h6>
-                <icons name="shopping-bag" size="sm" />
-                <span class="label label-theme rounded-pill">0</span>
+                <nuxt-link to="/cart">
+                  <icons name="shopping-bag" size="sm" />
+                  <span class="label label-theme rounded-pill">0</span>
+                </nuxt-link>
               </h6>
               <span class="d-md-none d-block" @click="toggleCart">
                 <i class="fas fa-arrow-right back-cart"></i>
