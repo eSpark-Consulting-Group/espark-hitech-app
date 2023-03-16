@@ -2,7 +2,7 @@ var boostrapCss = '/css/bootstrap.min.css'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'testing',
+    title: 'Hi-Tech Store',
     htmlAttrs: {
       lang: 'en',
     },
