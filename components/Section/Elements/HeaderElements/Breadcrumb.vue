@@ -1,16 +1,9 @@
 <template>
   <section class="breadcrumb-section section-b-space">
     <ul class="circles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li v-for="(item, i) in imgList" :key="i">
+        <img :src="getImageUrl(item)" alt="" />
+      </li>
     </ul>
     <div class="container">
       <div class="row">
@@ -50,6 +43,22 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
+  data() {
+    return {
+      imgList: [
+        'breadcrumb/tester.png',
+        'breadcrumb/resistor.png',
+        'breadcrumb/screwdriver.png',
+        'breadcrumb/soldering-iron.png',
+        'breadcrumb/plier.png',
+        'breadcrumb/chip.png',
+        'breadcrumb/dc.png',
+        'breadcrumb/diode.png',
+        'breadcrumb/connector.png',
+        'breadcrumb/capacitor.png',
+      ],
+    }
+  },
   computed: {
     ...mapGetters({
       items: 'breadcrumbs/GetBreadcrumbs',
