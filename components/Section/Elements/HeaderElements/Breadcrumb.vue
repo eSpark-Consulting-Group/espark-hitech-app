@@ -8,12 +8,12 @@
     <div class="container">
       <div class="row">
         <!-- breadcrumb 1 -->
-        <div v-if="items.pageParent" class="col-12">
+        <div v-if="items.pageParent" class="col-12 text-capitalize">
           <h3>{{ items.pageParent }}</h3>
           <nav>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <nuxt-link to="/home/fashion_demo">
+                <nuxt-link to="/">
                   <i class="fas fa-home"></i>
                 </nuxt-link>
               </li>

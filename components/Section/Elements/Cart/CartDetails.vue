@@ -55,12 +55,10 @@
         <!-- <div class="col-lg-4 col-sm-6" v-if="cartItems.length != 0"> -->
         <div class="col-lg-4 col-sm-6">
           <div class="checkout-button">
-            <!-- @click.prevent="$router.push('/page/checkout')" -->
-            <a class="btn btn-solid-default btn fw-bold">
-              <!-- {{ $const.CheckOut }}  -->
-              Cheeeek
+            <nuxt-link to="/checkout" class="btn btn-solid-default btn fw-bold">
+              Checkout
               <i class="fas fa-arrow-right ms-1"></i>
-            </a>
+            </nuxt-link>
           </div>
         </div>
 
@@ -71,20 +69,20 @@
               <div class="total-details">
                 <div class="top-details">
                   <!-- <h3>{{ $const.CartTotals }}</h3> -->
-                  <h3>tootl</h3>
+                  <h3>Cart Totat</h3>
                   <h6>
                     <!-- {{ $const.TotalMRP }} -->
-                    Total MRP:
+                    Total MRP
                     <!-- <span>{{ selectedCurrencySymbol }}{{ cartTotal }}</span> -->
                   </h6>
                   <h6>
                     <!-- {{ $const.CouponDiscount }} -->
-                    disscount
+                    Coupon Discount
                     <!-- <span>-{{ selectedCurrencySymbol }}25.00</span> -->
                   </h6>
                   <h6>
                     <!-- {{ $const.ConvenienceFee }} -->
-                    ConvenienceFee
+                    Delivery Fee
                     <span>
                       <!-- <del>{{ selectedCurrencySymbol }}25.00</del> -->
                       <del>25.00</del>
@@ -92,10 +90,7 @@
                   </h6>
                 </div>
                 <div class="bottom-details">
-                  <nuxt-link to="/checkout">
-                    <!-- {{ $const.ProcessCheckout }} -->
-                    ProcessCheckout
-                  </nuxt-link>
+                  <nuxt-link to="/checkout"> Process Checkout </nuxt-link>
                 </div>
               </div>
             </div>
