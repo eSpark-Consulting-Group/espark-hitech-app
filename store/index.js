@@ -14,85 +14,22 @@ import Vuex from 'vuex'
 // import firebase from "./modules/firebase";
 // import banners from "./modules/banners";
 import breadcrumbs from './modules/breadcrumbs'
+import cart from './modules/cart'
+
 const createStore = () => {
   return new Vuex.Store({
     modules: {
       breadcrumbs,
+      cart,
       // clickEvents,
       // layout,
       // firebase,
       // banners,
     },
-    state: {
-      // drawer: false,
-      // dropdown: true,
-      // customerServices: [],
-      // banners: [],
-      // products: [],
-      // tabsBanners: [],
-      // slider: [],
-      // footerlinks: [],
-      // menu: [],
-      // categoryMenu: [],
-      // cartItems: [],
-    },
-    mutations: {
-      // toggle(state) {
-      //   state.drawer = !state.drawer
-      // },
-      // dropdown(state) {
-      //   state.dropdown = !state.dropdown
-      // },
-      // setService(state, data) {
-      //   state.customerServices = data
-      // },
-      // setBanner(state, data) {
-      //   state.banners = data
-      // },
-      // setProducts(state, data) {
-      //   state.products = data
-      // },
-      // setTabBanner(state, data) {
-      //   state.tabsBanners = data
-      // },
-      // setSlide(state, data) {
-      //   state.slider = data
-      // },
-      // setFooters(state, data) {
-      //   state.footerlinks = data
-      // },
-      // setMenu(state, data) {
-      //   state.menu = data
-      // },
-      // setCategoryMenu(state, data) {
-      //   state.categoryMenu = data
-      // },
-      // setCart(state, data) {
-      //   state.cartItems = data
-      // },
-    },
-    actions: {
-      // nuxtServerInit({ commit }) {
-      //   // axiosData.push(...categoryM.data);
-      //   // commit('setService', information)
-      //   // commit('setBanner', Banner)
-      //   // commit('setProducts', Products)
-      //   // commit('setTabBanner', TabsBanners)
-      //   // commit('setSlide', SliderData)
-      //   // commit('setFooters', FootersData)
-      //   // commit('setMenu', Menu)
-      //   // commit('setCategoryMenu', CategoryMenu)
-      //   // commit('setCart', Cart)
-      // },
-    },
-    getters: {
-      // getDrawerState(state) {
-      //   return state.drawer
-      // },
-      // getDropdownState(state) {
-      //   return state.dropdown
-      // },
-    },
+    state: {},
+    mutations: {},
+    actions: {},
+    getters: {},
   })
 }
 
