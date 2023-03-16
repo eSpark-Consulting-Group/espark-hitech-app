@@ -1,26 +1,19 @@
 <template>
   <section class="breadcrumb-section section-b-space">
     <ul class="circles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li v-for="(item, i) in imgList" :key="i">
+        <img :src="getImageUrl(item)" alt="" />
+      </li>
     </ul>
     <div class="container">
       <div class="row">
         <!-- breadcrumb 1 -->
-        <div v-if="items.pageParent" class="col-12">
+        <div v-if="items.pageParent" class="col-12 text-capitalize">
           <h3>{{ items.pageParent }}</h3>
           <nav>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <nuxt-link to="/home/fashion_demo">
+                <nuxt-link to="/">
                   <i class="fas fa-home"></i>
                 </nuxt-link>
               </li>
@@ -50,6 +43,22 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
+  data() {
+    return {
+      imgList: [
+        'breadcrumb/tester.png',
+        'breadcrumb/resistor.png',
+        'breadcrumb/screwdriver.png',
+        'breadcrumb/soldering-iron.png',
+        'breadcrumb/plier.png',
+        'breadcrumb/chip.png',
+        'breadcrumb/dc.png',
+        'breadcrumb/diode.png',
+        'breadcrumb/connector.png',
+        'breadcrumb/capacitor.png',
+      ],
+    }
+  },
   computed: {
     ...mapGetters({
       items: 'breadcrumbs/GetBreadcrumbs',
