@@ -30,6 +30,7 @@ const state = {
     {
       productId: 1,
       itemName: 'Slim Fit Plastic Coat',
+      brand: 'Boat',
       price: 78.0,
       image: '../../_nuxt/assets/images/fashion/product/front/1.jpg',
       itemImage: 'fashion/product/front/1.jpg',
@@ -38,6 +39,7 @@ const state = {
     },
     {
       productId: 2,
+      brand: 'Boat',
       itemName: 'Womens Stylish Jacket',
       price: 24.0,
       image: '../../_nuxt/assets/images/fashion/product/front/7.jpg',
