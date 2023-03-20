@@ -15,13 +15,14 @@ import Vuex from 'vuex'
 // import banners from "./modules/banners";
 import breadcrumbs from './modules/breadcrumbs'
 import cart from './modules/cart'
+import clickEvents from './modules/clickEvents'
 
 const createStore = () => {
   return new Vuex.Store({
     modules: {
       breadcrumbs,
       cart,
-      // clickEvents,
+      clickEvents,
       // layout,
       // firebase,
       // banners,
