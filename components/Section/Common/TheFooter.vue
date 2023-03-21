@@ -167,7 +167,7 @@ export default {
             },
             {
               title: 'Your Account',
-              path: '/pages/user_dashboard',
+              path: '/user_dashboard',
             },
             {
               title: 'Track Orders',
