@@ -17,7 +17,7 @@
 </template>
 <script>
 import productRightSection from './productsComponents/productRightSection.vue'
-import productSlider from './productsComponents/productSlider2.vue'
+import productSlider from './productsComponents/productSlider.vue'
 import tabs from './productsComponents/tabs.vue'
 export default {
   props: ['product'],
