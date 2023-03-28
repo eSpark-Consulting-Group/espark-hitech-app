@@ -33,12 +33,13 @@
       </li>
       <li id="link" class="onhover-dropdown auth-dropdown" style="text-align: start">
         <div class="cart-media">
-          <span>{{ $t('name') }}</span>
+          <span class="mr-1">{{ $t('name') }}</span>
+          <icons name="language" size="sm" />
         </div>
         <div class="onhover-div profile-dropdown">
           <ul>
             <li v-for="(locale) in availableLocales" :key="locale.code" @click="setLanguage(locale.code)">
-              {{ locale.code }}
+              {{ locale.label }}
             </li>
           </ul>
         </div>

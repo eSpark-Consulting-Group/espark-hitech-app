@@ -74,11 +74,12 @@ export default {
 
   i18n: {
     locales: [
-      { code: 'en', iso: 'en-US', file: 'en.json' },
-      { code: 'zh', iso: 'fr-CN', file: 'zh.json' },
+      { code: 'en', label: 'English', iso: 'en-US', file: 'en.json' },
+      { code: 'zh', label: '中国人', iso: 'fr-CN', file: 'zh.json' },
     ],
     langDir: 'locales/',
     defaultLocale: 'en',
+    strategy: 'no_prefix',
     vueI18n: {
       fallbackLocale: 'en',
     },
