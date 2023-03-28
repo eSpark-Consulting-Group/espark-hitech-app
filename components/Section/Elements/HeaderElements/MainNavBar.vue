@@ -30,7 +30,12 @@
               :class="getClass(items.title)"
             >
               <client-only>
+                <!-- {{ items.path ? true : false }} -->
+                <nuxt-link v-if="items.path" :to="items.path">
+                  {{ items.title }}
+                </nuxt-link>
                 <a
+                  v-else
                   href="javascript:void(0)"
                   class="nav-link menu-title"
                   :class="[
@@ -142,72 +147,80 @@ export default {
           title: 'HOME',
           active: false,
           isHome: true,
+          path: '/',
+        },
+        {
+          title: 'Shop',
+          active: false,
+          path: '/shop',
         },
 
-        {
-          title: 'PRODUCT',
-          active: false,
-          children: [
-            {
-              path: '/product/product_4_images',
-              title: 'Product 4 Images',
-              type: 'link',
-            },
-            {
-              path: '/product/product_360_view',
-              title: 'Product 360 View',
-              type: 'link',
-            },
-            {
-              path: '/product/product_bundle',
-              title: 'Product Bundle',
-              type: 'link',
-            },
-            {
-              path: '/product/product_left_sidebar',
-              title: 'Product Left Sidebar',
-              type: 'link',
-            },
-            {
-              path: '/product/product_left_thumbnail',
-              title: 'Product Left Thumbnail',
-              type: 'link',
-            },
-            {
-              path: '/product/product_no_sidebar',
-              title: 'Product No Sidebar',
-              type: 'link',
-            },
-            {
-              path: '/product/product_right_sidebar',
-              title: 'Product Right Sidebar',
-              type: 'link',
-            },
-            {
-              path: '/product/product_right_thumbnail',
-              title: 'Product Right Thumbnail',
-              type: 'link',
-            },
-            {
-              path: '/product/product_sticky',
-              title: 'Product Sticky',
-              type: 'link',
-            },
-            {
-              path: '/product/product_video_thumbnail',
-              title: 'Product Video Thumbnail',
-              type: 'link',
-            },
-          ],
-        },
+        // {
+        //   title: 'PRODUCT',
+        //   active: false,
+        //   children: [
+        //     {
+        //       path: '/product/product_4_images',
+        //       title: 'Product 4 Images',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_360_view',
+        //       title: 'Product 360 View',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_bundle',
+        //       title: 'Product Bundle',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_left_sidebar',
+        //       title: 'Product Left Sidebar',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_left_thumbnail',
+        //       title: 'Product Left Thumbnail',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_no_sidebar',
+        //       title: 'Product No Sidebar',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_right_sidebar',
+        //       title: 'Product Right Sidebar',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_right_thumbnail',
+        //       title: 'Product Right Thumbnail',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_sticky',
+        //       title: 'Product Sticky',
+        //       type: 'link',
+        //     },
+        //     {
+        //       path: '/product/product_video_thumbnail',
+        //       title: 'Product Video Thumbnail',
+        //       type: 'link',
+        //     },
+        //   ],
+        // },
 
         {
           title: 'BLOG',
           active: false,
+          path: '/blogs',
         },
         {
           title: 'CONTACT US',
           active: false,
+          path: '/Contact_Us',
         },
       ],
       openMobileNav: false,
@@ -253,6 +266,7 @@ export default {
     },
 
     changePage(path) {
+      console.log('clicked ', path)
       // document
       //   .getElementById('bootstrap-link')
       //   .setAttribute('href', '/css/bootstrap.min.css')

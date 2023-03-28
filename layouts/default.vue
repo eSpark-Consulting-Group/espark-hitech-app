@@ -1,8 +1,13 @@
 <template>
   <div>
+    <TheHeader :offerCode="offerCode" />
+    <Breadcrumb v-if="this.$route.path != '/'" />
     <transition>
-      <nuxt id="body-content" />
+      <Nuxt />
     </transition>
+    <NewsSubscribe v-if="this.$route.path != '/'" />
+    <TheFooter />
+    <MobileMenu />
     <!-- v-scroll-to="'#body-content'" -->
     <div class="tap-to-top" :class="showTapToTop ? 'show' : ''">
       <a @click="scrollOnTop">
@@ -16,9 +21,16 @@
 </template>
 
 <script>
+import TheHeader from '../components/Section/Common/TheHeader.vue'
+import Breadcrumb from '../components/Section/Elements/HeaderElements/Breadcrumb.vue'
+import NewsSubscribe from '../components/Section/Elements/HomePageElements/Banners/NewsSubscribe.vue'
+import TheFooter from '../components/Section/Common/TheFooter.vue'
+import MobileMenu from '../components/Section/Elements/Navigation/MobileMenu.vue'
 export default {
+  components: { TheHeader, TheFooter, Breadcrumb, NewsSubscribe, MobileMenu },
   data() {
     return {
+      offerCode: 'eSpark-Hi-Tech-15',
       showTapToTop: false,
       showDarkButton: true,
 
@@ -31,6 +43,12 @@ export default {
         '/page/comming_soon',
       ],
     }
+  },
+  watch: {
+    $route(n, o) {
+      // when route change scroll on top
+      this.scrollOnTop()
+    },
   },
   // watch: {
   //   windowScroll: function () {
@@ -45,7 +63,7 @@ export default {
   //   },
   // },
   mounted() {
-    console.log(process.browser)
+    // console.log(process.browser)
     if (process.client) {
       window.addEventListener('scroll', this.handleScroll)
       this.noTapToTopArray.includes(this.$route.path)
@@ -60,7 +78,6 @@ export default {
   },
   methods: {
     scrollOnTop() {
-      console.log('asdasda', document)
       document.body.scrollTop = 0
       document.documentElement.scrollTop = 0
     },

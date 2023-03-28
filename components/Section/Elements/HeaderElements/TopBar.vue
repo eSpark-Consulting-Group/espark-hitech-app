@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-auto d-xl-block d-none">
           <ul class="border-list">
-            <li>Voxo ecommerc always free delivery</li>
+            <li>eSpark Hi-Tech Store always free delivery</li>
             <li>New Customer Extra 50% OFF</li>
           </ul>
         </div>

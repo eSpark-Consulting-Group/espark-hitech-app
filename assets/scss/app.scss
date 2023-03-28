@@ -1,5 +1,5 @@
 @import 'vendors/font-awesome.scss';
-// // utils scss files
+// utils scss files
 @import './utils/variables';
 @import './utils/mixin/common';
 @import './utils/mixin/breakpoints';
@@ -7,19 +7,19 @@
 @import './sliderBackground.scss';
 @import './pageTransitions.scss';
 
-// // base scss files
+// base scss files
 @import './base/reset';
 @import './base/typography';
 
-// // components scss files
+// components scss files
 // @import "components/alert";
 @import 'components/breadcrumb';
 @import 'components/button';
 @import 'components/dropdown';
-// @import "components/form";
+@import 'components/form';
 @import 'components/label';
 // @import "components/lazyload";
-// @import "components/modal";
+@import 'components/modal';
 @import 'components/ratio';
 @import 'components/slider';
 @import 'components/tab';
@@ -46,9 +46,9 @@
 @import 'layout/subscribe';
 
 // // pages
-// @import "pages/inner_page";
-// @import "pages/shop_page";
-// @import "pages/product_details";
+@import 'pages/inner_page';
+@import 'pages/shop_page';
+@import 'pages/product_details';
 // @import "pages/coming_soon";
 
 // // themes scss files

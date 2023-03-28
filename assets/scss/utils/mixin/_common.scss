@@ -82,6 +82,7 @@ $txt-color: $theme-font-color, $font-dark, $font-light, $font-dark-30;
 
     &:hover {
       color: var(--theme-color) !important;
+      border-color: var(--theme-color) !important;
 
       &::before {
         opacity: 0;

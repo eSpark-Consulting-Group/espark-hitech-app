@@ -22,16 +22,14 @@
             </li>
             <!-- <li v-if="$store.state.firebase.user === null"> -->
             <li>
-              <nuxt-link to="/page/login" class="d-block">Login</nuxt-link>
+              <nuxt-link to="/auth/login" class="d-block">Login</nuxt-link>
             </li>
-            <li>
-              <a @click.prevent="signout" to="/page/login" class="d-block"
-                >logout</a
-              >
-            </li>
+            <!-- <li>
+              <a @click.prevent="signout" to="/" class="d-block">logout</a>
+            </li> -->
             <!-- <li v-if="$store.state.firebase.user === null"> -->
             <li>
-              <nuxt-link to="/page/register" class="d-block"
+              <nuxt-link to="/auth/register" class="d-block"
                 >Register</nuxt-link
               >
             </li>
@@ -136,8 +134,10 @@
           <div class="cart-menu" v-else>
             <div class="cart-title">
               <h6>
-                <icons name="shopping-bag" size="sm" />
-                <span class="label label-theme rounded-pill">0</span>
+                <nuxt-link to="/cart">
+                  <icons name="shopping-bag" size="sm" />
+                  <span class="label label-theme rounded-pill">0</span>
+                </nuxt-link>
               </h6>
               <span class="d-md-none d-block" @click="toggleCart">
                 <i class="fas fa-arrow-right back-cart"></i>

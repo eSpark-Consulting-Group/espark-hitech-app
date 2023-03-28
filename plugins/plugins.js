@@ -1,4 +1,13 @@
 import Vue from 'vue'
+import { BootstrapVue } from 'bootstrap-vue'
+
+// Import Bootstrap and BootstrapVue CSS files (order is important)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// Make BootstrapVue available throughout your project
+Vue.use(BootstrapVue)
+
 // // import { constants } from "../static/const";
 // // import { VueMasonryPlugin } from "vue-masonry";
 // // import PayPal from "vue-paypal-checkout";

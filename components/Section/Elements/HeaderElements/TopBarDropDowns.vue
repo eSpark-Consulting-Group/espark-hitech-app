@@ -24,9 +24,14 @@
             <li>
               <a @click.prevent="signout" to="/page/login" class="d-block">logout</a>
             </li>
+            <!-- <li>
+              <a @click.prevent="signout" to="/" class="d-block">logout</a>
+            </li> -->
             <!-- <li v-if="$store.state.firebase.user === null"> -->
             <li>
-              <nuxt-link to="/page/register" class="d-block">Register</nuxt-link>
+              <nuxt-link to="/auth/register" class="d-block"
+                >Register</nuxt-link
+              >
             </li>
           </ul>
         </div>
@@ -52,48 +57,7 @@
 import icons from '~/assets/icons.vue'
 export default {
   components: { icons },
-  data() {
-    return {
-      selectedDropdowns: {
-        loginAndRegister: '',
-        currency: '',
-        languages: '',
-      },
-      selectedLanguage: '',
-      dropdowns: {
-        // loginAndRegister: {
-        //   title: 'Login & Register',
-        //   active: false,
-        //   links: ['login', 'register'],
-        // },
-        currency: {
-          title: 'Currency',
-          active: false,
-          links: ['Dollar', 'Rupee', 'Euro'],
-        },
-        languages: {
-          title: 'Languages',
-          active: false,
-          // links: this.$i18n.locales,
-          links: [
-            {
-              code: 'en',
-              name: 'English',
-            },
-            {
-              code: 'es',
-              name: 'Español',
-            },
-            {
-              code: 'fr',
-              name: 'Français',
-            },
-          ],
-        },
-      },
-      dropdownKeys: [],
-    }
-  },
+
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
@@ -103,55 +67,12 @@ export default {
     },
   },
   methods: {
-    toggleDropdown(key) {
-      this.dropdowns[key].active = !this.dropdowns[key].active
-    },
-    changeLanguage(locale) {
-      this.$i18n.setLocale(locale.code)
-    },
     isLocaleSelected(locale) {
       return this.$i18n.locale === locale.code
-    },
-    handleDropdown(key, link) {
-      this.dropdowns[key].active = false
-      this.selectedDropdowns[key] != link &&
-        (this.selectedDropdowns[key] = link)
-      if (key === 'currency') {
-        // this.$store.dispatch("layout/setCurrency", { currency: link });
-      }
-      // this.$store.dispatch("products/currencyChanged");
     },
     setLanguage(language) {
       this.$i18n.setLocale(language)
     },
-  },
-  watch: {
-    selectedDropdowns: {
-      handler: function () {
-        if (
-          this.selectedDropdowns.languages != '' &&
-          this.selectedLanguage != this.selectedDropdowns.languages
-        ) {
-          this.selectedLanguage = this.selectedDropdowns.languages
-        }
-      },
-      deep: true,
-    },
-    selectedLanguage: function () {
-      this.$router.replace(
-        this.switchLocalePath(this.selectedDropdowns.languages)
-      )
-      // this.$store.dispatch("layout/setLanguage", {
-      //   languageCode: this.selectedDropdowns.languages,
-      // });
-    },
-  },
-  created() {
-    this.dropdownKeys = Object.keys(this.dropdowns)
-    // this.dropdowns.currency.links = [];
-    // this.currencyList.forEach((item) => {
-    //   this.dropdowns.currency.links.push(item.currency);
-    // });
   },
 }
 </script>
