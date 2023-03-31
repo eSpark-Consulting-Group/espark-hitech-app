@@ -1,3 +1,7 @@
 {
-    "name": "English"
+    "name": "English",
+    "HOME": "Home",
+    "Shop": "Shop",
+    "BLOG": "Blog",
+    "CONTACT US": "Contact Us"
 }

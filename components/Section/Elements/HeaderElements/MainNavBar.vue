@@ -32,7 +32,7 @@
               <client-only>
                 <!-- {{ items.path ? true : false }} -->
                 <nuxt-link v-if="items.path" :to="items.path">
-                  {{ items.title }}
+                  {{ $t(items.title) }}
                 </nuxt-link>
                 <a
                   v-else
