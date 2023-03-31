@@ -163,7 +163,7 @@ export default {
           items: [
             {
               title: 'Your Orders',
-              path: '/pages/user_dashboard',
+              path: '/cart',
             },
             {
               title: 'Your Account',
@@ -171,7 +171,7 @@ export default {
             },
             {
               title: 'Track Orders',
-              path: '/pages/order_tracking',
+              path: '/order_tracking',
             },
             {
               title: 'Your Wishlist',
@@ -180,6 +180,10 @@ export default {
             {
               title: 'Shopping FAQS',
               path: '/Support/FAQs',
+            },
+            {
+              title: 'Order Success ',
+              path: '/order_success',
             },
           ],
         },

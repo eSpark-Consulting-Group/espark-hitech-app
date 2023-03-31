@@ -5,6 +5,7 @@ Vue.mixin({
   methods: {
     ...mapActions({
       setBreadcrumbs: 'breadcrumbs/setBreadcrumbs',
+      setOrderView: 'breadcrumbs/setOrderView',
     }),
     redirect(path) {
       this.$router.push(path)
