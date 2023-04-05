@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col">
           <div class="title text-center">
-            <h5>{{ SpecialOffer }}</h5>
-            <h2>{{ HurryUp }}</h2>
+            <h5>{{ $t(SpecialOffer) }}</h5>
+            <h2>{{ $t(HurryUp) }}</h2>
           </div>
           <div class="tab-wrap">
             <ul class="nav nav-tabs" id="myTab">

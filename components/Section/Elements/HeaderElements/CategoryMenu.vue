@@ -7,7 +7,7 @@
         class="btn btn-solid-default toggle-category d-sm-block d-none"
       >
         <!-- {{ $const.Allcategories }} -->
-        {{ message }}
+        {{ $t(message) }}
         <!-- <client-side>
           
         </client-side> -->

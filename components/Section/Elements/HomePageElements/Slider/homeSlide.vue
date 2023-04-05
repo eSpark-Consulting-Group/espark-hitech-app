@@ -150,7 +150,7 @@
         type="button"
         class="btn btn-solid-default"
       >
-        {{ Showdetails }}
+        {{$t(Showdetails) }}
       </button>
     </div>
   </div>

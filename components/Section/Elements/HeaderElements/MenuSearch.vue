@@ -22,7 +22,7 @@
             </li>
             <!-- <li v-if="$store.state.firebase.user === null"> -->
             <li>
-              <nuxt-link to="/auth/login" class="d-block">Login</nuxt-link>
+              <nuxt-link to="/auth/login" class="d-block">{{$t('Login')}}</nuxt-link>
             </li>
             <!-- <li>
               <a @click.prevent="signout" to="/" class="d-block">logout</a>
@@ -30,7 +30,7 @@
             <!-- <li v-if="$store.state.firebase.user === null"> -->
             <li>
               <nuxt-link to="/auth/register" class="d-block"
-                >Register</nuxt-link
+                >{{$t('Register')}}</nuxt-link
               >
             </li>
           </ul>
