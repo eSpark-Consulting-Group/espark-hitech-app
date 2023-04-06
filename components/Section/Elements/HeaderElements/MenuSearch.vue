@@ -83,7 +83,9 @@
           class="btn btn-solid-default btn-spacing"
         >
           <icons name="cart" color="light" size="sm" />
-          <span class="ml-4">{{ currencySymbol }} {{ cartTotal }}</span>
+          <div class="ml-1">
+            {{ $n(cartTotal, 'currency') }}
+          </div>
         </button>
         <div class="onhover-div">
           <div class="cart-menu" v-if="getterCartItems.length != 0">
@@ -107,7 +109,7 @@
                   <div class="media-body">
                     <h6>{{ item.name }}</h6>
                     <div class="qty-with-price">
-                      <span>{{ currencySymbol }} {{ item.price }}</span>
+                      <span> {{ $n(item.price, 'currency') }}</span>
                       <span>
                         <input
                           type="number"
@@ -156,8 +158,8 @@
           </div>
           <div class="cart-btn" v-if="getterCartItems.length != 0">
             <h6 class="cart-total">
-              <span>{{ Total }}:</span> {{ currencySymbol }}
-              {{ cartTotal }}
+              <span>{{ Total }}:</span>
+              {{ $n(cartTotal, 'currency') }}
             </h6>
             <a href="javascript:void(0)" class="btn btn-solid-default btn-block"
               >{{ ProceedTOPayment }}

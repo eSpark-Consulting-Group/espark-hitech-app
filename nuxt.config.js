@@ -89,6 +89,22 @@ export default {
     strategy: 'no_prefix',
     vueI18n: {
       fallbackLocale: 'en',
+      numberFormats: {
+        en: {
+          currency: {
+            style: 'currency',
+            currency: 'PKR',
+          },
+        },
+        zh: {
+          currency: {
+            style: 'currency',
+            currency: 'USD',
+            currencyDisplay: 'symbol',
+            notation: 'standard',
+          },
+        },
+      }
     },
   },
 
