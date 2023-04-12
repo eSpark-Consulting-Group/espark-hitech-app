@@ -37,7 +37,7 @@
           >
             <div class="footer-links">
               <div class="footer-title" @click="toggleFooterMenu(headings.id)">
-                <h3>{{ headings.title }}</h3>
+                <h3>{{ $t(headings.title) }}</h3>
               </div>
               <div
                 class="footer-content"
@@ -46,7 +46,7 @@
                 <ul>
                   <li v-for="(links, index) in headings.items" :key="index">
                     <nuxt-link :to="{ path: links.path }" class="font-dark">{{
-                      links.title
+                      $t(links.title)
                     }}</nuxt-link>
                   </li>
                 </ul>
@@ -95,7 +95,7 @@ export default {
           linkClasses: 'col-xl-2 col-lg-3 col-md-4 col-sm-6',
           items: [
             {
-              title: 'Home',
+              title: 'HOME',
               path: '/',
             },
             {
@@ -107,11 +107,11 @@ export default {
               path: '/about_us',
             },
             {
-              title: 'Blog',
+              title: 'BLOG',
               path: '/blogs',
             },
             {
-              title: 'Contact',
+              title: 'CONTACT US',
               path: '/contact_us',
             },
           ],
@@ -182,7 +182,7 @@ export default {
               path: '/Support/FAQs',
             },
             {
-              title: 'Order Success ',
+              title: 'Order Success',
               path: '/order_success',
             },
           ],

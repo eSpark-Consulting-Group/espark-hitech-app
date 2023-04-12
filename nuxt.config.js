@@ -70,12 +70,42 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
+  },
+
+  i18n: {
+    locales: [
+      { code: 'en', label: 'English', iso: 'en-US', file: 'en.json' },
+      { code: 'zh', label: '中国人', iso: 'fr-CN', file: 'zh.json' },
+    ],
+    langDir: 'locales/',
+    defaultLocale: 'en',
+    strategy: 'no_prefix',
+    vueI18n: {
+      fallbackLocale: 'en',
+      numberFormats: {
+        en: {
+          currency: {
+            style: 'currency',
+            currency: 'PKR',
+          },
+        },
+        zh: {
+          currency: {
+            style: 'currency',
+            currency: 'USD',
+            currencyDisplay: 'symbol',
+            notation: 'standard',
+          },
+        },
+      }
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

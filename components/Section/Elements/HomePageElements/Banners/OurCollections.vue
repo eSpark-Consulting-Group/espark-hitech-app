@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="title text-center">
-            <h5>{{ JustForYou }}</h5>
-            <h2>{{ OurCollection }}</h2>
+            <h5>{{ $t(JustForYou) }}</h5>
+            <h2>{{ $t(OurCollection) }}</h2>
           </div>
           <div class="product-wrapper slide-6">
             <VueSlickCarousel v-bind="settings" ref="brandCarousel">

@@ -16,8 +16,8 @@
               </svg>
             </div>
             <div class="service-content">
-              <h3 class="mb-2">{{ service.service }}</h3>
-              <span class="font-light">{{ service.description }}</span>
+              <h3 class="mb-2">{{ $t(service.service) }}</h3>
+              <span class="font-light">{{ $t(service.description) }}</span>
             </div>
           </div>
         </div>
