@@ -3,7 +3,7 @@
     <div class="main-footer">
       <div class="container">
         <div class="row gy-4">
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-xl-4 col-lg-6 col-md-8">
             <div class="footer-contact">
               <BrandLogo />
               <ul class="contact-lists">
@@ -116,44 +116,44 @@ export default {
             },
           ],
         },
-        {
-          id: 1,
-          menuOpen: true,
-          click: false,
-          title: 'Categories',
-          linkClasses: 'col-xl-2 col-lg-3 col-md-4 col-sm-6',
+        // {
+        //   id: 1,
+        //   menuOpen: true,
+        //   click: false,
+        //   title: 'Categories',
+        //   linkClasses: 'col-xl-2 col-lg-3 col-md-4 col-sm-6',
 
-          items: [
-            {
-              title: 'Audio Products',
-              path: '/shop/audio-products',
-            },
-            {
-              title: 'Battery Products',
-              path: '/shop/batter',
-            },
-            {
-              title: 'Cable Assemblies',
-              path: '/shop/cable-assemblies',
-            },
-            {
-              title: 'Computer Equipment',
-              path: '/shop/computer-equipment',
-            },
-            {
-              title: 'Capacitors',
-              path: '/shop/capacitors',
-            },
-            {
-              title: 'Connectors',
-              path: '/shop/connectors',
-            },
-            {
-              title: 'Development Kits',
-              path: '/shop/development-kits',
-            },
-          ],
-        },
+        //   items: [
+        //     {
+        //       title: 'Audio Products',
+        //       path: '/shop/audio-products',
+        //     },
+        //     {
+        //       title: 'Battery Products',
+        //       path: '/shop/batter',
+        //     },
+        //     {
+        //       title: 'Cable Assemblies',
+        //       path: '/shop/cable-assemblies',
+        //     },
+        //     {
+        //       title: 'Computer Equipment',
+        //       path: '/shop/computer-equipment',
+        //     },
+        //     {
+        //       title: 'Capacitors',
+        //       path: '/shop/capacitors',
+        //     },
+        //     {
+        //       title: 'Connectors',
+        //       path: '/shop/connectors',
+        //     },
+        //     {
+        //       title: 'Development Kits',
+        //       path: '/shop/development-kits',
+        //     },
+        //   ],
+        // },
         {
           id: 2,
           menuOpen: true,

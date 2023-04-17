@@ -2,12 +2,12 @@
   <div>
     <LandingPageSlider :slides="slides" />
     <CustomerServices serviceClasses="service-style-2 section-b-space" />
-    <TopBanner />
+    <!-- <TopBanner /> -->
     <!-- :banners="
         bannersList.filter((item) => item.subtype === 'topbanner')[0].banners
       "
     /> -->
-    <OurCollections />
+    <!-- <OurCollections /> -->
     <!-- :products="productsList" -->
     <TopSellingCarousel />
     <hurryUpBanner />

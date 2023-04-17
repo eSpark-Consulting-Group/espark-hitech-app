@@ -150,7 +150,7 @@ export default {
           path: '/',
         },
         {
-          title: 'Shop',
+          title: 'Product',
           active: false,
           path: '/shop',
         },

@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col">
           <div class="title text-center">
-            <h5>{{ $t(SpecialOffer) }}</h5>
-            <h2>{{ $t(HurryUp) }}</h2>
+            <h5>{{ $t( JustForYou) }}</h5>
+            <h2>{{ $t(OurCollection) }}</h2>
           </div>
           <div class="tab-wrap">
             <ul class="nav nav-tabs" id="myTab">
@@ -50,6 +50,8 @@ export default {
   },
   data() {
     return {
+      JustForYou: 'Just For You',
+      OurCollection: 'Our Collection',
       HurryUp: 'Hurry up!',
       SpecialOffer: 'Special Offer',
       tabList: [

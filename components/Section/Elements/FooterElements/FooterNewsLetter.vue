@@ -1,7 +1,10 @@
 <template>
   <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
     <div class="footer-newsletter">
-      <h3>Let's stay in touch</h3>
+      <h3>Let's Connect</h3>
+      <p class="font-dark mb-0">
+          Keep up to date with our latest news and special offers.
+        </p>
       <form
         action="https://pixelstrap.us19.list-manage.com/subscribe/post?u=5a128856334b598b395f1fc9b&amp;id=082f74cbda"
         class="form-newsletter needs-validation"
@@ -21,15 +24,44 @@
             <i class="fas fa-arrow-right"></i>
           </span>
         </div>
-        <p class="font-dark mb-0">
-          Keep up to date with our latest news and special offers.
-        </p>
+        
+        <h3 class="mb-0">Follow us</h3>
+        
+        <div class="social-icons">
+          <a href="www.facebook.com">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="www.twitter.com">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="www.facebook.com">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+          
+        </div>
       </form>
     </div>
   </div>
 </template>
 <script>
+import icons from '../../../../assets/icons.vue'
 export default {
   props: ['formControlColor'],
+  components:{icons}
 }
 </script>
+
+<style scoped>
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+
+</style>
