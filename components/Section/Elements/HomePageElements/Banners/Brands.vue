@@ -3,6 +3,10 @@
     <div class="container">
       <div class="row">
         <div class="col">
+          <div class="title text-center">
+          
+            <h2>{{ $t(Manufacture) }}</h2>
+          </div>
           <div class="brand-slider">
             <VueSlickCarousel v-bind="settings" ref="brandCarousel">
               <div v-for="(image, index) in images" :key="index">
@@ -29,6 +33,7 @@ export default {
   components: { VueSlickCarousel },
   data() {
     return {
+      Manufacture: 'Feature Manufacture',
       images: [
         'brand/1.png',
         'brand/2.png',

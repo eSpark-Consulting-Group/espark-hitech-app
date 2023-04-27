@@ -4,7 +4,11 @@
       <div class="row gy-3">
         <div class="col-md-6">
           <ul>
-            <li class="font-dark">We accept:</li>
+            <li class="font-dark sub-f">Privacy </li>
+            <li class="font-dark sub-f">|</li>
+            <li class="font-dark sub-f">Terms & Condition</li>
+            <li class="font-dark sub-f">|</li>
+            <li class="font-dark sub-f">We accept:</li>
             <li>
               <a href="javascript:void(0)">
                 <img
@@ -48,3 +52,9 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.sub-f{
+    margin-left: 0;
+}
+</style>
