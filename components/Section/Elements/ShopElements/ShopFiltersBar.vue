@@ -1,5 +1,5 @@
 <template>
-  <div class="col-lg-3 col-md-4">
+  <div class="col-xxl-2 col-lg-3 col-md-4">
     <!-- :class="[{ show: showFilters && !isMobileView }]" -->
     <div class="category-option">
       <!-- <div class="button-close mb-3">

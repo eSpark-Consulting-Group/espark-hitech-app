@@ -40,13 +40,13 @@
           />
         </a>
       </div>
-      <div class="label-block" v-if="product.new || product.discount">
+      <!-- <div class="label-block" v-if="product.new || product.discount">
         <span class="label label-black" v-if="product.new">{{ NEW }}</span>
         <span class="label label-theme" v-if="product.discount"
           >{{ product.discount }}% {{ OFF }}</span
         >
-      </div>
-      <div class="cart-wrap">
+      </div> -->
+      <!-- <div class="cart-wrap">
         <ul>
           <li>
             <a
@@ -87,12 +87,12 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
     <div class="product-details">
       <div class="rating-details">
-        <span class="font-light grid-content">{{ product.category }}</span>
-        <ul class="rating mt-0 d-flex">
+        <!-- <span class="font-light grid-content">{{ product.category }}</span> -->
+        <!-- <ul class="rating mt-0 d-flex">
           <li v-for="(stars, index) in product.ratingStars" :key="index">
             <i class="fas fa-star theme-color"></i>
           </li>
@@ -102,7 +102,7 @@
           >
             <i class="fas fa-star"></i>
           </li>
-        </ul>
+        </ul> -->
       </div>
       <div class="main-price">
         <a
@@ -112,13 +112,13 @@
         >
           <h5>{{ product.name }}</h5>
         </a>
-        <div class="listing-content">
+        <!-- <div class="listing-content">
           <span class="font-light">{{ product.size }}</span>
           <p class="font-light">{{ product.description }}</p>
-        </div>
-        <h3 class="theme-color">
+        </div> -->
+        <!-- <h3 class="theme-color">
           {{ selectedCurrencySymbol }}{{ product.price }}
-        </h3>
+        </h3> -->
         <button @click="toggleCartModal(product)" class="btn listing-content">
           Addtocart
         </button>
@@ -168,3 +168,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.product-box .product-details {
+  margin-top: 0px !important;
+}
+</style>

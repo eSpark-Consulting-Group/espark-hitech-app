@@ -12,11 +12,11 @@
             :showSidebarCarousel="showSidebarCarousel"
             :isMobileView="isMobileView" -->
         <div
-          class="col-lg-9 col-12 ratio_30"
+          class="col-xxl-10 col-lg-9 col-12 ratio_30"
           :class="[{ 'col-lg-12': showFilters }]"
         >
           <!-- <slot name="topBanner"></slot> -->
-          <TopShopBanner />
+          <!-- <TopShopBanner /> -->
           <div class="hide-button d-flex mb-3" v-if="filterHide">
             <button
               class="danger-button danger-center btn btn-sm filter-btn"
@@ -36,7 +36,6 @@
                 @click.prevent="toggleFilterBar"
               >
                 Icon
-                <!-- <vue-feather type="align-left"></vue-feather>Filter -->
               </button>
             </div>
 
@@ -82,7 +81,10 @@
             :class="[
               { 'row-cols-2': cardsLayout == 2 },
               { 'row-cols-md-3 row-cols-2': cardsLayout == 3 },
-              { 'row-cols-xl-4 row-cols-md-3 row-cols-2': cardsLayout == 4 },
+              {
+                'row-cols-xxl-4 row-cols-xl-4 row-cols-md-4 row-cols-2':
+                  cardsLayout == 4,
+              },
               {
                 'row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-2 ':
                   cardsLayout == 5,
@@ -218,8 +220,84 @@ export default {
     changeCardLayout(toLayout) {
       this.cardsLayout = toLayout
     },
+    changePage(toPage) {
+      if (toPage > 0 && toPage <= this.totalPages) {
+        this.currentPage = toPage
+        this.calculatePages()
+      }
+    },
+    calculatePages() {
+      this.pages = []
+      var startPage, endPage
+      if (this.currentPage == 1) {
+        startPage = 1
+        endPage = 4
+      } else {
+        startPage = this.currentPage - 1
+        endPage = this.currentPage + 2
+      }
+      for (var i = startPage; i < endPage; i++) {
+        if (i <= this.totalPages) {
+          this.pages.push(i)
+        }
+      }
+    },
+  },
+  mounted() {
+    this.totalCards = this.cards.length
+    this.totalPages = Math.ceil(this.totalCards / this.cardsToShow)
+    this.calculatePages()
+    if (this.setCardsLayout != undefined) this.cardsLayout = this.setCardsLayout
   },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+@media (min-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+  .row-cols-md-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+  .row-cols-md-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+  .row-cols-l-4 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 100%;
+  }
+  .row-cols-xxl-4 > * {
+    flex: 0 0 auto;
+    width: 16.5%;
+  }
+}
+
+.container {
+  margin: 0px;
+  padding: 0 1.5rem 0 1.5rem;
+}
+</style>
