@@ -2,7 +2,12 @@
   <section class="section-b-space">
     <div class="container">
       <div class="row">
-        <ShopFiltersbar />
+        <ShopFiltersbar :showFilterBar="showFilters"
+          v-if="filterbarPosition != 'right'"
+          :filterBarClasses="filterBarClasses"
+          :showSidebarCarousel="showSidebarCarousel"
+          :isMobileView="isMobileView"
+        />
         <!-- :showRating="showRating"
             :showPriceRange2="showPriceRange2"
             :showSizeListInComponent="showSizeListInComponent"
@@ -35,7 +40,7 @@
                 class="danger-button danger-center btn btn-sm filter-btn"
                 @click.prevent="toggleFilterBar"
               >
-                Icon
+                Filter
               </button>
             </div>
 
@@ -144,12 +149,19 @@
             </ul>
           </nav>
         </div>
+        <ShopFiltersbar :showFilterBar="showFilters"
+          v-if="filterbarPosition == 'right'"
+          :filterBarClasses="filterBarClasses"
+          :showSidebarCarousel="showSidebarCarousel"
+          :isMobileView="isMobileView"
+        />
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import { mapState} from "vuex";
 import ProductBox from '../../components/Section/Elements/ProductBox/ProductBox2.vue'
 import ProBoxSkeletonLoader from '../../components/Section/Elements/ProductBox/ProBoxSkeletonLoader.vue'
 import products from '../../static/DummyData/products.json'
@@ -173,7 +185,7 @@ export default {
     'setCardsLayout',
     'showSidebarCarousel',
     'filterbarPosition',
-    // 'filterBarClasses',
+    'filterBarClasses',
     'filterHide',
     'showSizeListInComponent',
     'showRating',
@@ -195,9 +207,19 @@ export default {
       currentPage: 1,
       totalPages: 2,
       initCards: products.data,
-      showFilters: false,
+      // showFilters: false,
       filtersList: [],
     }
+  },
+  computed: {
+    // ...mapGetters({
+    //   initCards: "filters/cardsToReturn",
+    // }),
+    ...mapState({
+      showFilters: (state) => state.clickEvents.shopFilterBar,
+      // filtersList: (state) => state.filters.filtersList,
+      // appliedFiltersList: (state) => state.filters.appliedFilters,
+    }),
   },
   watch: {
     initCards: function () {
@@ -241,6 +263,11 @@ export default {
           this.pages.push(i)
         }
       }
+    },
+    toggleFilterBar() {
+      if (this.filterHide)
+        this.$store.dispatch("clickEvents/toggleShopFilterBarNoOverlay");
+      else this.$store.dispatch("clickEvents/toggleShopFilterBar");
     },
   },
   mounted() {

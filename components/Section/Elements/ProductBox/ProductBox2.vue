@@ -112,16 +112,16 @@
         >
           <h5>{{ product.name }}</h5>
         </a>
-        <!-- <div class="listing-content">
+        <div class="listing-content">
           <span class="font-light">{{ product.size }}</span>
           <p class="font-light">{{ product.description }}</p>
-        </div> -->
+        </div>
         <!-- <h3 class="theme-color">
           {{ selectedCurrencySymbol }}{{ product.price }}
         </h3> -->
-        <button @click="toggleCartModal(product)" class="btn listing-content">
+        <!-- <button @click="toggleCartModal(product)" class="btn listing-content">
           Addtocart
-        </button>
+        </button> -->
       </div>
     </div>
   </div>

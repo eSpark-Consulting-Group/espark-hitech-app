@@ -10,7 +10,7 @@
                 <li>
                   <span>
                     <b>Phone :</b>
-                    <span class="font-light"> +92(333- 6006055)</span>
+                    <span class="font-light"> +923232788259</span>
                   </span>
                 </li>
                 <li>

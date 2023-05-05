@@ -39,11 +39,11 @@
       "images": [
         {
           "imageId": 111,
-          "src": "fashion/product/front/1.jpg"
+          "src": "Dummy/cap.jpg"
         },
         {
           "imageId": 112,
-          "src": "fashion/product/back/1.jpg"
+          "src": "Dummy/cap2.jpg"
         },
         {
           "imageId": 113,
@@ -90,11 +90,11 @@
       "images": [
         {
           "imageId": 111,
-          "src": "fashion/product/front/3.jpg"
+          "src": "Dummy/resistor.jpg"
         },
         {
           "imageId": 112,
-          "src": "fashion/product/back/3.jpg"
+          "src": "Dummy/res2.jpg"
         },
         {
           "imageId": 113,
