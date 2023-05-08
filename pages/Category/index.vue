@@ -2,7 +2,13 @@
   <section class="section-b-space">
     <div class="container">
       <div class="row">
-        <ShopFiltersbar />
+        <ShopFiltersbar
+          :showFilterBar="showFilters"
+          v-if="filterbarPosition != 'right'"
+          :filterBarClasses="filterBarClasses"
+          :showSidebarCarousel="showSidebarCarousel"
+          :isMobileView="isMobileView"
+        />
         <!-- :showRating="showRating"
             :showPriceRange2="showPriceRange2"
             :showSizeListInComponent="showSizeListInComponent"
@@ -12,11 +18,11 @@
             :showSidebarCarousel="showSidebarCarousel"
             :isMobileView="isMobileView" -->
         <div
-          class="col-lg-9 col-12 ratio_30"
+          class="col-xxl-10 col-lg-9 col-12 ratio_30"
           :class="[{ 'col-lg-12': showFilters }]"
         >
           <!-- <slot name="topBanner"></slot> -->
-          <TopShopBanner />
+          <!-- <TopShopBanner /> -->
           <div class="hide-button d-flex mb-3" v-if="filterHide">
             <button
               class="danger-button danger-center btn btn-sm filter-btn"
@@ -35,8 +41,7 @@
                 class="danger-button danger-center btn btn-sm filter-btn"
                 @click.prevent="toggleFilterBar"
               >
-                Icon
-                <!-- <vue-feather type="align-left"></vue-feather>Filter -->
+                Filter
               </button>
             </div>
 
@@ -82,7 +87,10 @@
             :class="[
               { 'row-cols-2': cardsLayout == 2 },
               { 'row-cols-md-3 row-cols-2': cardsLayout == 3 },
-              { 'row-cols-xl-4 row-cols-md-3 row-cols-2': cardsLayout == 4 },
+              {
+                'row-cols-xxl-4 row-cols-xl-4 row-cols-md-4 row-cols-2':
+                  cardsLayout == 4,
+              },
               {
                 'row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-2 ':
                   cardsLayout == 5,
@@ -142,12 +150,20 @@
             </ul>
           </nav>
         </div>
+        <ShopFiltersbar
+          :showFilterBar="showFilters"
+          v-if="filterbarPosition == 'right'"
+          :filterBarClasses="filterBarClasses"
+          :showSidebarCarousel="showSidebarCarousel"
+          :isMobileView="isMobileView"
+        />
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import ProductBox from '../../components/Section/Elements/ProductBox/ProductBox2.vue'
 import ProBoxSkeletonLoader from '../../components/Section/Elements/ProductBox/ProBoxSkeletonLoader.vue'
 import products from '../../static/DummyData/products.json'
@@ -171,7 +187,7 @@ export default {
     'setCardsLayout',
     'showSidebarCarousel',
     'filterbarPosition',
-    // 'filterBarClasses',
+    'filterBarClasses',
     'filterHide',
     'showSizeListInComponent',
     'showRating',
@@ -193,9 +209,19 @@ export default {
       currentPage: 1,
       totalPages: 2,
       initCards: products.data,
-      showFilters: false,
+      // showFilters: false,
       filtersList: [],
     }
+  },
+  computed: {
+    // ...mapGetters({
+    //   initCards: "filters/cardsToReturn",
+    // }),
+    ...mapState({
+      showFilters: (state) => state.clickEvents.shopFilterBar,
+      // filtersList: (state) => state.filters.filtersList,
+      // appliedFiltersList: (state) => state.filters.appliedFilters,
+    }),
   },
   watch: {
     initCards: function () {
@@ -210,7 +236,7 @@ export default {
     // this.$store.dispatch("filters/setCategory", this.category);
     this.cards = this.initCards.filter((item) => item.category != 'vr')
     this.setBreadcrumbs({
-      pageParent: 'Shop - Listing',
+      pageParent: 'Category - Listing',
       pageName: 'Electronic Store',
     })
   },
@@ -218,8 +244,97 @@ export default {
     changeCardLayout(toLayout) {
       this.cardsLayout = toLayout
     },
+    changePage(toPage) {
+      if (toPage > 0 && toPage <= this.totalPages) {
+        this.currentPage = toPage
+        this.calculatePages()
+      }
+    },
+    calculatePages() {
+      this.pages = []
+      var startPage, endPage
+      if (this.currentPage == 1) {
+        startPage = 1
+        endPage = 4
+      } else {
+        startPage = this.currentPage - 1
+        endPage = this.currentPage + 2
+      }
+      for (var i = startPage; i < endPage; i++) {
+        if (i <= this.totalPages) {
+          this.pages.push(i)
+        }
+      }
+    },
+    toggleFilterBar() {
+      if (this.filterHide)
+        this.$store.dispatch('clickEvents/toggleShopFilterBarNoOverlay')
+      else this.$store.dispatch('clickEvents/toggleShopFilterBar')
+    },
+  },
+  mounted() {
+    this.totalCards = this.cards.length
+    this.totalPages = Math.ceil(this.totalCards / this.cardsToShow)
+    this.calculatePages()
+    if (this.setCardsLayout != undefined) this.cardsLayout = this.setCardsLayout
   },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.row-cols-2 > * {
+  flex: 0 0 auto;
+  width: 20%;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+  .row-cols-2 > * {
+    flex: 0 0 auto;
+    width: 16.5%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+  .row-cols-md-4 > * {
+    flex: 0 0 auto;
+    width: 16.5%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+  .row-cols-md-4 > * {
+    flex: 0 0 auto;
+    width: 16.5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+  .row-cols-l-4 > * {
+    flex: 0 0 auto;
+    width: 16.5%;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 100%;
+  }
+  .row-cols-xxl-4 > * {
+    flex: 0 0 auto;
+    width: 10.5%;
+  }
+}
+
+.container {
+  margin: 0px;
+  padding: 0 1.5rem 0 1.5rem;
+}
+</style>

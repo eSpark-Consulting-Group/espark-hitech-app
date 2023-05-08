@@ -152,7 +152,7 @@ export default {
         {
           title: 'Product',
           active: false,
-          path: '/shop',
+          path: '/category',
         },
 
         // {

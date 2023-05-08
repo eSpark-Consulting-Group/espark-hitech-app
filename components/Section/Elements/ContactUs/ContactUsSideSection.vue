@@ -53,7 +53,7 @@ export default {
       ActualAddress:
         ' 401/B 4th Floor, Blossom Trade Centre, Block 1 Gulistan-e-Johar, Karachi, 74300',
       PhoneNumber: 'Phone Number :',
-      num1: '+92(333- 6006055)',
+      num1: '+923232788259',
 
       ThemeEmail: 'support@espark-hitech.com',
 

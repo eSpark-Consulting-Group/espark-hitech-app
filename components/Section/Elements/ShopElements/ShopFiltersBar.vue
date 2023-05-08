@@ -1,12 +1,15 @@
 <template>
-  <div class="col-lg-3 col-md-4">
-    <!-- :class="[{ show: showFilters && !isMobileView }]" -->
-    <div class="category-option">
-      <!-- <div class="button-close mb-3">
+  <div class="col-xxl-2 col-lg-3 col-md-4"
+    :class="[filterBarClasses, { show: showFilters }]">  
+    <!-- && !isMobileView  -->
+    <div class="category-option" :class="[{ show: showFilters }]">
+      <div class="button-close mb-3  ">
         <button class="btn p-0" @click.prevent="toggleFilterBar">
-          Close icon
+          <!-- <i class="fa-solid fa-arrow-left"></i> -->
+          <iconsVue name="left-arrow" size="sm"/>
+         <span class="ms-2">Close</span> 
         </button>
-      </div> -->
+      </div>
       <FilterBars :items="initCards.map((r) => r.brand)" title="Brands" />
       <FilterBars :items="initCards.map((r) => r.brand)" title="Category" />
     </div>
@@ -14,10 +17,13 @@
 </template>
 
 <script>
+import { mapState} from "vuex";
 import products from '../../../../static/DummyData/products.json'
 import FilterBars from './FilterBars.vue'
+import iconsVue from "../../../../assets/icons.vue";
 export default {
   props: [
+    'filterBarClasses',
     'showFilterBar',
     'showSidebarCarousel',
     'showSizeListInComponent',
@@ -25,7 +31,7 @@ export default {
     'showPriceRange2',
     'isMobileView',
   ],
-  components: { FilterBars },
+  components: { FilterBars,iconsVue },
   data() {
     return {
       showSizeList: false,
@@ -48,7 +54,7 @@ export default {
       selectedCategory: 'all',
       selectedDiscount: 0,
       // categories: [],
-      showFilters: true,
+      // showFilters: true,
       initCards: products.data,
     }
   },
@@ -56,11 +62,11 @@ export default {
     categories() {
       return this.initCards.map((product) => product.type)
     },
-    // ...mapState({
-    //   showFilters: (state) => state.clickEvents.shopFilterBar,
-    //   allProducts: (state) => state.filters.allCards,
-    //   appliedFilters: (state) => state.filters.filtersList,
-    // }),
+    ...mapState({
+      showFilters: (state) => state.clickEvents.shopFilterBar,
+      // allProducts: (state) => state.filters.allCards,
+      // appliedFilters: (state) => state.filters.filtersList,
+    }),
     // ...mapGetters({
     //   maxPrice: "filters/maxPrice",
     //   initCards: "filters/cardsToReturn",
@@ -213,5 +219,12 @@ export default {
 
 input[type='checkbox']:checked ~ div {
   box-shadow: 0 0 0 2px rgb(0, 0, 0, 0.8);
+}
+
+.category-option .button-close button {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #212529;
 }
 </style>
