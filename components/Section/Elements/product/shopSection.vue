@@ -5,7 +5,7 @@
         <div class="col-12">
           <div class="details-items">
             <div class="row g-4">
-              <productSlider />
+              <productSlider class="d-flex justify-content-end" />
               <productRightSection :product="product" />
             </div>
           </div>

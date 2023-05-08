@@ -110,3 +110,12 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+@media (min-width: 992px) {
+  .col-lg-10 {
+    flex: 0 0 auto;
+    width: 63.33333333%;
+  }
+}
+</style>
