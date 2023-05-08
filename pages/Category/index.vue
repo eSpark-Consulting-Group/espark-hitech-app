@@ -2,7 +2,8 @@
   <section class="section-b-space">
     <div class="container">
       <div class="row">
-        <ShopFiltersbar :showFilterBar="showFilters"
+        <ShopFiltersbar
+          :showFilterBar="showFilters"
           v-if="filterbarPosition != 'right'"
           :filterBarClasses="filterBarClasses"
           :showSidebarCarousel="showSidebarCarousel"
@@ -149,7 +150,8 @@
             </ul>
           </nav>
         </div>
-        <ShopFiltersbar :showFilterBar="showFilters"
+        <ShopFiltersbar
+          :showFilterBar="showFilters"
           v-if="filterbarPosition == 'right'"
           :filterBarClasses="filterBarClasses"
           :showSidebarCarousel="showSidebarCarousel"
@@ -161,7 +163,7 @@
 </template>
 
 <script>
-import { mapState} from "vuex";
+import { mapState } from 'vuex'
 import ProductBox from '../../components/Section/Elements/ProductBox/ProductBox2.vue'
 import ProBoxSkeletonLoader from '../../components/Section/Elements/ProductBox/ProBoxSkeletonLoader.vue'
 import products from '../../static/DummyData/products.json'
@@ -234,7 +236,7 @@ export default {
     // this.$store.dispatch("filters/setCategory", this.category);
     this.cards = this.initCards.filter((item) => item.category != 'vr')
     this.setBreadcrumbs({
-      pageParent: 'Shop - Listing',
+      pageParent: 'Category - Listing',
       pageName: 'Electronic Store',
     })
   },
@@ -266,8 +268,8 @@ export default {
     },
     toggleFilterBar() {
       if (this.filterHide)
-        this.$store.dispatch("clickEvents/toggleShopFilterBarNoOverlay");
-      else this.$store.dispatch("clickEvents/toggleShopFilterBar");
+        this.$store.dispatch('clickEvents/toggleShopFilterBarNoOverlay')
+      else this.$store.dispatch('clickEvents/toggleShopFilterBar')
     },
   },
   mounted() {
@@ -280,9 +282,17 @@ export default {
 </script>
 
 <style scoped>
+.row-cols-2 > * {
+  flex: 0 0 auto;
+  width: 20%;
+}
 @media (min-width: 576px) {
   .container {
     max-width: 100%;
+  }
+  .row-cols-2 > * {
+    flex: 0 0 auto;
+    width: 16.5%;
   }
 }
 @media (min-width: 768px) {
@@ -291,7 +301,7 @@ export default {
   }
   .row-cols-md-4 > * {
     flex: 0 0 auto;
-    width: 25%;
+    width: 16.5%;
   }
 }
 @media (min-width: 992px) {
@@ -300,7 +310,7 @@ export default {
   }
   .row-cols-md-4 > * {
     flex: 0 0 auto;
-    width: 25%;
+    width: 16.5%;
   }
 }
 
@@ -310,7 +320,7 @@ export default {
   }
   .row-cols-l-4 > * {
     flex: 0 0 auto;
-    width: 20%;
+    width: 16.5%;
   }
 }
 @media (min-width: 1400px) {
@@ -319,7 +329,7 @@ export default {
   }
   .row-cols-xxl-4 > * {
     flex: 0 0 auto;
-    width: 16.5%;
+    width: 10.5%;
   }
 }
 

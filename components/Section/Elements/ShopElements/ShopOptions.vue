@@ -8,7 +8,7 @@
               class="btn dropdown-toggle"
               @change="changeProductsPerPage($event)"
             >
-              <option value="" selected disabled>Products per Page</option>
+              <option value="" selected disabled>Categories per Page</option>
               <option
                 class="dropdown-item"
                 v-for="(page, index) in productsPerPage"

@@ -100,7 +100,7 @@ export default {
             },
             {
               title: 'Shop',
-              path: '/shop',
+              path: '/category',
             },
             {
               title: 'About Us',
