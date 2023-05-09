@@ -172,19 +172,19 @@
       "images": [
         {
           "imageId": "1",
-          "src": "fashion/1.jpg"
+          "src": "Dummy/cap.jpg"
         },
         {
           "imageId": "2",
-          "src": "fashion/2.jpg"
+          "src": "Dummy/cap2.jpg"
         },
         {
           "imageId": "3",
-          "src": "fashion/3.jpg"
+          "src": "Dummy/res2.jpg"
         },
         {
           "imageId": "4",
-          "src": "fashion/4.jpg"
+          "src": "Dummy/resistor.jpg"
         }
       ]
     },

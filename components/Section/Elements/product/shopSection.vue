@@ -4,8 +4,8 @@
       <div class="row gx-4 gy-sm-5">
         <div class="col-12">
           <div class="details-items">
-            <div class="row g-4">
-              <productSlider class="d-flex justify-content-end" />
+            <div class="row  justify-content-center g-4">
+              <productSlider  />
               <productRightSection :product="product" />
             </div>
           </div>
