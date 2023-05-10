@@ -4,7 +4,7 @@
     class="addeffect-section product-description border-product"
     :class="submited && selectedSize === '' ? 'cartMove' : ''"
   >
-    <h6
+    <!-- <h6
       class="product-title size-text"
       v-if="Array.isArray(product.sizeoption) && product.sizeoption.length > 0"
     >
@@ -41,7 +41,7 @@
           <a href="javascript:void(0)">{{ size }}</a>
         </li>
       </ul>
-    </div>
+    </div> -->
 
     <h6 class="product-title product-title-2 d-block">quantity</h6>
 

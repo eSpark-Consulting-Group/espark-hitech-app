@@ -58,7 +58,7 @@
 
       <!-- <timer /> -->
 
-      <shareIt />
+      <!-- <shareIt /> -->
       <slot></slot>
     </div>
   </div>

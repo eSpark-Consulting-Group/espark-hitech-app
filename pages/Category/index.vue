@@ -237,7 +237,7 @@ export default {
     this.cards = this.initCards.filter((item) => item.category != 'vr')
     this.setBreadcrumbs({
       pageParent: 'Category - Listing',
-      pageName: 'Electronic Store',
+      pageName: 'Electronic Store - Categories',
     })
   },
   methods: {
