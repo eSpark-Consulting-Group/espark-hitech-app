@@ -1,6 +1,6 @@
 <template>
   <div class="col-md-6">
-    <div class="row">
+    <div class="row justify-content-end">
       <div class="col-lg-2 oder-lg-1 order-2">
         <div class="details-image-vertical black-slide rounded">
           <VueSlickCarousel
@@ -34,7 +34,7 @@
                 :src="getImageUrl(image.src)"
                 id="zoom_01"
                 :data-zoom-image="getImageUrl(image.src)"
-                class="img-fluid w-100 image_zoom_cls-0"
+                class="img-fluid w-100 image_zoom_cls-0 "
                 alt=""
               />
             </div>
@@ -110,3 +110,12 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+@media (min-width: 992px) {
+  .col-lg-10 {
+    flex: 0 0 auto;
+    width: 63.33333333%;
+  }
+}
+</style>

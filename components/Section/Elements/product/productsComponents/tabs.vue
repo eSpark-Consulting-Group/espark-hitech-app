@@ -10,7 +10,7 @@
             type="button"
             @click="setActive('description')"
           >
-            Description
+            Attributes
           </button>
 
           <button
@@ -20,7 +20,7 @@
             type="button"
             @click="setActive('Specifications')"
           >
-            Specifications
+            Documents & Media
           </button>
 
           <button
@@ -30,7 +30,7 @@
             type="button"
             @click="setActive('sizingGuide')"
           >
-            Sizing Guide
+            Enviornment & Export Classification
           </button>
 
           <button
@@ -40,10 +40,10 @@
             type="button"
             @click="setActive('q&a')"
           >
-            Q & A
+            Additonal Resource
           </button>
 
-          <button
+          <!-- <button
             class="nav-link"
             id="nav-contact-tab"
             :class="tabActive['review'] ? 'active' : ''"
@@ -51,7 +51,7 @@
             @click="setActive('review')"
           >
             Review
-          </button>
+          </button> -->
         </div>
       </nav>
 

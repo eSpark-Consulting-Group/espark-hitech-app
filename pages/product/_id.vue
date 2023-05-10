@@ -16,7 +16,7 @@ export default {
   created() {
     this.setBreadcrumbs({
       pageParent: 'Product',
-      pageName: 'Product',
+      pageName: 'Product Detail',
     })
   },
   data() {

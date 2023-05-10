@@ -5,7 +5,7 @@
     <transition>
       <Nuxt />
     </transition>
-    <NewsSubscribe v-if="this.$route.path != '/'" />
+    <!-- <NewsSubscribe v-if="this.$route.path != '/'" /> -->
     <TheFooter />
     <MobileMenu />
     <!-- v-scroll-to="'#body-content'" -->

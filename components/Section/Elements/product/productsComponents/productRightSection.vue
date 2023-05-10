@@ -1,16 +1,16 @@
 <template>
   <div class="col-md-6" :class="rightSectionClasses ? rightSectionClasses : ''">
     <div class="cloth-details-size">
-      <productCount />
+      <!-- <productCount /> -->
 
       <div class="details-image-concept">
         <h2>{{ currentProduct.name }}</h2>
       </div>
 
-      <div class="label-section">
+      <!-- <div class="label-section">
         <span class="badge badge-grey-color">BestSeller </span>
         <span class="label-text">in fashion </span>
-      </div>
+      </div> -->
 
       <h3 class="price-detail">
         {{ selectedCurrencySymbol }}{{ currentProduct.price }}
@@ -20,7 +20,7 @@
         ><span v-else>25% off</span>
       </h3>
 
-      <selectColors v-if="currentProduct.colors.length > 0" />
+      <!-- <selectColors v-if="currentProduct.colors.length > 0" /> -->
 
       <selectSize
         :product="currentProduct"
@@ -56,9 +56,9 @@
         </li>
       </ul>
 
-      <timer />
+      <!-- <timer /> -->
 
-      <shareIt />
+      <!-- <shareIt /> -->
       <slot></slot>
     </div>
   </div>
