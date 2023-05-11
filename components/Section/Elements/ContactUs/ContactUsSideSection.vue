@@ -13,9 +13,12 @@
         <h5 class="font-light justify-content-center">
           {{ Detail }}
         </h5>
-        <button class="btn btn-solid-default" type="submit">
-                Submit
-              </button>
+        <div class="checkout-button">
+            <nuxt-link to="/about_us" class="btn btn-solid-default btn fw-bold">
+              Read More
+            
+            </nuxt-link>
+          </div>
         <!-- <div class="contact-box">
           <div class="contact-icon">
             <icons name="heart" />

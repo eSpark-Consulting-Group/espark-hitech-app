@@ -101,13 +101,14 @@
               >
                 <option selected value="0">Select related issue</option>
                 <option value="1">Trouble in logging</option>
-                <option value="2">Register Assistance</option>
-                <option value="3">Forget/Change password?</option>
+                <option value="2">Register assistance</option>
+                <option value ='6'>How to register?</option>
+                <option value="3">Forget/Change password</option>
                 <option value="4">
-                  How to place an order without registration?
+                    How to place an order without registering?
                 </option>
                 <option value="5">
-                  Change the email address or Delate account
+                    Change the email address or delete the account
                 </option>
               </select>
               <div class="mt-2">
