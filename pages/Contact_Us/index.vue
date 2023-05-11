@@ -3,7 +3,7 @@
     <section class="contact-section">
       <div class="container">
         <div class="row g-4">
-          <div class="col-lg-7">
+          <div class="col-lg-9">
             <div class="materialContainer">
               <!-- <div class="material-details">
                 <div class="title title1 title-effect mb-1 title-left">
@@ -75,7 +75,7 @@
             </div>
           </div>
 
-          <ContactUsSideSection />
+          <ContactUsSideSection class="col-lg-3  d-flex flex-column justify-content-center align-self-center align-items-center h-100"/>
         </div>
       </div>
     </section>

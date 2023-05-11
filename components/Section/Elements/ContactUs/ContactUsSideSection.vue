@@ -1,12 +1,22 @@
 <template>
-  <div class="col-lg-5">
-    <div class="contact-details">
-      <div>
-        <h2>{{ LetTouch }}</h2>
-        <h5 class="font-light">
-          {{ SuggestionDesc }}
+  
+  <div >
+    <div class="contact-details ">
+      <div style="text-align: center">
+        <h2 class="justify-content-center">{{ AboutUS }}</h2>
+        <img
+        src="~assets/images/logo2.png"
+        
+        class="img-fluid justify-content-center w-25"
+        alt="logo"
+      />
+        <h5 class="font-light justify-content-center">
+          {{ Detail }}
         </h5>
-        <div class="contact-box">
+        <button class="btn btn-solid-default" type="submit">
+                Submit
+              </button>
+        <!-- <div class="contact-box">
           <div class="contact-icon">
             <icons name="heart" />
           </div>
@@ -36,10 +46,11 @@
             <h4>Email Address :</h4>
             <p>{{ ThemeEmail }}</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -57,7 +68,8 @@ export default {
 
       ThemeEmail: 'support@espark-hitech.com',
 
-      LetTouch: "Let's get in touch",
+      AboutUS: "About Us",
+      Detail: "eSpark has always believed our employees are the greatest reason for our company's continued success and exceptional service.  Our employees are hardworking, talented, motivated, dedicated, agile, generous, and humble.",
       SuggestionDesc: "We're open for any suggestion or just to have a chat",
     }
   },
