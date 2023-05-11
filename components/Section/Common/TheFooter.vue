@@ -99,7 +99,7 @@ export default {
               path: '/',
             },
             {
-              title: 'Shop',
+              title: 'Products',
               path: '/category',
             },
             {

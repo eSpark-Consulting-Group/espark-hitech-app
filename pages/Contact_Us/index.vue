@@ -3,9 +3,9 @@
     <section class="contact-section">
       <div class="container">
         <div class="row g-4">
-          <div class="col-lg-7">
+          <div class="col-lg-9">
             <div class="materialContainer">
-              <div class="material-details">
+              <!-- <div class="material-details">
                 <div class="title title1 title-effect mb-1 title-left">
                   <h2>Contact Us</h2>
                   <p class="ms-0 w-100">
@@ -13,8 +13,9 @@
                     are marked *
                   </p>
                 </div>
-              </div>
-              <div class="row g-4 mt-md-1 mt-2">
+              </div> -->
+              <ContactUsTab/>
+              <!-- <div class="row g-4 mt-md-1 mt-2">
                 <div class="col-md-6">
                   <label for="first" class="form-label">First Name</label>
                   <input
@@ -70,11 +71,11 @@
                     Submit
                   </button>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
-          <ContactUsSideSection />
+          <ContactUsSideSection class="col-lg-3  d-flex flex-column justify-content-center align-self-center align-items-center h-100"/>
         </div>
       </div>
     </section>
@@ -97,6 +98,7 @@
 
 <script>
 import ContactUsSideSection from '../../components/Section/Elements/ContactUs/ContactUsSideSection'
+import ContactUsTab from '../../components/Section/Elements/ContactUs/ContactUsTab.vue'
 
 export default {
   head() {
@@ -104,7 +106,7 @@ export default {
       title: 'Contact Us',
     }
   },
-  components: { ContactUsSideSection },
+  components: { ContactUsSideSection ,ContactUsTab },
   created() {
     this.setBreadcrumbs({
       pageParent: 'Contact Us',
