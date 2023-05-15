@@ -1,0 +1,106 @@
+{
+  "faqList": [
+    {
+      "type": "Placing Orders",
+      "indexOf": 0,
+      "faq": [
+        {
+          "id": 1,
+          "question": "How does it work?",
+          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "Another very important question in FAQ?",
+          "answer": "Now for yhe caravan and looking for the right caravan to suit your needs. Most of the parks will deal with majority of the manufactures. If buying directly from the park you will probably deal with a salesperson instead of direct with the manufactures. You Can collect brochures direct from the manufactures. you can collect brochures direct from the manufactures to research all the models and specifications which will not only ensure you choose the correct model but also help you to understand what to look for and choice of different modals. To see the caravan you can vixit them at key caravan exhibitions as most top manufactures will display there, see events.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "Another important quesstion in FAQ?",
+          "answer": "The static holiday caravan has been designed for holiday use instead of full time living. With its modern construction and use of high quality materials the static caravan should be built to British and European standard: BS EN 1647 but some luxury caravans are built to BS 3632 confirming to residential standards.",
+          "clicked": false
+        },
+        {
+          "id": 4,
+          "question": "Another  quesstion in FAQ?",
+          "answer": "Normal static caravan can come in either one or two sectiond with width up to 22ft and 60ft long. If you have a one piece model this is a single unit and the two piece is known as a twin and usually assembled on site.",
+          "clicked": false
+        },
+        {
+          "id": 5,
+          "question": "Another very important quesstion in FAQ?",
+          "answer": "Decide on how many bedrooms you require as most caravans can be from 2 to 4 bedrooms but up to eight berths. manufactures will normally have their own layout but will offer but will a number of ranges depending on your budget.",
+          "clicked": false
+        },
+        {
+          "id": 6,
+          "question": "Another question in FAQ?",
+          "answer": "The static holiday caravan has been designed for holiday use instead of full time living. With its modern construction and use of high quality materials the static caravan should be built to British and European standard: BS EN 1647 but some luxury caravans are built to BS 3632 confirming to residential standards.",
+          "clicked": false
+        }
+      ]
+    },
+    {
+      "type": "Product Support",
+      "indexOf": 1,
+      "faq": [
+        {
+          "id": 1,
+          "question": "How does it work? 1",
+          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "clicked": false
+        }
+      ]
+    },
+    {
+      "type": "My Account",
+      "indexOf": 2,
+      "faq": [
+        {
+          "id": 1,
+          "question": "How does it work? 2",
+          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "clicked": false
+        }
+      ]
+    },
+    {
+      "type": "Returns",
+      "indexOf": 3,
+      "faq": [
+        {
+          "id": 1,
+          "question": "How does it work? 3",
+          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "clicked": false
+        }
+      ]
+    },
+    {
+      "type": "Delivery",
+      "indexOf": 4,
+      "faq": [
+        {
+          "id": 1,
+          "question": "How does it work? 4",
+          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "clicked": false
+        }
+      ]
+    },
+    {
+      "type": "Payment and Billing",
+      "indexOf": 5,
+      "faq": [
+        {
+          "id": 1,
+          "question": "How does it work? 5",
+          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "clicked": false
+        }
+      ]
+    }
+  ]
+}
