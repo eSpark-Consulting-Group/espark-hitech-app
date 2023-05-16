@@ -13,8 +13,9 @@
                     v-for="(question, index) in faqList"
                     :key="index"
                     @click="selectedQuestion(index)"
+                    class="link"
                   >
-                    <h4>{{ index + 1 }}</h4>
+                    <!-- <h4>{{ index + 1 }}</h4> -->
                     <h5>{{ question.type }}</h5>
                   </a>
                 </li>
@@ -31,10 +32,16 @@
                 </h6>
               </div>
             </div> -->
-            <div class="faq-heading" v-for="faq in faq.faq" :key="faq.id">
-              <icons name="info" size="sm" color="theme-color" />
+            <div
+              class="faq-heading d-flex justify-content-center"
+              v-for="faq in faq.faq"
+              :key="faq.id"
+            >
+              <icons name="arrow-down" size="sm" color="theme-color" />
               <div class="faq-option">
-                <h3 @click="toggleAnswer(faq)">{{ faq.question }}</h3>
+                <h3 class="link question m-0" @click="toggleAnswer(faq)">
+                  {{ faq.question }}
+                </h3>
                 <h6 v-if="faq.clicked" class="font-light">{{ faq.answer }}</h6>
               </div>
             </div>
@@ -79,3 +86,18 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+/* .tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+} */
+
+.link {
+  cursor: pointer;
+}
+faq-heading .faq-option h3 {
+  margin-top: 0px !important;
+}
+</style>

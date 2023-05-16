@@ -96,42 +96,42 @@
               <label for="comment" class="form-label"> Related to: </label>
               <select
                 v-model="selectedOption"
-                class="form-select"
+                class="form-select form-control"
                 aria-label="Default select example"
               >
                 <option selected value="0">Select related issue</option>
                 <option value="1">Trouble in logging</option>
                 <option value="2">Register assistance</option>
-                <option value ='6'>How to register?</option>
+                <option value="6">How to register?</option>
                 <option value="3">Forget/Change password</option>
                 <option value="4">
-                    How to place an order without registering?
+                  How to place an order without registering?
                 </option>
                 <option value="5">
-                    Change the email address or delete the account
+                  Change the email address or delete the account
                 </option>
               </select>
               <div class="mt-2">
                 <div v-if="selectedOption === '1'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 1 -->
                 </div>
 
                 <div v-if="selectedOption === '2'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 2 -->
                 </div>
 
                 <div v-if="selectedOption === '3'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 3 -->
                 </div>
                 <div v-if="selectedOption === '4'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 3 -->
                 </div>
                 <div v-if="selectedOption === '5'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 3 -->
                 </div>
               </div>
@@ -150,11 +150,7 @@
             <!-- </div> -->
           </div>
         </div>
-        <div
-          class="tab-pane show active"
-          id="desc"
-          v-if="tabActive['Order']"
-        >
+        <div class="tab-pane show active" id="desc" v-if="tabActive['Order']">
           <div class="row g-4 mt-md-1 mt-2">
             <div class="col-md-6">
               <label for="first" class="form-label">First Name</label>
@@ -200,48 +196,42 @@
               <label for="comment" class="form-label"> Related to: </label>
               <select
                 v-model="selectedOption"
-                class="form-select"
+                class="form-select form-control"
                 aria-label="Default select example"
               >
                 <option selected value="0">Select related issue</option>
                 <option value="1">Change/Cancel order</option>
                 <option value="2">Inquiry / Handling fee</option>
                 <option value="3">Payment</option>
-                <option value="4">
-                    Coupon
-                </option>
-                <option value="5">
-                    Invoice/ Packing list download
-                </option>
-                <option value="6">
-                    Shipping & Delivery
-                </option>
+                <option value="4">Coupon</option>
+                <option value="5">Invoice/ Packing list download</option>
+                <option value="6">Shipping & Delivery</option>
               </select>
               <div class="mt-2">
                 <div v-if="selectedOption === '1'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 1 -->
                 </div>
 
                 <div v-if="selectedOption === '2'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 2 -->
                 </div>
 
                 <div v-if="selectedOption === '3'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 3 -->
                 </div>
                 <div v-if="selectedOption === '4'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 3 -->
                 </div>
                 <div v-if="selectedOption === '5'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 3 -->
                 </div>
                 <div v-if="selectedOption === '6'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 3 -->
                 </div>
               </div>
@@ -260,11 +250,7 @@
             </div> -->
           </div>
         </div>
-        <div
-          class="tab-pane show active"
-          id="desc"
-          v-if="tabActive['Other']"
-        >
+        <div class="tab-pane show active" id="desc" v-if="tabActive['Other']">
           <div class="row g-4 mt-md-1 mt-2">
             <div class="col-md-6">
               <label for="first" class="form-label">First Name</label>
@@ -310,38 +296,34 @@
               <label for="comment" class="form-label"> Related to: </label>
               <select
                 v-model="selectedOption"
-                class="form-select"
-                aria-label="Default select example"
+                class="form-select form-control"
+                aria-label="Default select example form-label"
               >
                 <option selected value="0">Select related issue</option>
                 <option value="1">BOM Tool</option>
                 <option value="2">Have ideas or suggestions</option>
                 <option value="3">Warranty policy</option>
-                <option value="4">
-                    Others
-                </option>
-                
+                <option value="4">Others</option>
               </select>
               <div class="mt-2">
                 <div v-if="selectedOption === '1'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 1 -->
                 </div>
 
                 <div v-if="selectedOption === '2'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 2 -->
                 </div>
 
                 <div v-if="selectedOption === '3'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 3 -->
                 </div>
                 <div v-if="selectedOption === '4'">
-                    <OptionTabs/>
+                  <OptionTabs />
                   <!-- Form for option 3 -->
                 </div>
-               
               </div>
               <!-- <textarea
                     class="form-control"
@@ -350,8 +332,6 @@
                     required
                   ></textarea> -->
             </div>
-
-            
           </div>
         </div>
       </transition>
@@ -362,7 +342,7 @@
 <script>
 import OptionTabs from './OptionTabs.vue'
 export default {
-    components:{OptionTabs},
+  components: { OptionTabs },
   data() {
     return {
       tabActive: { description: true },
@@ -372,8 +352,7 @@ export default {
   },
   methods: {
     setActive(tab) {
-      this.tabActive = {},
-      this.selectedOption = '0'
+      ;(this.tabActive = {}), (this.selectedOption = '0')
       this.tabActive[tab] = true
     },
     ContactsetActive(tab) {
