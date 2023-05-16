@@ -13,7 +13,7 @@
                     v-for="(question, index) in faqList"
                     :key="index"
                     @click="selectedQuestion(index)"
-                    class="link"
+                    :class="{ selected: index === selectedIndex }"
                   >
                     <!-- <h4>{{ index + 1 }}</h4> -->
                     <h5>{{ question.type }}</h5>
@@ -94,8 +94,15 @@ export default {
   cursor: pointer;
 } */
 
-.link {
+a {
   cursor: pointer;
+}
+a:hover {
+  color: #01b7a1 !important;
+}
+a.selected {
+  color: #01b7a1 !important; /* Change the color of the selected link */
+  /* Add any other styling you want for the selected link */
 }
 faq-heading .faq-option h3 {
   margin-top: 0px !important;

@@ -100,18 +100,22 @@ export default {
         if (!this.stopScrollWork) {
           if (window.scrollY > 0) {
             if (!this.headerDown) {
+              console.log('1st', window.scrollY)
               this.headerDown = true
               this.scrollDown = false
               this.scrollUp = false
             }
             if (window.scrollY > this.scrollTopDiff) {
+              console.log('up', window.scrollY)
               this.scrollDown = true
               this.scrollUp = false
             } else {
+              console.log('up-else', window.scrollY)
               this.scrollUp = true
             }
             this.scrollTopDiff = window.scrollY
           } else if (window.scrollY === 0) {
+            console.log('top', window.scrollY)
             this.headerDown = false
             this.scrollDown = false
             this.scrollUp = false

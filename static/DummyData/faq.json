@@ -6,38 +6,32 @@
       "faq": [
         {
           "id": 1,
-          "question": "How does it work?",
-          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "question": "Do I have to be registered on the website to place an order?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           "clicked": false
         },
         {
           "id": 2,
-          "question": "Another very important question in FAQ?",
-          "answer": "Now for yhe caravan and looking for the right caravan to suit your needs. Most of the parks will deal with majority of the manufactures. If buying directly from the park you will probably deal with a salesperson instead of direct with the manufactures. You Can collect brochures direct from the manufactures. you can collect brochures direct from the manufactures to research all the models and specifications which will not only ensure you choose the correct model but also help you to understand what to look for and choice of different modals. To see the caravan you can vixit them at key caravan exhibitions as most top manufactures will display there, see events.",
+          "question": "What do I need to do to order online?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           "clicked": false
         },
         {
           "id": 3,
-          "question": "Another important quesstion in FAQ?",
-          "answer": "The static holiday caravan has been designed for holiday use instead of full time living. With its modern construction and use of high quality materials the static caravan should be built to British and European standard: BS EN 1647 but some luxury caravans are built to BS 3632 confirming to residential standards.",
+          "question": "Can I cancel an order?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           "clicked": false
         },
         {
           "id": 4,
-          "question": "Another  quesstion in FAQ?",
-          "answer": "Normal static caravan can come in either one or two sectiond with width up to 22ft and 60ft long. If you have a one piece model this is a single unit and the two piece is known as a twin and usually assembled on site.",
+          "question": "Is there a minimum order quantity or minimum order value?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           "clicked": false
         },
         {
           "id": 5,
-          "question": "Another very important quesstion in FAQ?",
-          "answer": "Decide on how many bedrooms you require as most caravans can be from 2 to 4 bedrooms but up to eight berths. manufactures will normally have their own layout but will offer but will a number of ranges depending on your budget.",
-          "clicked": false
-        },
-        {
-          "id": 6,
-          "question": "Another question in FAQ?",
-          "answer": "The static holiday caravan has been designed for holiday use instead of full time living. With its modern construction and use of high quality materials the static caravan should be built to British and European standard: BS EN 1647 but some luxury caravans are built to BS 3632 confirming to residential standards.",
+          "question": "Will I receive an invoice?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           "clicked": false
         }
       ]
@@ -48,8 +42,32 @@
       "faq": [
         {
           "id": 1,
-          "question": "How does it work? 1",
-          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "question": "Can I speak to someone about technical product information?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "How do I check stock and lead times?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "What packaging options are available?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 4,
+          "question": "How do I compare products?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 5,
+          "question": "I cannot find the product I'm looking for. Can I get some help?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           "clicked": false
         }
       ]
@@ -60,8 +78,32 @@
       "faq": [
         {
           "id": 1,
-          "question": "How does it work? 2",
-          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "question": "I have forgotten my password, can you help?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "How can I request my username?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "How do I change my delivery/invoice address?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 4,
+          "question": "Can I view my order status and search my Order History?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 5,
+          "question": "How can I change my Trade Account?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           "clicked": false
         }
       ]
@@ -72,8 +114,20 @@
       "faq": [
         {
           "id": 1,
-          "question": "How does it work? 3",
-          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "question": "How do I return goods?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "What is the time restriction for returning a product?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "What is the Returns policy?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           "clicked": false
         }
       ]
@@ -84,8 +138,32 @@
       "faq": [
         {
           "id": 1,
-          "question": "How does it work? 4",
-          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "question": "What are your delivery options?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "What is the status of my order?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "Why are some items missing from my order?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 4,
+          "question": "Do you offer Saturday delivery?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 5,
+          "question": "What should I do if the product is damaged in delivery?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           "clicked": false
         }
       ]
@@ -96,8 +174,32 @@
       "faq": [
         {
           "id": 1,
-          "question": "How does it work? 5",
-          "answer": "When choosing a static caravan you will probably look for the holiday park which meets your requirements and the move onto the caravan selection the right holiday park is vital to ensure a long term ownership.",
+          "question": "What payment methods are available on the website?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "How do I open a trade account?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "I have no credit or debit card, can I still buy?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 4,
+          "question": "Can I pay my account balance online?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 5,
+          "question": "Can I order if I am on credit hold?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           "clicked": false
         }
       ]
