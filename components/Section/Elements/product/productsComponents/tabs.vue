@@ -62,6 +62,63 @@
             id="desc"
             v-if="tabActive['description']"
           >
+            <div class="pro mb-4">
+              <p class="font-light">SpecifyDescription</p>
+              <div class="table-responsive">
+                <table class="table table-part">
+                  <tr>
+                    <th>Product Dimensions</th>
+                    <td>15 x 15 x 3 cm; 250 Grams</td>
+                  </tr>
+                  <tr>
+                    <th>DateFirstAvailable</th>
+                    <td>5 April 2021</td>
+                  </tr>
+                  <tr>
+                    <th>Manufacturer</th>
+                    <td>Aditya Birla Fashion and Retail Limited</td>
+                  </tr>
+                  <tr>
+                    <th>ASIN</th>
+                    <td>B06Y28LCDN</td>
+                  </tr>
+                  <tr>
+                    <th>Item model number</th>
+                    <td>AMKP317G04244</td>
+                  </tr>
+                  <tr>
+                    <th>Department</th>
+                    <td>Men</td>
+                  </tr>
+                  <tr>
+                    <th>Item Weight</th>
+                    <td>250 G</td>
+                  </tr>
+                  <tr>
+                    <th>Item Dimensions LxWxH</th>
+                    <td>15 x 15 x 3 Centimeters</td>
+                  </tr>
+                  <tr>
+                    <th>Net Quantity</th>
+                    <td>1 U</td>
+                  </tr>
+                  <tr>
+                    <th>Included Components</th>
+                    <td>1-T-shirt</td>
+                  </tr>
+                  <tr>
+                    <th>GenericName</th>
+                    <td>T-shirt</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane show active"
+            id="speci"
+            v-else-if="tabActive['Specifications']"
+          >
             <div class="shipping-chart">
               <div class="part">
                 <h4 class="inner-title mb-2">ProductQuestion1</h4>
@@ -120,63 +177,6 @@
                     alt=""
                   />
                 </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="tab-pane show active"
-            id="speci"
-            v-else-if="tabActive['Specifications']"
-          >
-            <div class="pro mb-4">
-              <p class="font-light">SpecifyDescription</p>
-              <div class="table-responsive">
-                <table class="table table-part">
-                  <tr>
-                    <th>Product Dimensions</th>
-                    <td>15 x 15 x 3 cm; 250 Grams</td>
-                  </tr>
-                  <tr>
-                    <th>DateFirstAvailable</th>
-                    <td>5 April 2021</td>
-                  </tr>
-                  <tr>
-                    <th>Manufacturer</th>
-                    <td>Aditya Birla Fashion and Retail Limited</td>
-                  </tr>
-                  <tr>
-                    <th>ASIN</th>
-                    <td>B06Y28LCDN</td>
-                  </tr>
-                  <tr>
-                    <th>Item model number</th>
-                    <td>AMKP317G04244</td>
-                  </tr>
-                  <tr>
-                    <th>Department</th>
-                    <td>Men</td>
-                  </tr>
-                  <tr>
-                    <th>Item Weight</th>
-                    <td>250 G</td>
-                  </tr>
-                  <tr>
-                    <th>Item Dimensions LxWxH</th>
-                    <td>15 x 15 x 3 Centimeters</td>
-                  </tr>
-                  <tr>
-                    <th>Net Quantity</th>
-                    <td>1 U</td>
-                  </tr>
-                  <tr>
-                    <th>Included Components</th>
-                    <td>1-T-shirt</td>
-                  </tr>
-                  <tr>
-                    <th>GenericName</th>
-                    <td>T-shirt</td>
-                  </tr>
-                </table>
               </div>
             </div>
           </div>
@@ -681,15 +681,15 @@ export default {
   data() {
     return {
       tabActive: { description: true },
-    };
+    }
   },
   methods: {
     setActive(tab) {
-      this.tabActive = {};
-      this.tabActive[tab] = true;
+      this.tabActive = {}
+      this.tabActive[tab] = true
     },
   },
-};
+}
 </script>
 
 <style scoped>

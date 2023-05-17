@@ -1,65 +1,90 @@
 <template>
   <div class="col-md-6" :class="rightSectionClasses ? rightSectionClasses : ''">
-    <div class="cloth-details-size">
-      <!-- <productCount /> -->
+    <div class="row justify-content-center g-4">
+      <div class="cloth-details-size col-md-6">
+        <!-- <productCount /> -->
 
-      <div class="details-image-concept">
-        <h2>{{ currentProduct.name }}</h2>
-      </div>
+        <div class="details-image-concept">
+          <h2>{{ currentProduct.name }}</h2>
+        </div>
 
-      <!-- <div class="label-section">
+        <!-- <div class="label-section">
         <span class="badge badge-grey-color">BestSeller </span>
         <span class="label-text">in fashion </span>
       </div> -->
 
-      <h3 class="price-detail">
-        {{ selectedCurrencySymbol }}{{ currentProduct.price }}
-        <del>{{ selectedCurrencySymbol }}{{ currentProduct.mrp }}</del
-        ><span v-if="currentProduct.discount != 0"
-          >{{ currentProduct.discount }}% off</span
-        ><span v-else>25% off</span>
-      </h3>
+        <h3 class="price-detail">
+          {{ selectedCurrencySymbol }}{{ currentProduct.price }}
+          <del>{{ selectedCurrencySymbol }}{{ currentProduct.mrp }}</del
+          ><span v-if="currentProduct.discount != 0"
+            >{{ currentProduct.discount }}% off</span
+          ><span v-else>25% off</span>
+        </h3>
 
-      <!-- <selectColors v-if="currentProduct.colors.length > 0" /> -->
+        <!-- <selectColors v-if="currentProduct.colors.length > 0" /> -->
 
-      <selectSize
-        :product="currentProduct"
-        :submited="submited"
-        @changeQuantityTo="changeQuantityTo"
-        @setSelectedSize="setSelectedSize"
-      />
+        <selectSize
+          :product="currentProduct"
+          :submited="submited"
+          @changeQuantityTo="changeQuantityTo"
+          @setSelectedSize="setSelectedSize"
+        />
 
-      <div class="product-buttons">
-        <a @click.prevent="addToWishlist(currentProduct)" class="btn btn-solid">
+        <div class="product-buttons">
+          <!-- <a @click.prevent="addToWishlist(currentProduct)" class="btn btn-solid">
           <i class="fa fa-bookmark fz-16 me-2"></i>
           <span>wishlist </span>
-        </a>
-        <a
-          href="javascript:void(0)"
-          @click="addToCart(currentProduct)"
-          id="cartEffect"
-          class="btn btn-solid hover-solid btn-animation"
-        >
-          <i class="fa fa-shopping-cart" v-if="!addedToCart"></i>
-          <span>{{ addedToCart ? AddedToBag : Addtocart }}</span>
-        </a>
+        </a> -->
+          <a
+            href="javascript:void(0)"
+            @click="addToCart(currentProduct)"
+            id="cartEffect"
+            class="btn btn-solid hover-solid btn-animation"
+          >
+            <i class="fa fa-shopping-cart" v-if="!addedToCart"></i>
+            <span>{{ addedToCart ? AddedToBag : Addtocart }}</span>
+          </a>
+        </div>
+
+        <ul class="product-count shipping-order">
+          <li>
+            <img
+              src="~assets/images/gif/truck.png"
+              class="img-fluid"
+              alt="image"
+            />
+            <span class="lang">Free shipping for orders above $500 USD</span>
+          </li>
+        </ul>
+
+        <!-- <timer /> -->
+
+        <!-- <shareIt /> -->
+        <slot></slot>
       </div>
-
-      <ul class="product-count shipping-order">
-        <li>
-          <img
-            src="~assets/images/gif/truck.png"
-            class="img-fluid"
-            alt="image"
-          />
-          <span class="lang">Free shipping for orders above $500 USD</span>
-        </li>
-      </ul>
-
-      <!-- <timer /> -->
-
-      <!-- <shareIt /> -->
-      <slot></slot>
+      <div class="cloth-details-size col-md-6 align-self-center">
+        <div class="details-image-concept">
+          <h3>Bag</h3>
+        </div>
+        <!-- <productCount /> -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Quantity</th>
+              <th>Unit Price</th>
+              <th>Extended Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in items" :key="index">
+              <td>{{ item.quantity }}</td>
+              <td>{{ item.unitPrice }}</td>
+              <td>{{ item.extendedPrice }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -84,6 +109,12 @@ export default {
       addedToCart: false,
       Addtocart: 'Add to cart',
       AddedToBag: 'Added To Bag',
+      items: [
+        { quantity: 2, unitPrice: 10, extendedPrice: 20 },
+        { quantity: 3, unitPrice: 15, extendedPrice: 45 },
+        { quantity: 1, unitPrice: 8, extendedPrice: 8 },
+        // Add more dummy data items as needed
+      ],
     }
   },
   components: {

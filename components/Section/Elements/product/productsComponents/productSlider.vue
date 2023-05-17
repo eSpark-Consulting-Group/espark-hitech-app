@@ -34,7 +34,7 @@
                 :src="getImageUrl(image.src)"
                 id="zoom_01"
                 :data-zoom-image="getImageUrl(image.src)"
-                class="img-fluid w-100 image_zoom_cls-0 "
+                class="img-fluid w-100 image_zoom_cls-0"
                 alt=""
               />
             </div>
