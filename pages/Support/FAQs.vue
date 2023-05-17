@@ -69,6 +69,7 @@ export default {
       faqList: faq.faqList,
       faq: [],
       index: 0,
+      selectedIndex: 0,
     }
   },
   created() {
@@ -76,6 +77,7 @@ export default {
   },
   methods: {
     selectedQuestion(index) {
+      this.selectedIndex = index
       console.log('selection', index)
       this.faq = this.faqList.filter((item) => item.indexOf == index)[0]
       console.log(this.faq)
@@ -97,6 +99,10 @@ export default {
 a {
   cursor: pointer;
 }
+.link {
+  cursor: pointer;
+}
+
 a:hover {
   color: #01b7a1 !important;
 }
