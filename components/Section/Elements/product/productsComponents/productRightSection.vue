@@ -30,39 +30,29 @@
           @setSelectedSize="setSelectedSize"
         />
 
-        <div class="product-buttons">
-          <!-- <a @click.prevent="addToWishlist(currentProduct)" class="btn btn-solid">
-          <i class="fa fa-bookmark fz-16 me-2"></i>
-          <span>wishlist </span>
-        </a> -->
-          <a
-            href="javascript:void(0)"
-            @click="addToCart(currentProduct)"
-            id="cartEffect"
-            class="btn btn-solid hover-solid btn-animation"
-          >
-            <i class="fa fa-shopping-cart" v-if="!addedToCart"></i>
-            <span>{{ addedToCart ? AddedToBag : Addtocart }}</span>
-          </a>
-        </div>
-
-        <ul class="product-count shipping-order">
-          <li>
-            <img
-              src="~assets/images/gif/truck.png"
-              class="img-fluid"
-              alt="image"
-            />
-            <span class="lang">Free shipping for orders above $500 USD</span>
-          </li>
-        </ul>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Quantity</th>
+              <th>Unit Price</th>
+              <th>Extended Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in items" :key="index">
+              <td>{{ item.quantity }}</td>
+              <td>{{ item.unitPrice }}</td>
+              <td>{{ item.extendedPrice }}</td>
+            </tr>
+          </tbody>
+        </table>
 
         <!-- <timer /> -->
 
         <!-- <shareIt /> -->
         <slot></slot>
       </div>
-      <div class="cloth-details-size col-md-6 align-self-center">
+      <div class="cloth-details-size col-md-6">
         <div class="details-image-concept">
           <h3>Bag</h3>
         </div>
@@ -83,6 +73,32 @@
             </tr>
           </tbody>
         </table>
+
+        <div class="product-buttons">
+          <!-- <a @click.prevent="addToWishlist(currentProduct)" class="btn btn-solid">
+          <i class="fa fa-bookmark fz-16 me-2"></i>
+          <span>wishlist </span>
+        </a> -->
+          <a
+            href="javascript:void(0)"
+            @click="addToCart(currentProduct)"
+            id="cartEffect"
+            class="btn btn-solid hover-solid btn-animation"
+          >
+            <i class="fa fa-shopping-cart" v-if="!addedToCart"></i>
+            <span>{{ addedToCart ? AddedToBag : Addtocart }}</span>
+          </a>
+        </div>
+        <ul class="product-count shipping-order">
+          <li>
+            <img
+              src="~assets/images/gif/truck.png"
+              class="img-fluid"
+              alt="image"
+            />
+            <span class="lang">Free shipping for orders above $500 USD</span>
+          </li>
+        </ul>
         <slot></slot>
       </div>
     </div>
