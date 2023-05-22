@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-6">
+  <div class="col-md-5">
     <div class="row justify-content-end">
       <div class="col-lg-2 oder-lg-1 order-2">
         <div class="details-image-vertical black-slide rounded">

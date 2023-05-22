@@ -66,7 +66,7 @@
   .image-name {
     margin-left: 15px;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-left: unset;
       margin-right: 15px;
     }
@@ -285,7 +285,7 @@
         left: calc(-10px + (-10 - 10) * ((100vw - 320px) / (1920 - 320)));
         background: var(--theme-color);
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           left: unset;
           right: calc(-10px + (-10 - 10) * ((100vw - 320px) / (1920 - 320)));
         }
@@ -309,7 +309,7 @@
         margin-bottom: -2px;
         color: $white;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: 20px;
         }
@@ -438,18 +438,18 @@
         top: 20px;
         border: none;
         background: transparent;
-        font-family: "Roboto", $font_1;
+        font-family: 'Roboto', $font_1;
         font-size: 18px;
         color: $black1;
         font-weight: 300;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           text-align: right;
         }
       }
 
       label {
-        font-family: "Roboto", $font_1;
+        font-family: 'Roboto', $font_1;
         font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
         color: rgba($black1, 0.8);
         font-weight: 300;
@@ -462,7 +462,7 @@
 
     .button {
       button {
-        font-family: "Roboto", $font_1;
+        font-family: 'Roboto', $font_1;
         font-size: 24px;
         color: rgba($black1, 0.8);
         font-weight: 300;
@@ -478,14 +478,14 @@
         bottom: 0;
         left: 0;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           left: unset;
           right: 0;
         }
       }
 
       &:before {
-        content: "";
+        content: '';
         background: rgba($black1, $alpha: 0.15);
         z-index: 3;
       }
@@ -842,14 +842,14 @@
         top: 10px;
         border: none;
         background: transparent;
-        font-family: "Roboto", $font_1;
+        font-family: 'Roboto', $font_1;
         font-size: 18px;
         color: rgba($black1, 0.8);
         font-weight: 300;
       }
 
       label {
-        font-family: "Roboto", $font_1;
+        font-family: 'Roboto', $font_1;
         font-size: calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320)));
         color: rgba($black1, 0.8);
         font-weight: 300;
@@ -871,7 +871,7 @@
       }
 
       &:before {
-        content: "";
+        content: '';
         background: rgba($black1, 0.1);
         z-index: 3;
       }
@@ -930,7 +930,7 @@
         width: calc(80% - 80px);
         margin-left: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: calc(
             10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))
@@ -1099,7 +1099,7 @@
         font-weight: 200;
         margin-left: 10px;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: 10px;
         }
@@ -1113,7 +1113,7 @@
   align-items: flex-start;
 
   + .faq-heading {
-    margin-top: calc(30px + (45 - 30) * ((100vw - 320px) / (1920 - 320)));
+    margin-top: calc(10px + (45 - 30) * ((100vw - 320px) / (1920 - 320)));
   }
 
   .feather {
@@ -1125,7 +1125,7 @@
     margin-left: 10px;
     width: calc(100% - 0px);
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-left: unset;
       margin-right: 10px;
     }
@@ -1227,7 +1227,7 @@
       .image-name {
         margin-left: 10px;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: 10px;
         }
@@ -1594,7 +1594,7 @@
     margin-top: 20px;
     background-color: $white;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       direction: rtl;
     }
 
@@ -1641,7 +1641,7 @@
           gap: 4px;
         }
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: 0;
         }
@@ -1661,7 +1661,7 @@
             padding-right: 0;
           }
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             padding-right: unset;
             padding-left: 10px;
             border-left: 1px solid $gray-light;
@@ -1911,7 +1911,7 @@
         .image-name {
           margin-left: 15px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-left: unset;
             margin-right: 15px;
           }
@@ -1973,7 +1973,7 @@
     align-items: center;
     padding-right: 10px;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       padding-right: unset;
     }
 
@@ -2054,7 +2054,7 @@
           width: 15px;
           margin-right: 5px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-right: unset;
             margin-left: 5px;
           }
@@ -2074,7 +2074,7 @@
         border-radius: 7px;
         width: 55px;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           width: unset;
           margin-left: 15px;
         }
@@ -2210,7 +2210,7 @@
           margin-left: 15px;
           transition: all 0.5s ease-in-out;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-left: unset;
             margin-right: 15px;
           }
@@ -2434,7 +2434,7 @@
       .page-link {
         span {
           i {
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               transform: rotate(-180deg);
             }
           }
@@ -2444,7 +2444,7 @@
       + .page-item {
         margin-left: 10px;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: 10px;
         }
@@ -2820,7 +2820,7 @@ tfoot {
     h5 {
       margin-right: 10px;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         margin-right: unset;
         margin-left: 10px;
       }
@@ -3034,7 +3034,7 @@ tfoot {
 
     a {
       i {
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           transform: rotate(180deg);
         }
       }
@@ -3069,7 +3069,7 @@ tfoot {
     .checkout-button {
       text-align: right;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         text-align: left;
       }
 
@@ -3095,7 +3095,7 @@ tfoot {
           span {
             float: right;
 
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               float: left;
             }
           }
@@ -3178,7 +3178,7 @@ tfoot {
     margin-left: auto;
     background-color: $black1;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-left: unset;
       margin-right: auto;
     }
@@ -3203,7 +3203,7 @@ tfoot {
   display: inline-block;
   margin-right: 10px;
 
-  [dir="rtl"] & {
+  [dir='rtl'] & {
     margin-right: 0;
     margin-left: 10px;
   }
@@ -3353,7 +3353,7 @@ hr {
           border-bottom: none !important;
           color: $font-light;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             text-align: right;
           }
 
@@ -3385,7 +3385,7 @@ hr {
           text-align: right;
           padding: 10px 15px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             text-align: left;
           }
 
@@ -3393,7 +3393,7 @@ hr {
             text-align: left;
             width: 100%;
 
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               text-align: right;
             }
           }
@@ -3507,7 +3507,7 @@ hr {
   top: 10px;
   background: $light-blue;
 
-  [dir="rtl"] & {
+  [dir='rtl'] & {
     padding: 20px;
   }
 
@@ -3539,7 +3539,7 @@ hr {
       transition: all 0.3s ease-in-out;
       color: $black1 !important;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         text-align: right;
       }
 
@@ -3549,7 +3549,7 @@ hr {
         @include center(vertical);
         transition: all 0.5s ease-in-out;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           top: 3px;
           left: unset;
           right: 0;
@@ -3558,7 +3558,7 @@ hr {
       }
 
       &:before {
-        content: "\f105";
+        content: '\f105';
         @include font;
         position: absolute;
         left: 0;
@@ -3566,7 +3566,7 @@ hr {
         transition: all 0.3s ease-in-out;
         opacity: 0;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           left: unset;
           right: 0;
           top: 0;
@@ -3580,7 +3580,7 @@ hr {
         padding-left: 20px;
         color: var(--theme-color) !important;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           padding-left: unset;
           padding-right: 20px;
         }
@@ -3589,7 +3589,7 @@ hr {
           opacity: 1;
           left: 0px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             left: unset;
             right: 0;
             line-height: normal;
@@ -3600,7 +3600,7 @@ hr {
         i {
           left: 7px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             left: unset;
             right: 7px;
           }
@@ -3612,7 +3612,7 @@ hr {
         color: var(--theme-color) !important;
         font-weight: 600;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           padding-left: unset;
           padding-right: 20px;
         }
@@ -3621,7 +3621,7 @@ hr {
           opacity: 1;
           left: 0px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             left: unset;
             right: 0;
             top: 0;
@@ -3634,7 +3634,7 @@ hr {
         i {
           left: 7px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             left: unset;
             right: 7px;
           }
@@ -3677,7 +3677,7 @@ hr {
       color: var(--theme-color);
     }
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-left: unset;
       margin-right: 20px;
     }
@@ -3776,7 +3776,7 @@ hr {
       transform: rotate(0) translateY(-50%);
       transition: all 0.5s ease-in-out;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: -20px;
         right: unset;
       }
@@ -3787,7 +3787,7 @@ hr {
         transform: rotate(-7deg) translateY(-50%);
         opacity: 0.25;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           transform: rotate(7deg) translateY(-50%);
         }
       }
@@ -3806,7 +3806,7 @@ hr {
         margin-left: 15px;
         text-transform: capitalize;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: 15px;
         }
@@ -3837,7 +3837,7 @@ hr {
           width: auto;
           margin-right: 10px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-right: unset;
             margin-left: 10px;
           }
@@ -3851,7 +3851,7 @@ hr {
       a {
         margin-left: 20px;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: 20px;
         }
@@ -3956,7 +3956,7 @@ hr {
         calc(8px + (15 - 8) * ((100vw - 320px) / (1920 - 320)));
       border-radius: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320)));
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         right: unset;
         left: 0;
       }
@@ -4091,7 +4091,7 @@ hr {
           font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
           font-weight: normal;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-left: unset;
             margin-right: 15px;
           }
@@ -4101,7 +4101,7 @@ hr {
       .primary {
         margin-left: auto;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: auto;
         }
@@ -4136,7 +4136,7 @@ hr {
         margin-left: auto;
         text-align: right;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           text-align: left;
         }
       }
@@ -4244,7 +4244,7 @@ hr {
         text-align: left;
         margin-top: 0;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           text-align: right;
         }
       }
@@ -4266,7 +4266,7 @@ hr {
         line-height: 1;
         transform: translate(-50%, -50%) !important;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           float: right;
           right: -32px !important;
           left: unset !important;
@@ -4291,7 +4291,7 @@ hr {
         border-top: unset;
         border-left: 4px solid $silver;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           border-left: none;
           border-right: 4px solid $silver;
           margin-left: unset;
@@ -4304,7 +4304,7 @@ hr {
       }
 
       &:before {
-        content: "\f111";
+        content: '\f111';
         @include font;
         color: $silver;
         background-color: $white;
@@ -4317,7 +4317,7 @@ hr {
           line-height: 1;
           transform: translateY(-50%);
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             left: unset;
             right: -17px;
           }
@@ -4346,7 +4346,7 @@ hr {
         border-top: unset;
         border-left: 4px solid var(--theme-color);
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: 30px;
           text-align: right;
@@ -4357,7 +4357,7 @@ hr {
       }
 
       &:before {
-        content: "\f00c";
+        content: '\f00c';
         @include font;
         color: $white;
         background-color: var(--theme-color);
@@ -4391,7 +4391,7 @@ hr {
     margin-right: 40px;
     width: 30%;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-right: unset;
       margin-left: 40px;
     }
@@ -4402,7 +4402,7 @@ hr {
       margin-left: auto;
       margin-right: auto;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         margin-left: auto;
         margin-right: auto;
       }
@@ -4430,7 +4430,7 @@ hr {
         margin-left: 10px;
         color: $black1;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: 10px;
         }
@@ -4516,7 +4516,7 @@ hr {
         border-bottom: 1px solid $light-blue !important;
         background-color: $light-blue;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           text-align: right;
         }
       }
@@ -4538,7 +4538,7 @@ hr {
             calc(6px + (16 - 6) * ((100vw - 320px) / (1920 - 320)));
           min-width: 175px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             text-align: right;
           }
 
@@ -4647,7 +4647,7 @@ hr {
           height: 20px;
           margin-left: auto;
           color: $font-light;
-          content: "\f054";
+          content: '\f054';
           @include font;
           background-image: none;
           transition: transform 0.4s ease-in-out;
@@ -4851,7 +4851,7 @@ hr {
     padding: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
     border-radius: 10px;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       direction: rtl;
     }
 
@@ -4892,14 +4892,14 @@ hr {
         font-size: 15px;
         vertical-align: super;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           transform: rotate(180deg);
         }
 
         &.fa-quote-left {
           margin-right: 8px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-right: unset;
             margin-left: 8px;
           }
@@ -4908,7 +4908,7 @@ hr {
         &.fa-quote-right {
           margin-left: 8px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-left: unset;
             margin-right: 8px;
           }
@@ -4942,7 +4942,7 @@ hr {
   z-index: 3;
 
   ul {
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       padding-right: 0;
     }
 

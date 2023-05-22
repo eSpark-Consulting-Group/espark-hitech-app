@@ -1,7 +1,7 @@
 <template>
-  <div class="col-md-6" :class="rightSectionClasses ? rightSectionClasses : ''">
+  <div class="col-md-7" :class="rightSectionClasses ? rightSectionClasses : ''">
     <div class="row justify-content-center g-4">
-      <div class="cloth-details-size col-md-6">
+      <div class="cloth-details-size col-md-7">
         <!-- <productCount /> -->
 
         <div class="details-image-concept">
@@ -22,59 +22,72 @@
         </h3>
 
         <!-- <selectColors v-if="currentProduct.colors.length > 0" /> -->
-
-        <selectSize
-          :product="currentProduct"
-          :submited="submited"
-          @changeQuantityTo="changeQuantityTo"
-          @setSelectedSize="setSelectedSize"
-        />
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Quantity</th>
-              <th>Unit Price</th>
-              <th>Extended Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(item, index) in items" :key="index">
-              <td>{{ item.quantity }}</td>
-              <td>{{ item.unitPrice }}</td>
-              <td>{{ item.extendedPrice }}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="tab-pane">
+          <div class="pro mb-4">
+            <p class="font-light">SpecifyDescription</p>
+            <div class="table-responsive">
+              <table class="table table-part">
+                <tr>
+                  <th>Product Dimensions</th>
+                  <td>15 x 15 x 3 cm; 250 Grams</td>
+                </tr>
+                <tr>
+                  <th>DateFirstAvailable</th>
+                  <td>5 April 2021</td>
+                </tr>
+                <tr>
+                  <th>Manufacturer</th>
+                  <td>Aditya Birla Fashion and Retail Limited</td>
+                </tr>
+                <tr>
+                  <th>ASIN</th>
+                  <td>B06Y28LCDN</td>
+                </tr>
+                <tr>
+                  <th>GenericName</th>
+                  <td>T-shirt</td>
+                </tr>
+                <tr>
+                  <th>Product Dimensions</th>
+                  <td>15 x 15 x 3 cm; 250 Grams</td>
+                </tr>
+                <tr>
+                  <th>DateFirstAvailable</th>
+                  <td>5 April 2021</td>
+                </tr>
+                <tr>
+                  <th>Manufacturer</th>
+                  <td>Aditya Birla Fashion and Retail Limited</td>
+                </tr>
+                <tr>
+                  <th>ASIN</th>
+                  <td>B06Y28LCDN</td>
+                </tr>
+                <tr>
+                  <th>GenericName</th>
+                  <td>T-shirt</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
 
         <!-- <timer /> -->
 
         <!-- <shareIt /> -->
         <slot></slot>
       </div>
-      <div class="cloth-details-size col-md-6">
-        <div class="details-image-concept">
-          <h3>Bag</h3>
+      <div class="cloth-details-size col-md-5">
+        <div class="details-image-concept mt-5">
+          <h3>Can ship immediately</h3>
         </div>
-        <!-- <productCount /> -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Quantity</th>
-              <th>Unit Price</th>
-              <th>Extended Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(item, index) in items" :key="index">
-              <td>{{ item.quantity }}</td>
-              <td>{{ item.unitPrice }}</td>
-              <td>{{ item.extendedPrice }}</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="product-buttons">
+        <selectSize
+          :product="currentProduct"
+          :submited="submited"
+          @changeQuantityTo="changeQuantityTo"
+          @setSelectedSize="setSelectedSize"
+        />
+        <div class="product-buttons mt-2">
           <!-- <a @click.prevent="addToWishlist(currentProduct)" class="btn btn-solid">
           <i class="fa fa-bookmark fz-16 me-2"></i>
           <span>wishlist </span>
@@ -89,7 +102,29 @@
             <span>{{ addedToCart ? AddedToBag : Addtocart }}</span>
           </a>
         </div>
-        <ul class="product-count shipping-order">
+
+        <div class="details-image-concept bag-border m-0">
+          <h3>Bag</h3>
+        </div>
+        <!-- <productCount /> -->
+        <table class="table table-bag">
+          <thead>
+            <tr>
+              <th>Quantity</th>
+              <th>Unit Price</th>
+              <th>Extended Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in items" :key="index">
+              <td>{{ item.quantity }}</td>
+              <td>{{ item.unitPrice }}</td>
+              <td>{{ item.extendedPrice }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- <ul class="product-count shipping-order">
           <li>
             <img
               src="~assets/images/gif/truck.png"
@@ -98,7 +133,7 @@
             />
             <span class="lang">Free shipping for orders above $500 USD</span>
           </li>
-        </ul>
+        </ul> -->
         <slot></slot>
       </div>
     </div>
@@ -205,3 +240,21 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.tab-pane .pro .table-part tr th {
+  /* border: 1px solid #ced4da; */
+  /* background-color: #eff2f7; */
+}
+/* .tab-pane .pro .table-part tr td {
+  border: 1px solid #ced4da;
+} */
+
+.bag-border {
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #ddd;
+}
+.table-bag td {
+  text-align: center;
+}
+</style>

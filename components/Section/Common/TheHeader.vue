@@ -1,5 +1,9 @@
 <template>
-  <header id="home" :class="{ 'nav-down': scrollDown, 'nav-up': scrollUp }">
+  <header
+    id="home"
+    :class="{ 'nav-down': scrollDown, 'nav-up': scrollUp }"
+    class="transition-navbar"
+  >
     <TopBar :offerCode="offerCode" />
     <div class="main-header navbar-searchbar">
       <div class="container-fluid-lg">
@@ -126,4 +130,25 @@ export default {
   },
 }
 </script>
-<style scoped></style>
+<style scoped>
+.transition-navbar {
+  transition: opacity 0.3s ease;
+}
+.navbar-searchbar {
+  transition: all 0.3s ease;
+}
+.nav-down1 .navbar-searchbar {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  margin-top: 0;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(23, 32, 90, 0.15);
+  transition: all 0.3s ease;
+  z-index: 6;
+}
+header.nav-down1 .main-menu {
+  padding: 10px 0;
+}
+</style>

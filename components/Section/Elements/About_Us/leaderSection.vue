@@ -11,7 +11,32 @@
           </div>
         </div>
       </div>
-      <div
+      <div class="row">
+        <div class="col-6">
+          <div
+            class="faq-heading d-flex justify-content-center"
+            v-for="faq in faq.faq"
+            :key="faq.id"
+          >
+            <icons name="arrow-down" size="sm" color="theme-color" />
+            <div class="faq-option">
+              <h3 class="link question m-0" @click="toggleAnswer(faq)">
+                {{ faq.question }}
+              </h3>
+              <h6 v-if="faq.clicked" class="font-light">{{ faq.answer }}</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <img
+            src="~assets/images/inner-page/review-image/8.jpg"
+            class="img-fluid rounded-3 about-image border"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- <div
         class="product-wrapper leader-section slick-lg-space slide-5_1 ratio_asos"
       >
         <VueSlickCarousel v-bind="settings" ref="brandCarousel">
@@ -55,7 +80,7 @@
             </div>
           </div>
         </VueSlickCarousel>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -63,9 +88,11 @@
 <script>
 // import { teamleadersSlider } from "@/static/data/SliderSettingsData.js";
 import VueSlickCarousel from 'vue-slick-carousel-rtl'
+import icons from '../../../../assets/icons.vue'
+import aboutUs from '../../../../static/DummyData/aboutUs.json'
 export default {
   props: ['teamLeaders'],
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel, icons },
   data() {
     return {
       settings: {
@@ -96,17 +123,44 @@ export default {
           },
         ],
       },
-      meetOurTeam: 'Meet Our Team',
-      teamDesc:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero assumenda hic porro odio voluptas qui quod sed.',
+      meetOurTeam: 'eSpark Hi-Tech',
+      teamDesc: 'Electronic Store',
+      faqList: aboutUs.faqList,
+      faq: [],
+      index: 0,
+      selectedIndex: 0,
     }
   },
   methods: {
     getImageUrl(path) {
       return require('@/assets/images/' + path)
     },
+    toggleAnswer(faq) {
+      faq.clicked = !faq.clicked // toggle clicked property
+    },
+  },
+  created() {
+    this.faq = this.faqList.filter((item) => item.indexOf == this.index)[0]
   },
 }
 </script>
 
-<style></style>
+<style scoped>
+a {
+  cursor: pointer;
+}
+.link {
+  cursor: pointer;
+}
+
+a:hover {
+  color: #01b7a1 !important;
+}
+a.selected {
+  color: #01b7a1 !important; /* Change the color of the selected link */
+  /* Add any other styling you want for the selected link */
+}
+faq-heading .faq-option h3 {
+  margin-top: 0px !important;
+}
+</style>

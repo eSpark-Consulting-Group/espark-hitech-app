@@ -1,0 +1,40 @@
+{
+  "faqList": [
+    {
+      "type": "about us",
+      "indexOf": 0,
+      "faq": [
+        {
+          "id": 1,
+          "question": "Corporate Responsibility",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "Breadth of Product",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "Support/Resources",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 4,
+          "question": "Top-Rated Website",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 5,
+          "question": "Authorized Distribution",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        }
+      ]
+    }
+  ]
+}

@@ -4,15 +4,25 @@
       <div class="row">
         <div class="col-12">
           <div class="title title1 text-center">
-            <h2>Testimonial</h2>
-            <p>
+            <h2>Fast Facts</h2>
+            <!-- <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               assumenda hic porro odio voluptas qui quod sed.
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
-      <div class="testimonial-slider product-wrapper slide-3-1 slick-lg-space">
+      <div class="fastfacts-container">
+        <div class="fastfacts-item" v-for="faq in facts" :key="faq.id">
+          <div class="faq-option">
+            <h3 class="link question mb-3" @click="toggleAnswer(faq)">
+              {{ faq.header }}
+            </h3>
+            <h4 class="answer">{{ faq.answer }}</h4>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="testimonial-slider product-wrapper slide-3-1 slick-lg-space">
         <VueSlickCarousel v-bind="settings" ref="brandCarousel">
           <div v-for="(testimonial, index) in testimonials" :key="index">
             <div class="testimonial-contain">
@@ -52,7 +62,7 @@
             </div>
           </div>
         </VueSlickCarousel>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -64,6 +74,69 @@ export default {
   components: { VueSlickCarousel },
   data() {
     return {
+      facts: [
+        {
+          id: 1,
+          header: 'ANNUAL SALES',
+          answer: '$5.1 Billion +',
+        },
+        {
+          id: 2,
+          header: 'NUMBER OF EMPLOYEES',
+          answer: '5,000 +',
+        },
+        {
+          id: 3,
+          header: 'FACILITIES',
+          answer: 'Over 3 Million Square Feet',
+        },
+        {
+          id: 4,
+          header: 'PRODUCTS AVAILABLE',
+          answer: '14.9 Million +',
+        },
+        {
+          id: 5,
+          header: 'SUPPLIERS',
+          answer: '2,300 +',
+        },
+        {
+          id: 6,
+          header: 'INTERNET ORDERS / YR.',
+          answer: '5.7 Million +',
+        },
+        {
+          id: 7,
+          header: 'TELEPHONE CALLS / YR.',
+          answer: '3.2 Million +',
+        },
+        {
+          id: 8,
+          header: 'ORDERS PROCESSED / YR.',
+          answer: '6.5 Million +',
+        },
+        {
+          id: 9,
+          header: 'CUSTOMER SERVICED / YR.',
+          answer: '929,000 +',
+        },
+        {
+          id: 10,
+          header: 'SITES SERVED / YR.',
+          answer: '674,000 +',
+        },
+        {
+          id: 11,
+          header: 'ORDERS SHIPPED SAME DAY',
+          answer: '99.9%',
+        },
+        {
+          id: 12,
+          header: 'CUSTOMER SERVICE',
+          answer: 'Available 24/7',
+        },
+      ],
+
       settings: {
         dots: true,
         arrows: false,
@@ -97,4 +170,50 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.fastfacts-container {
+  background-color: #222;
+  border-radius: 12px;
+  padding: 40px 20px 20px 20px;
+}
+.fastfacts-container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px px 1% 20px 1%;
+  width: 98%;
+  text-align: center;
+}
+.faq-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.fastfacts-item {
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.fastfacts-item {
+  position: relative;
+  width: 22%;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0px;
+  box-sizing: content-box;
+  overflow: hidden;
+  padding: 0px;
+  min-height: 120px;
+}
+
+.question {
+  color: white !important;
+}
+.answer {
+  color: #ddd;
+}
+</style>
