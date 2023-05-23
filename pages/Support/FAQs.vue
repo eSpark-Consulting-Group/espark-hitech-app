@@ -37,7 +37,14 @@
               v-for="faq in faq.faq"
               :key="faq.id"
             >
-              <icons name="arrow-down" size="sm" color="theme-color" />
+              <div @click="toggleAnswer(faq)">
+                <icons
+                  class="link"
+                  :name="faq.clicked ? 'arrow-up' : 'arrow-down'"
+                  size="sm"
+                  color="theme-color"
+                />
+              </div>
               <div class="faq-option">
                 <h3 class="link question m-0" @click="toggleAnswer(faq)">
                   {{ faq.question }}
@@ -69,6 +76,7 @@ export default {
       faqList: faq.faqList,
       faq: [],
       index: 0,
+
       selectedIndex: 0,
     }
   },
@@ -83,7 +91,9 @@ export default {
       console.log(this.faq)
     },
     toggleAnswer(faq) {
-      faq.clicked = !faq.clicked // toggle clicked property
+      faq.clicked = !faq.clicked
+
+      // toggle clicked property
     },
   },
 }

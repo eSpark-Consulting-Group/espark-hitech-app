@@ -15,10 +15,16 @@
       <div class="fastfacts-container">
         <div class="fastfacts-item" v-for="faq in facts" :key="faq.id">
           <div class="faq-option">
+            <icons
+              class="link mb-3 mt-2"
+              :name="faq.icon"
+              size="lg"
+              color="theme-color"
+            />
             <h3 class="link question mb-3" @click="toggleAnswer(faq)">
               {{ faq.header }}
             </h3>
-            <h4 class="answer">{{ faq.answer }}</h4>
+            <h4 class="answer mb-2">{{ faq.answer }}</h4>
           </div>
         </div>
       </div>
@@ -69,9 +75,10 @@
 
 <script>
 import VueSlickCarousel from 'vue-slick-carousel-rtl'
+import icons from '../../../../assets/icons.vue'
 export default {
   props: ['testimonials'],
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel, icons },
   data() {
     return {
       facts: [
@@ -79,61 +86,73 @@ export default {
           id: 1,
           header: 'ANNUAL SALES',
           answer: '$5.1 Billion +',
+          icon: 'annual-sale',
         },
         {
           id: 2,
           header: 'NUMBER OF EMPLOYEES',
           answer: '5,000 +',
+          icon: 'employees',
         },
         {
           id: 3,
           header: 'FACILITIES',
           answer: 'Over 3 Million Square Feet',
+          icon: 'question',
         },
         {
           id: 4,
           header: 'PRODUCTS AVAILABLE',
           answer: '14.9 Million +',
+          icon: 'products',
         },
         {
           id: 5,
           header: 'SUPPLIERS',
           answer: '2,300 +',
+          icon: 'question',
         },
         {
           id: 6,
           header: 'INTERNET ORDERS / YR.',
           answer: '5.7 Million +',
+          icon: 'question',
         },
         {
           id: 7,
           header: 'TELEPHONE CALLS / YR.',
           answer: '3.2 Million +',
+          icon: 'telephone',
         },
         {
           id: 8,
           header: 'ORDERS PROCESSED / YR.',
           answer: '6.5 Million +',
+          icon: 'truck',
         },
         {
           id: 9,
           header: 'CUSTOMER SERVICED / YR.',
           answer: '929,000 +',
+          icon: 'question',
         },
         {
           id: 10,
           header: 'SITES SERVED / YR.',
           answer: '674,000 +',
+          icon: 'question',
         },
         {
           id: 11,
           header: 'ORDERS SHIPPED SAME DAY',
           answer: '99.9%',
+          icon: 'question',
         },
         {
           id: 12,
           header: 'CUSTOMER SERVICE',
           answer: 'Available 24/7',
+          icon: 'question',
         },
       ],
 
@@ -172,7 +191,7 @@ export default {
 
 <style scoped>
 .fastfacts-container {
-  background-color: #222;
+  background-color: #eff2f7;
   border-radius: 12px;
   padding: 40px 20px 20px 20px;
 }
@@ -192,8 +211,8 @@ export default {
 }
 
 .fastfacts-item {
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  border: 1px solid #dee2e6;
+  /* border-right: 1px solid #ddd; */
 }
 .fastfacts-item {
   position: relative;
@@ -210,10 +229,10 @@ export default {
   min-height: 120px;
 }
 
-.question {
+/* .question {
   color: white !important;
 }
 .answer {
   color: #ddd;
-}
+} */
 </style>

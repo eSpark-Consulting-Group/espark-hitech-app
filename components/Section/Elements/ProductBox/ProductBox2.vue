@@ -164,7 +164,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.showSkeletonLoader = false
-    }, 2000)
+    }, 500)
   },
 }
 </script>

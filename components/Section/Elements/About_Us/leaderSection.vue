@@ -163,4 +163,8 @@ a.selected {
 faq-heading .faq-option h3 {
   margin-top: 0px !important;
 }
+
+.title h2 {
+  text-transform: none !important;
+}
 </style>

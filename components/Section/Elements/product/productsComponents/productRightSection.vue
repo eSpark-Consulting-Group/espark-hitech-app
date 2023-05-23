@@ -74,7 +74,7 @@
 
         <!-- <timer /> -->
 
-        <!-- <shareIt /> -->
+        <shareIt />
         <slot></slot>
       </div>
       <div class="cloth-details-size col-md-5">
