@@ -1,7 +1,7 @@
 <template>
   <div
     id="selectSize"
-    class="addeffect-section product-description border-product"
+    class="addeffect-section product-description border-product p-1"
     :class="submited && selectedSize === '' ? 'cartMove' : ''"
   >
     <!-- <h6
@@ -82,33 +82,39 @@
 
 <script>
 export default {
-  props: ["product", "submited"],
+  props: ['product', 'submited'],
   data() {
     return {
-      selectedSize: "",
+      selectedSize: '',
       productQuantity: 1,
-      selectsize: "select size",
-      sizechart: "size chart",
-      pleaseselectsize: "please select size",
-    };
+      selectsize: 'select size',
+      sizechart: 'size chart',
+      pleaseselectsize: 'please select size',
+    }
   },
   mounted() {
-    this.productQuantity = this.product.quantity ? this.product.quantity : 1;
+    this.productQuantity = this.product.quantity ? this.product.quantity : 1
   },
   methods: {
     changeQuantityTo(quantity) {
       if (quantity <= this.product.inStock && quantity > 0) {
-        this.$emit("changeQuantityTo", quantity);
-        this.productQuantity = quantity;
+        this.$emit('changeQuantityTo', quantity)
+        this.productQuantity = quantity
       }
     },
     showSizeChart() {
-      this.$store.dispatch("clickEvents/toggleSizeChart");
+      this.$store.dispatch('clickEvents/toggleSizeChart')
     },
     selectSize(size) {
-      this.selectedSize = size;
-      this.$emit("setSelectedSize", this.selectedSize);
+      this.selectedSize = size
+      this.$emit('setSelectedSize', this.selectedSize)
     },
   },
-};
+}
 </script>
+
+<style scoped>
+.product-title-2 {
+  margin-top: 0 !important;
+}
+</style>

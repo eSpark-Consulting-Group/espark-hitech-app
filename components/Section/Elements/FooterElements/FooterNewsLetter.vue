@@ -3,8 +3,8 @@
     <div class="footer-newsletter">
       <h3>Let's Connect</h3>
       <p class="font-dark mb-0">
-          Keep up to date with our latest news and special offers.
-        </p>
+        Keep up to date with our latest news and special offers.
+      </p>
       <form
         action="https://pixelstrap.us19.list-manage.com/subscribe/post?u=5a128856334b598b395f1fc9b&amp;id=082f74cbda"
         class="form-newsletter needs-validation"
@@ -24,20 +24,20 @@
             <i class="fas fa-arrow-right"></i>
           </span>
         </div>
-        
+
         <h3 class="mb-0">Follow us</h3>
-        
+
         <div class="social-icons">
+          <!-- <shareIt /> -->
           <a href="www.facebook.com">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="www.twitter.com">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="www.facebook.com">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-          
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="www.twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="www.facebook.com">
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
       </form>
     </div>
@@ -45,9 +45,11 @@
 </template>
 <script>
 import icons from '../../../../assets/icons.vue'
+import shareIt from '../product/productsComponents/shareIt.vue'
+
 export default {
   props: ['formControlColor'],
-  components:{icons}
+  components: { icons },
 }
 </script>
 
@@ -58,10 +60,14 @@ export default {
 }
 
 .social-icons a {
-  
   font-size: 1.5rem;
+  color: #d8dadd;
   transition: color 0.2s;
 }
 
-
+.social-icons a:hover {
+  font-size: 1.5rem;
+  color: #01b7a1;
+  transition: color 0.2s;
+}
 </style>

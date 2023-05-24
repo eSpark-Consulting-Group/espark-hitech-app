@@ -1,5 +1,9 @@
 <template>
-  <header id="home" :class="{ 'nav-down': scrollDown, 'nav-up': scrollUp }">
+  <header
+    id="home"
+    :class="{ 'nav-down': scrollDown, 'nav-up': scrollUp }"
+    class="transition-navbar"
+  >
     <TopBar :offerCode="offerCode" />
     <div class="main-header navbar-searchbar">
       <div class="container-fluid-lg">
@@ -100,18 +104,22 @@ export default {
         if (!this.stopScrollWork) {
           if (window.scrollY > 0) {
             if (!this.headerDown) {
+              // console.log('1st', window.scrollY)
               this.headerDown = true
               this.scrollDown = false
               this.scrollUp = false
             }
             if (window.scrollY > this.scrollTopDiff) {
+              // console.log('up', window.scrollY)
               this.scrollDown = true
               this.scrollUp = false
             } else {
+              // console.log('up-else', window.scrollY)
               this.scrollUp = true
             }
             this.scrollTopDiff = window.scrollY
           } else if (window.scrollY === 0) {
+            // console.log('top', window.scrollY)
             this.headerDown = false
             this.scrollDown = false
             this.scrollUp = false
@@ -122,4 +130,25 @@ export default {
   },
 }
 </script>
-<style scoped></style>
+<style scoped>
+.transition-navbar {
+  transition: opacity 0.3s ease;
+}
+.navbar-searchbar {
+  transition: all 0.3s ease;
+}
+.nav-down1 .navbar-searchbar {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  margin-top: 0;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(23, 32, 90, 0.15);
+  transition: all 0.3s ease;
+  z-index: 6;
+}
+header.nav-down1 .main-menu {
+  padding: 10px 0;
+}
+</style>

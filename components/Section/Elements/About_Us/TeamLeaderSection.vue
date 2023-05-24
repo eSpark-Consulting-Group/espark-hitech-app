@@ -42,7 +42,7 @@
                 {{ aboutUsDesc2 }}
               </p>
               <button
-                @click.prevent="$router.push('/shop/shop_left_sidebar')"
+                @click.prevent="$router.push('/')"
                 type="button"
                 class="btn btn-solid-default"
               >
@@ -61,14 +61,13 @@ export default {
   data() {
     return {
       whoAreWe: 'WHO ARE WE',
-      largerFashion: 'largest Online fashion destination',
-      aboutUsDesc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
-  culpa! Asperiores labore amet nemo ullam odit atque adipisci,
-  hic, aliquid animi fugiat praesentium quidem. Perspiciatis,
-  expedita!`,
-      aboutUsDesc2: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
-  culpa! Asperiores labore amet nemo ullam odit atque adipisci,
-  hic, aliquid animi fugiat praesentium quidem. Perspiciatis,
+      largerFashion: 'eSpark Consulting Group',
+      aboutUsDesc: `We love technology and creating cool stuff with it. From designing software, hardware, and mechanical projects, 
+      everything we do is up-to-date with the latest trends. 
+      Our design process and products help our clients stay ahead of their competitors. So far, we've completed over 150+ projects that are innovative and top-notch quality, 
+      helping us to grow and succeed. Our focus on quality and innovation has helped us build long-term relationships with our clients, many of whom have been with us for years.
+      `,
+      aboutUsDesc2: `We offer a range of services, including Iot, software development, IT consulting, project management, and more.,
   expedita!`,
     }
   },

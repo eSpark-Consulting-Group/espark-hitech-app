@@ -48,7 +48,7 @@
                     {{ section.title }}
                   </h5>
                 </a>
-                <ul class="rating rating-2">
+                <!-- <ul class="rating rating-2">
                   <li>
                     <i
                       class="fas fa-star theme-color"
@@ -63,7 +63,7 @@
                       :key="'b' + index6"
                     ></i>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@
                 >
                   <h5>{{ banner.title }}</h5>
                 </a>
-                <ul class="rating">
+                <!-- <ul class="rating">
                   <li
                     v-for="(stars, index3) in banner.ratingstars"
                     :key="'d' + index3"
@@ -115,7 +115,7 @@
                   >
                     <i class="fas fa-star"></i>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
@@ -127,15 +127,15 @@
 
 <script>
 export default {
-  props: ["tab", "productBoxClasses"],
+  props: ['tab', 'productBoxClasses'],
   methods: {
     getSectionClasses(section) {
-      if (section.childtype === "middlebanner") return "order-lg-0 order-1";
-      else return "col-md-6";
+      if (section.childtype === 'middlebanner') return 'order-lg-0 order-1'
+      else return 'col-md-6'
     },
     getImageUrl(path) {
-      return require("@/assets/images/" + path);
+      return require('@/assets/images/' + path)
     },
   },
-};
+}
 </script>

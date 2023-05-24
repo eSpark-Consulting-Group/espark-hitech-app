@@ -1,0 +1,208 @@
+{
+  "faqList": [
+    {
+      "type": "Placing Orders",
+      "indexOf": 0,
+      "faq": [
+        {
+          "id": 1,
+          "question": "Do I have to be registered on the website to place an order?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "What do I need to do to order online?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "Can I cancel an order?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 4,
+          "question": "Is there a minimum order quantity or minimum order value?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 5,
+          "question": "Will I receive an invoice?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        }
+      ]
+    },
+    {
+      "type": "Product Support",
+      "indexOf": 1,
+      "faq": [
+        {
+          "id": 1,
+          "question": "Can I speak to someone about technical product information?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "How do I check stock and lead times?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "What packaging options are available?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 4,
+          "question": "How do I compare products?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 5,
+          "question": "I cannot find the product I'm looking for. Can I get some help?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        }
+      ]
+    },
+    {
+      "type": "My Account",
+      "indexOf": 2,
+      "faq": [
+        {
+          "id": 1,
+          "question": "I have forgotten my password, can you help?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "How can I request my username?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "How do I change my delivery/invoice address?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 4,
+          "question": "Can I view my order status and search my Order History?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 5,
+          "question": "How can I change my Trade Account?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        }
+      ]
+    },
+    {
+      "type": "Returns",
+      "indexOf": 3,
+      "faq": [
+        {
+          "id": 1,
+          "question": "How do I return goods?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "What is the time restriction for returning a product?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "What is the Returns policy?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        }
+      ]
+    },
+    {
+      "type": "Delivery",
+      "indexOf": 4,
+      "faq": [
+        {
+          "id": 1,
+          "question": "What are your delivery options?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "What is the status of my order?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "Why are some items missing from my order?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 4,
+          "question": "Do you offer Saturday delivery?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 5,
+          "question": "What should I do if the product is damaged in delivery?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        }
+      ]
+    },
+    {
+      "type": "Payment and Billing",
+      "indexOf": 5,
+      "faq": [
+        {
+          "id": 1,
+          "question": "What payment methods are available on the website?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 2,
+          "question": "How do I open a trade account?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 3,
+          "question": "I have no credit or debit card, can I still buy?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 4,
+          "question": "Can I pay my account balance online?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        },
+        {
+          "id": 5,
+          "question": "Can I order if I am on credit hold?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "clicked": false
+        }
+      ]
+    }
+  ]
+}

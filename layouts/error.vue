@@ -31,6 +31,7 @@
 </template>
 <script>
 export default {
+  layout: 'errorlayout',
   head() {
     return {
       title: '404 - Not Found',
