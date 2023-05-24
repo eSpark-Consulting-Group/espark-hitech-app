@@ -61,7 +61,7 @@ export default {
 
 .social-icons a {
   font-size: 1.5rem;
-  color: #3b3b3b;
+  color: #d8dadd;
   transition: color 0.2s;
 }
 
