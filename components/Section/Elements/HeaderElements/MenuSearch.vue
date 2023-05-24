@@ -22,31 +22,29 @@
             </li>
             <!-- <li v-if="$store.state.firebase.user === null"> -->
             <li>
-              <nuxt-link to="/auth/login" class="d-block">{{$t('Login')}}</nuxt-link>
+              <nuxt-link to="/auth/login" class="d-block">{{
+                $t('Login')
+              }}</nuxt-link>
             </li>
             <!-- <li>
               <a @click.prevent="signout" to="/" class="d-block">logout</a>
             </li> -->
             <!-- <li v-if="$store.state.firebase.user === null"> -->
             <li>
-              <nuxt-link to="/auth/register" class="d-block"
-                >{{$t('Register')}}</nuxt-link
-              >
+              <nuxt-link to="/auth/register" class="d-block">{{
+                $t('Register')
+              }}</nuxt-link>
             </li>
           </ul>
         </div>
       </li>
-      <li class="onhover-dropdown wislist-dropdown">
+      <!-- <li class="onhover-dropdown wislist-dropdown">
         <div class="cart-media">
           <div class="cart-icon">
-            <!-- <a
-              href="javascript:void(0)"
-              class="d-flex"
-              @click.prevent="$router.push('/page/wishlist')"
-            > -->
+           
             <icons name="heart" size="sm" />
             <span class="label label-theme rounded-pill">0</span>
-            <!-- </a> -->
+            
           </div>
           <div class="onhover-div">
             <a @click.prevent="$router.push('/page/wishlist')">
@@ -72,7 +70,7 @@
             </a>
           </div>
         </div>
-      </li>
+      </li> -->
       <li
         class="onhover-dropdown cart-dropdown"
         :class="isCartOpen ? 'show' : ''"

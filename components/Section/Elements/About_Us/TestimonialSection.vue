@@ -12,7 +12,7 @@
           </div>
         </div>
       </div>
-      <div class="fastfacts-container">
+      <!-- <div class="fastfacts-container">
         <div class="fastfacts-item" v-for="faq in facts" :key="faq.id">
           <div class="faq-option">
             <icons
@@ -27,7 +27,32 @@
             <h4 class="answer mb-2">{{ faq.answer }}</h4>
           </div>
         </div>
+      </div> -->
+      <div class="fastfacts-container">
+        <div class="row">
+          <div
+            class="col-md-4 fastfacts-item"
+            v-for="faq in facts"
+            :key="faq.id"
+          >
+            <div>
+              <div class="faq-option">
+                <icons
+                  class="link mb-3 mt-2"
+                  :name="faq.icon"
+                  size="lg"
+                  color="theme-color"
+                />
+                <h3 class="link question mb-3" @click="toggleAnswer(faq)">
+                  {{ faq.header }}
+                </h3>
+                <h4 class="answer mb-2">{{ faq.answer }}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
       <!-- <div class="testimonial-slider product-wrapper slide-3-1 slick-lg-space">
         <VueSlickCarousel v-bind="settings" ref="brandCarousel">
           <div v-for="(testimonial, index) in testimonials" :key="index">
@@ -83,12 +108,6 @@ export default {
     return {
       facts: [
         {
-          id: 1,
-          header: 'ANNUAL SALES',
-          answer: '$5.1 Billion +',
-          icon: 'annual-sale',
-        },
-        {
           id: 2,
           header: 'NUMBER OF EMPLOYEES',
           answer: '5,000 +',
@@ -112,36 +131,7 @@ export default {
           answer: '2,300 +',
           icon: 'question',
         },
-        {
-          id: 6,
-          header: 'INTERNET ORDERS / YR.',
-          answer: '5.7 Million +',
-          icon: 'question',
-        },
-        {
-          id: 7,
-          header: 'TELEPHONE CALLS / YR.',
-          answer: '3.2 Million +',
-          icon: 'telephone',
-        },
-        {
-          id: 8,
-          header: 'ORDERS PROCESSED / YR.',
-          answer: '6.5 Million +',
-          icon: 'truck',
-        },
-        {
-          id: 9,
-          header: 'CUSTOMER SERVICED / YR.',
-          answer: '929,000 +',
-          icon: 'question',
-        },
-        {
-          id: 10,
-          header: 'SITES SERVED / YR.',
-          answer: '674,000 +',
-          icon: 'question',
-        },
+
         {
           id: 11,
           header: 'ORDERS SHIPPED SAME DAY',
@@ -214,7 +204,7 @@ export default {
   border: 1px solid #dee2e6;
   /* border-right: 1px solid #ddd; */
 }
-.fastfacts-item {
+/* .fastfacts-item {
   position: relative;
   width: 22%;
   -webkit-flex: 1 0 auto;
@@ -227,7 +217,7 @@ export default {
   overflow: hidden;
   padding: 0px;
   min-height: 120px;
-}
+} */
 
 /* .question {
   color: white !important;

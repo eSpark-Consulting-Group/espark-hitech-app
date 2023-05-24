@@ -4,7 +4,7 @@
       <div class="cloth-details-size col-md-7">
         <!-- <productCount /> -->
 
-        <div class="details-image-concept">
+        <div class="details-image-concept m-0">
           <h2>{{ currentProduct.name }}</h2>
         </div>
 
@@ -78,7 +78,7 @@
         <slot></slot>
       </div>
       <div class="cloth-details-size col-md-5">
-        <div class="details-image-concept mt-5">
+        <div class="details-image-concept m-0">
           <h3>Can ship immediately</h3>
         </div>
         <selectSize

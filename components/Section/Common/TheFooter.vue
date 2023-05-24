@@ -173,10 +173,10 @@ export default {
               title: 'Track Orders',
               path: '/order_tracking',
             },
-            {
-              title: 'Your Wishlist',
-              path: '/pages/wishlist',
-            },
+            // {
+            //   title: 'Your Wishlist',
+            //   path: '/pages/wishlist',
+            // },
             {
               title: 'Shopping FAQS',
               path: '/Support/FAQs',

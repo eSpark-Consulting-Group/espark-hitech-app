@@ -28,16 +28,16 @@
         <h3 class="mb-0">Follow us</h3>
 
         <div class="social-icons">
-          <shareIt />
-          <!-- <a href="www.facebook.com">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="www.twitter.com">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="www.facebook.com">
-                      <i class="fab fa-linkedin"></i>
-                    </a> -->
+          <!-- <shareIt /> -->
+          <a href="www.facebook.com">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="www.twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="www.facebook.com">
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
       </form>
     </div>
@@ -61,6 +61,13 @@ export default {
 
 .social-icons a {
   font-size: 1.5rem;
+  color: #3b3b3b;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  font-size: 1.5rem;
+  color: #01b7a1;
   transition: color 0.2s;
 }
 </style>

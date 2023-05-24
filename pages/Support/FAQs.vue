@@ -67,7 +67,8 @@ export default {
     return { title: 'FAQ' }
   },
   components: { FAQTop, icons },
-  created() {
+
+  beforeMount() {
     this.setBreadcrumbs({ pageParent: null, pageName: null })
   },
   data() {

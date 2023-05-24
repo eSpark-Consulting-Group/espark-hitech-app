@@ -13,13 +13,14 @@
                 <div class="product-box">
                   <div class="img-wrapper">
                     <div class="top-wishlist">
-                      <span class="font-dark-30">{{ product.discount }}%</span>
+                      <!-- <span class="font-dark-30">{{ product.discount }}%</span> -->
                       <a
                         href="javascript:void(0)"
                         @click.prevent="$router.push('/page/wishlist')"
                         class="heart-wishlist wishlist"
-                        ><i class="far fa-heart"></i
-                      ></a>
+                      >
+                        <!-- <i class="far fa-heart"></i> -->
+                      </a>
                     </div>
                     <nuxt-link
                       :to="'/product/product_no_sidebar/' + product.id"
@@ -35,9 +36,9 @@
                   <div class="product-details text-center">
                     <h3 class="theme-color">
                       {{ selectedCurrencySymbol }}{{ product.price }}
-                      <span class="font-light ml-1"
+                      <!-- <span class="font-light ml-1"
                         >{{ selectedCurrencySymbol }}{{ product.mrp }}</span
-                      >
+                      > -->
                     </h3>
                     <a
                       href="javascript:void(0)"
@@ -48,7 +49,7 @@
                     >
                       <h5>{{ product.name }}</h5>
                     </a>
-                    <ul class="rating">
+                    <!-- <ul class="rating">
                       <li
                         v-for="(stars, index) in product.ratingStars"
                         :key="'A' + index"
@@ -61,7 +62,7 @@
                       >
                         <i class="fas fa-star"></i>
                       </li>
-                    </ul>
+                    </ul> -->
                   </div>
                 </div>
               </div>

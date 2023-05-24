@@ -20,6 +20,7 @@ export default {
   },
   components: { BlogsSearch, BlogDetail },
   created() {
+    console.log('blog created')
     this.setBreadcrumbs({
       pageParent: 'Blog Details',
       pageName: 'Blog Details',
