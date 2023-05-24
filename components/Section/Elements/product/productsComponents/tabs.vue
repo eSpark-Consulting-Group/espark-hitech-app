@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12">
+  <div class="col-12 mt-0">
     <div class="cloth-review">
       <nav>
         <div class="nav nav-tabs" id="nav-tab">

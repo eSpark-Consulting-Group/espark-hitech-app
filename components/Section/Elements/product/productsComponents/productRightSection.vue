@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-7" :class="rightSectionClasses ? rightSectionClasses : ''">
+  <div class="col-md-8" :class="rightSectionClasses ? rightSectionClasses : ''">
     <div class="row justify-content-center g-4">
       <div class="cloth-details-size col-md-7">
         <!-- <productCount /> -->
@@ -74,7 +74,7 @@
 
         <!-- <timer /> -->
 
-        <shareIt />
+        <!-- <shareIt /> -->
         <slot></slot>
       </div>
       <div class="cloth-details-size col-md-5">

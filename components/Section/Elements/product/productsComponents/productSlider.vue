@@ -1,11 +1,10 @@
 <template>
-  <div class="col-md-5">
-    <div class="row justify-content-end">
+  <div class="col-md-4">
+    <div class="row">
       <div class="col-lg-2 oder-lg-1 order-2">
         <div class="details-image-vertical black-slide rounded">
           <VueSlickCarousel
             v-bind="settingsVertical"
-            :style="{ height: '372px' }"
             ref="c2"
             :asNavFor="$refs.c1"
             :slidesToShow="3"
@@ -42,6 +41,7 @@
         </div>
       </div>
     </div>
+    <shareIt class="mt-5" />
   </div>
 </template>
 
@@ -49,9 +49,11 @@
 import { mapState } from 'vuex'
 import VueSlickCarousel from 'vue-slick-carousel-rtl'
 import dummyproducts from '../../../../../static/DummyData/information.json'
+import shareIt from './shareIt.vue'
 export default {
   components: {
     VueSlickCarousel,
+    shareIt,
   },
   data() {
     return {
@@ -115,7 +117,7 @@ export default {
 @media (min-width: 992px) {
   .col-lg-10 {
     flex: 0 0 auto;
-    width: 63.33333333%;
+    width: 83.33333333%;
   }
 }
 </style>
