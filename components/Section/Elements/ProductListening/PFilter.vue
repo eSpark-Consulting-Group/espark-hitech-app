@@ -1,17 +1,30 @@
 <template>
-  <div class="m-2">
-    <!-- <ul class="category-list list-inline text-center align-items-center">
+  <div
+    class="container-fluid accordion-body category-scroll custom-container shadow mb-1"
+  >
+    <h5 class="accordion-header m-2" id="headingOne">
+      <div>
+        {{ title }}
+      </div>
+    </h5>
+    <div class="line"></div>
+    <ul class="category-list mr-2">
       <li v-for="(item, i) in new Set(items)" :key="i">
         <div class="form-check ps-0 custome-form-check">
-          <input class="checkbox_animated check-it" type="checkbox" />
+          <input
+            class="checkbox_animated check-it"
+            type="checkbox"
+            v-model="selectedItems"
+            :value="item"
+          />
           <label class="form-check-label">{{ item }}</label>
           <p class="font-light">
-            ({{ items.filter((r) => r == item).length }})
+            <!-- ({{ items.filter((r) => r == item).length }}) -->
           </p>
         </div>
       </li>
-    </ul> -->
-    <ul class="list-group">
+    </ul>
+    <!-- <ul class="list-group">
       <li class="list-group-item">
         <input
           class="form-check-input me-1"
@@ -57,7 +70,7 @@
         />
         Fifth checkbox
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
@@ -77,9 +90,17 @@ export default {
   components: { icons },
   data() {
     return {
+      selected: null,
       visible: false,
       showFilters: false,
+      selectedItems: [],
     }
+  },
+  computed: {
+    selectedItemsCount() {
+      console.log(this.selectedItems.length)
+      return this.selectedItems.length
+    },
   },
   methods: {
     // toggleFilterBar() {
@@ -87,11 +108,37 @@ export default {
     //   this.showFilters = !this.showFilters
     // },
   },
+
+  watch: {
+    selectedItems: {
+      handler(newValue) {
+        console.log('Selected Items:', newValue)
+      },
+      deep: true,
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
+.custom-container {
+  background: #ffffff !important;
+  border-radius: 5px;
+  border: 1px solid #a7a7a7;
+}
 .category-list {
+  padding: 0.7rem !important;
+}
+.category-list li {
   display: block;
+  margin: 10px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line {
+  border: 1px solid #a7a7a7;
+  padding: 0 !important;
+  margin: 0;
 }
 </style>

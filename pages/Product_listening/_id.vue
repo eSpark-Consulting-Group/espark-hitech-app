@@ -1,26 +1,44 @@
 <template>
   <section class="section-b-space">
     <div class="container">
-      <div class="row">table</div>
       <div class="row g-4">
         <!-- filter button -->
         <div class="filter-button">
-          <button
+          <!-- <button
             class="danger-button danger-center btn btn-sm filter-btn"
             @click.prevent="toggleFilterBar"
           >
             Filter
-          </button>
+          </button> -->
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckChecked"
+              v-model="isChecked"
+            />
+            <label class="form-check-label" for="flexSwitchCheckChecked"
+              >stacked/scroll</label
+            >
+          </div>
         </div>
-        <div class="col-12 d-flex mr-2">
-          <PFilter :items="initCards.map((r) => r.brand)" title="Brands" />
-          <PFilter :items="initCards.map((r) => r.brand)" title="Brands" />
-          <PFilter :items="initCards.map((r) => r.brand)" title="Brands" />
+        <div
+          class="col-12 d-flex mr-2"
+          :class="isChecked ? 'flex-container' : '.flex-container'"
+        >
+          <div
+            v-for="key in Object.keys(items[0])"
+            :key="key"
+            style="margin-right: 0.7rem"
+          >
+            <!-- <p>{{ key }}</p> -->
+            <PFilter :items="getValuesByKey(key)" :title="key" />
+          </div>
         </div>
         <!-- filter button -->
 
         <!-- label and featured section -->
-        <div class="col-12">filters</div>
+
         <div class="col-12">
           <PTable />
         </div>
@@ -73,6 +91,7 @@ export default {
   data() {
     return {
       //   breadcrumb: true,
+      isChecked: true,
       HideFilter: 'Hide Filter',
       ShowFilter: 'Show Filter',
       showSkeletonLoad: true,
@@ -87,9 +106,79 @@ export default {
       initCards: products.data,
       // showFilters: false,
       filtersList: [],
+      items: [
+        {
+          'Mfr Part #': 'ABC123',
+          'Quantity Available': 100,
+          Price: 10.99,
+          Series: 'XYZ',
+          Package: 'Package A',
+          'Product Status': 'In Stock',
+          Resistance: '100 Ohms',
+          Tolerance: '5%',
+          'Power (Watts)': 1,
+          Composition: 'Carbon Film',
+          Features: 'High precision',
+          'Temperature Coefficient': '±100 ppm/°C',
+          'Operating Temperature': '-40°C to +85°C',
+          'Package / Case': 'Case A',
+          'Supplier Device Package': 'Device Package A',
+          'Size / Dimension': '10mm x 5mm',
+          'Height - Seated (Max)': '3mm',
+          'Number of Terminations': 2,
+          'Failure Rate': '1%',
+        },
+        {
+          'Mfr Part #': 'DEF456',
+          'Quantity Available': 50,
+          Price: 5.49,
+          Series: 'UVW',
+          Package: 'Package B',
+          'Product Status': 'Backordered',
+          Resistance: '220 Ohms',
+          Tolerance: '10%',
+          'Power (Watts)': 0.5,
+          Composition: 'Metal Film',
+          Features: 'Low noise',
+          'Temperature Coefficient': '±50 ppm/°C',
+          'Operating Temperature': '-20°C to +70°C',
+          'Package / Case': 'Case B',
+          'Supplier Device Package': 'Device Package B',
+          'Size / Dimension': '7mm x 3mm',
+          'Height - Seated (Max)': '2mm',
+          'Number of Terminations': 3,
+          'Failure Rate': '0.5%',
+        },
+        {
+          'Mfr Part #': 'GHI789',
+          'Quantity Available': 200,
+          Price: 2.99,
+          Series: 'PQR',
+          Package: 'Package C',
+          'Product Status': 'Discontinued',
+          Resistance: '1k Ohms',
+          Tolerance: '1%',
+          'Power (Watts)': 0.25,
+          Composition: 'Thick Film',
+          Features: 'High power handling',
+          'Temperature Coefficient': '±200 ppm/°C',
+          'Operating Temperature': '-10°C to +60°C',
+          'Package / Case': 'Case C',
+          'Supplier Device Package': 'Device Package C',
+          'Size / Dimension': '5mm x 2mm',
+          'Height - Seated (Max)': '1mm',
+          'Number of Terminations': 1,
+          'Failure Rate': '0.2%',
+        },
+      ],
     }
   },
   computed: {
+    checkboxClass() {
+      return {
+        '.flex-container': this.isChecked,
+      }
+    },
     // ...mapGetters({
     //   initCards: "filters/cardsToReturn",
     // }),
@@ -117,6 +206,9 @@ export default {
     })
   },
   methods: {
+    getValuesByKey(key) {
+      return this.items.map((item) => item[key])
+    },
     changeCardLayout(toLayout) {
       this.cardsLayout = toLayout
     },
@@ -215,5 +307,11 @@ export default {
 .container {
   margin: 0px;
   padding: 0 1.5rem 0 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 </style>
