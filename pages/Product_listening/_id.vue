@@ -24,7 +24,7 @@
         </div>
         <div
           class="col-12 d-flex mr-2"
-          :class="isChecked ? 'flex-container' : '.flex-container'"
+          :class="isChecked ? 'flex-container' : 'table-container'"
         >
           <div
             v-for="key in Object.keys(items[0])"

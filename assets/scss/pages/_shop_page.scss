@@ -109,7 +109,7 @@
   display: flex;
   align-items: center;
 
-  [dir="rtl"] & {
+  [dir='rtl'] & {
     padding-right: 0;
   }
 
@@ -123,12 +123,12 @@
     border-radius: 3px !important;
     transition: all 0.3s ease-in-out;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-left: 1.5rem;
       margin-right: 0;
     }
 
-    &:checked[type="checkbox"] {
+    &:checked[type='checkbox'] {
       background-image: url(~assets/images/check.svg);
       background-size: 13px;
     }
@@ -178,7 +178,7 @@
     overflow-x: scroll;
     overflow-y: auto;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       left: unset;
       right: -320px;
     }
@@ -187,7 +187,7 @@
   &.show {
     left: 0;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       left: unset;
       right: 0;
     }
@@ -213,7 +213,7 @@
         margin-right: 8px;
         margin-top: -1px;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-right: unset;
           margin-left: 8px;
         }
@@ -249,7 +249,7 @@
                     span {
                       margin-left: 10px;
 
-                      [dir="rtl"] & {
+                      [dir='rtl'] & {
                         margin-left: 0;
                         margin-right: 10px;
                       }
@@ -261,7 +261,7 @@
                     margin-left: 12px;
                     font-size: 13px;
 
-                    [dir="rtl"] & {
+                    [dir='rtl'] & {
                       margin-left: 0;
                       margin-right: 12px;
                     }
@@ -510,14 +510,14 @@
       }
 
       &:after {
-        background-image: url(/voxo/images/plus.svg);
+        background-image: url('/voxo/images/plus.svg');
         filter: invert(1);
         transition: all 0.2s ease-in-out;
       }
 
       &:not(.collapsed) {
         &::after {
-          background-image: url(/voxo/images/minus.svg);
+          background-image: url('/voxo/images/minus.svg');
           filter: invert(1);
           transform: rotate(0);
         }
@@ -594,7 +594,7 @@
     width: 20px;
     margin-right: 10px;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-right: unset;
       margin-left: 10px;
     }
@@ -625,7 +625,7 @@
       width: 20px;
       margin-right: 10px;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         margin-left: 10px;
         margin-right: unset;
         transform: rotateY(180deg);
@@ -668,7 +668,7 @@
         font-size: calc(8px + (10 - 8) * ((100vw - 320px) / (1920 - 320)));
         margin-left: 5px;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: 0;
           margin-right: 5px;
         }
@@ -709,7 +709,7 @@
     }
 
     &::before {
-      content: "\f107";
+      content: '\f107';
       @include font;
       position: absolute;
       top: 50%;
@@ -779,7 +779,7 @@
       transition: all 0.5s ease;
       overflow-y: auto;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: unset;
         right: 0;
       }
@@ -974,7 +974,7 @@
         padding: 0 20px 0 0;
         position: relative;
 
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           text-align: right;
           padding: 0 0 0 20px;
         }
@@ -986,18 +986,18 @@
 
         &:before {
           @include font;
-          content: "\f107";
+          content: '\f107';
           position: absolute;
           right: 0;
           opacity: 0.2;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             right: unset;
             left: 0;
           }
 
           @include mq-max(lg) {
-            content: "";
+            content: '';
           }
         }
       }
@@ -1065,7 +1065,7 @@
 
         &:before {
           @include font;
-          content: "\f107";
+          content: '\f107';
           position: absolute;
           right: 15px;
           opacity: 0.2;
@@ -1152,7 +1152,7 @@
     @include flex_common;
     width: 120px;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       padding-right: 0;
       padding-left: 30px;
     }
@@ -1275,7 +1275,7 @@
           + li {
             margin-left: 0;
 
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               margin-left: unset;
               margin-right: 0;
             }
@@ -1426,7 +1426,7 @@
   .title {
     margin-bottom: 25px;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       text-align: left !important;
     }
   }
@@ -1452,7 +1452,7 @@
       right: 50px;
 
       &::before {
-        content: "\f053";
+        content: '\f053';
         color: $black;
         @include font;
         z-index: 1;
@@ -1463,12 +1463,12 @@
     .slick-next {
       right: 0;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: unset;
       }
 
       &::before {
-        content: "\f054";
+        content: '\f054';
         color: $black;
         @include font;
         z-index: 1;
@@ -1516,7 +1516,7 @@
       margin-top: 0;
       width: calc(100% - 100px);
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         padding-left: 0;
         padding-right: 15px;
       }
@@ -1546,7 +1546,7 @@
         &.rating-shop {
           text-align: left;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             text-align: right;
           }
 
@@ -1571,7 +1571,7 @@
           &.listing-shop {
             text-align: left;
 
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               text-align: right;
             }
           }
@@ -1637,7 +1637,7 @@
   .grid-options {
     margin-left: auto;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-left: unset;
       margin-right: auto;
     }

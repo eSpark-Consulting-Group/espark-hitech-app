@@ -102,7 +102,7 @@
           >
             <div
               v-for="(product, index) in cards.slice(
-                currentPage * cardsToShow - cardsToShow,
+                currentPage * cardsToShow,
                 currentPage * cardsToShow
               )"
               :key="index"
@@ -204,7 +204,7 @@ export default {
       cardsLayout: 4,
       cards: [],
       pages: [],
-      cardsToShow: 12,
+      cardsToShow: 10,
       totalCards: 8,
       currentPage: 1,
       totalPages: 2,
@@ -235,6 +235,7 @@ export default {
   created() {
     // this.$store.dispatch("filters/setCategory", this.category);
     this.cards = this.initCards.filter((item) => item.category != 'vr')
+    console.log('total', this.cards.length)
     this.setBreadcrumbs({
       pageParent: 'Category - Listing',
       pageName: 'Electronic Store',

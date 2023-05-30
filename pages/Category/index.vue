@@ -204,7 +204,7 @@ export default {
       cardsLayout: 4,
       cards: [],
       pages: [],
-      cardsToShow: 12,
+      cardsToShow: 36,
       totalCards: 8,
       currentPage: 1,
       totalPages: 2,
