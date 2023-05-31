@@ -1,5 +1,5 @@
 <template>
- <div
+  <div
     class="container-fluid accordion-body category-scroll custom-container shadow mb-1"
   >
     <h5 class="accordion-header m-2" id="headingOne">
@@ -18,14 +18,12 @@
             :value="item"
           />
           <label class="form-check-label">{{ item }}</label>
-          <p class="font-light">
-          </p>
+          <p class="font-light"></p>
         </div>
       </li>
-      <ul class="list-group">
+      <ul class="list-group"></ul>
     </ul>
-  </ul>
-</div>
+  </div>
 </template>
 
 <script>
@@ -53,6 +51,7 @@ export default {
   computed: {
     selectedItemsCount() {
       console.log(this.selectedItems.length)
+
       return this.selectedItems.length
     },
   },
@@ -60,6 +59,7 @@ export default {
     selectedItems: {
       handler(newValue) {
         console.log('Selected Items:', newValue)
+        this.$emit('submit', newValue)
       },
       deep: true,
     },
@@ -87,5 +87,4 @@ export default {
   padding: 0 !important;
   margin: 0;
 }
-</style>
 </style>

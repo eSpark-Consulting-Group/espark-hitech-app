@@ -24,7 +24,7 @@
         </div>
         <div
           class="col-12 d-flex mr-2"
-          :class="isChecked ? 'flex-container' : 'table-container'"
+          :class="isChecked ? 'table-container' : 'flex-container'"
         >
           <div
             v-for="key in Object.keys(items[0])"
@@ -32,7 +32,11 @@
             style="margin-right: 0.7rem"
           >
             <!-- <p>{{ key }}</p> -->
-            <PFilter :items="getValuesByKey(key)" :title="key" />
+            <PFilter
+              :items="getValuesByKey(key)"
+              :title="key"
+              @submit="handleFilterSubmit(key, $event)"
+            />
           </div>
         </div>
         <!-- filter button -->
@@ -40,7 +44,7 @@
         <!-- label and featured section -->
 
         <div class="col-12">
-          <PTable />
+          <PTable :items="getitems" />
         </div>
         <!-- <ShopOptions
           :setCardsLayout="setCardsLayout"
@@ -62,6 +66,7 @@ import TopShopBanner from '../../components/Section/Elements/ShopElements/TopSho
 import ShopFiltersbar from '../../components/Section/Elements/ShopElements/ShopFiltersBar.vue'
 import PTable from '../../components/Section/Elements/ProductListening/PTable.vue'
 import PFilter from '../../components/Section/Elements/ProductListening/PFilter.vue'
+import item from '../../static/DummyData/items.json'
 export default {
   head() {
     return {
@@ -106,74 +111,29 @@ export default {
       initCards: products.data,
       // showFilters: false,
       filtersList: [],
-      items: [
-        {
-          'Mfr Part #': 'ABC123',
-          'Quantity Available': 100,
-          Price: 10.99,
-          Series: 'XYZ',
-          Package: 'Package A',
-          'Product Status': 'In Stock',
-          Resistance: '100 Ohms',
-          Tolerance: '5%',
-          'Power (Watts)': 1,
-          Composition: 'Carbon Film',
-          Features: 'High precision',
-          'Temperature Coefficient': '±100 ppm/°C',
-          'Operating Temperature': '-40°C to +85°C',
-          'Package / Case': 'Case A',
-          'Supplier Device Package': 'Device Package A',
-          'Size / Dimension': '10mm x 5mm',
-          'Height - Seated (Max)': '3mm',
-          'Number of Terminations': 2,
-          'Failure Rate': '1%',
-        },
-        {
-          'Mfr Part #': 'DEF456',
-          'Quantity Available': 50,
-          Price: 5.49,
-          Series: 'UVW',
-          Package: 'Package B',
-          'Product Status': 'Backordered',
-          Resistance: '220 Ohms',
-          Tolerance: '10%',
-          'Power (Watts)': 0.5,
-          Composition: 'Metal Film',
-          Features: 'Low noise',
-          'Temperature Coefficient': '±50 ppm/°C',
-          'Operating Temperature': '-20°C to +70°C',
-          'Package / Case': 'Case B',
-          'Supplier Device Package': 'Device Package B',
-          'Size / Dimension': '7mm x 3mm',
-          'Height - Seated (Max)': '2mm',
-          'Number of Terminations': 3,
-          'Failure Rate': '0.5%',
-        },
-        {
-          'Mfr Part #': 'GHI789',
-          'Quantity Available': 200,
-          Price: 2.99,
-          Series: 'PQR',
-          Package: 'Package C',
-          'Product Status': 'Discontinued',
-          Resistance: '1k Ohms',
-          Tolerance: '1%',
-          'Power (Watts)': 0.25,
-          Composition: 'Thick Film',
-          Features: 'High power handling',
-          'Temperature Coefficient': '±200 ppm/°C',
-          'Operating Temperature': '-10°C to +60°C',
-          'Package / Case': 'Case C',
-          'Supplier Device Package': 'Device Package C',
-          'Size / Dimension': '5mm x 2mm',
-          'Height - Seated (Max)': '1mm',
-          'Number of Terminations': 1,
-          'Failure Rate': '0.2%',
-        },
-      ],
+      filterValues: {},
+
+      items: item.items,
     }
   },
   computed: {
+    getitems() {
+      if (this.filterValues === null) {
+        this.filtersList = this.items
+        return this.items // Return the full items list
+      }
+      const filteredItems = this.items.filter((item) => {
+        for (const key in this.filterValues) {
+          if (!this.filterValues[key].includes(item[key])) {
+            return false
+          }
+        }
+        return true
+      })
+      this.filtersList = filteredItems
+      console.log('slicer', filteredItems)
+      return filteredItems
+    },
     checkboxClass() {
       return {
         '.flex-container': this.isChecked,
@@ -204,10 +164,23 @@ export default {
       pageParent: 'Category - Listing',
       pageName: 'Electronic Store - Categories',
     })
+    // this.getitems = this.items
+    // this.filtersList = this.items
   },
   methods: {
+    // getitems() {
+    //   return this.items
+    // },
+    handleFilterSubmit(key, selectedValues) {
+      if (selectedValues.length > 0) {
+        this.$set(this.filterValues, key, selectedValues)
+      } else {
+        this.$delete(this.filterValues, key)
+      }
+      console.log('Filter Values:', this.filterValues)
+    },
     getValuesByKey(key) {
-      return this.items.map((item) => item[key])
+      return this.filtersList.map((item) => item[key])
     },
     changeCardLayout(toLayout) {
       this.cardsLayout = toLayout
