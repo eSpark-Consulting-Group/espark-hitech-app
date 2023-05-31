@@ -1,21 +1,55 @@
+@@ -0,0 +1,140 @@
 <template>
-  <div>
-    <v-data-table
-      :headers="headers"
-      :items="desserts"
-      :page.sync="page"
-      :items-per-page="itemsPerPage"
-      hide-default-footer
-      class="elevation-1"
-      @page-count="pageCount = $event"
-    ></v-data-table>
-    <div class="text-center pt-2">
-      <v-pagination
-        class="customPagination"
-        v-model="page"
-        :length="pageCount"
-      ></v-pagination>
-    </div>
+  <div class="table-container mt-4">
+    <table class="table table-striped">
+      <thead>
+        <tr class="table-head">
+          <th scope="col">Mfr Part #</th>
+          <th scope="col">Quantity Available</th>
+          <th scope="col">Price</th>
+          <th scope="col">Series</th>
+          <th scope="col">Package</th>
+          <th scope="col">Product Status</th>
+          <th scope="col">Resistance</th>
+          <th scope="col">Tolerance</th>
+          <th scope="col">Power (Watts)</th>
+          <th scope="col">Composition</th>
+          <th scope="col">Features</th>
+          <th scope="col">Temperature Coefficient</th>
+
+          <th scope="col">Operating Temperature</th>
+          <th scope="col">Package / Case</th>
+          <th scope="col">Supplier Device Package</th>
+          <th scope="col">Size / Dimension</th>
+          <th scope="col">Height - Seated (Max)</th>
+          <th scope="col">Number of Terminations</th>
+          <th scope="col">Failure Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in items" :key="item['Mfr Part #']">
+          <td>{{ item['Mfr Part #'] }}</td>
+          <td>{{ item['Quantity Available'] }}</td>
+          <td>{{ item['Price'] }}</td>
+          <td>{{ item['Series'] }}</td>
+          <td>{{ item['Package'] }}</td>
+          <td>{{ item['Product Status'] }}</td>
+          <td>{{ item['Resistance'] }}</td>
+          <td>{{ item['Tolerance'] }}</td>
+          <td>{{ item['Power (Watts)'] }}</td>
+          <td>{{ item['Composition'] }}</td>
+          <td>{{ item['Features'] }}</td>
+          <td>{{ item['Temperature Coefficient'] }}</td>
+          <td>{{ item['Operating Temperature'] }}</td>
+          <td>{{ item['Package / Case'] }}</td>
+          <td>{{ item['Supplier Device Package'] }}</td>
+          <td>{{ item['Size / Dimension'] }}</td>
+          <td>{{ item['Height - Seated (Max)'] }}</td>
+          <td>{{ item['Number of Terminations'] }}</td>
+          <td>{{ item['Failure Rate'] }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -23,111 +57,85 @@
 export default {
   data() {
     return {
-      page: 1,
-      pageCount: 0,
-      itemsPerPage: 6,
-      headers: [
+      items: [
         {
-          text: 'Dessert (100g serving)',
-          align: 'start',
-          sortable: false,
-          value: 'name',
-        },
-        { text: 'Calories', value: 'calories' },
-        { text: 'Fat (g)', value: 'fat' },
-        { text: 'Carbs (g)', value: 'carbs' },
-        { text: 'Protein (g)', value: 'protein' },
-        { text: 'Iron (%)', value: 'iron' },
-      ],
-      desserts: [
-        {
-          name: 'Frozen Yogurt',
-          calories: 159,
-          fat: 6.0,
-          carbs: 24,
-          protein: 4.0,
-          iron: 1,
+          'Mfr Part #': 'ABC123',
+          'Quantity Available': 100,
+          Price: 10.99,
+          Series: 'XYZ',
+          Package: 'Package A',
+          'Product Status': 'In Stock',
+          Resistance: '100 Ohms',
+          Tolerance: '5%',
+          'Power (Watts)': 1,
+          Composition: 'Carbon Film',
+          Features: 'High precision',
+          'Temperature Coefficient': '±100 ppm/°C',
+          'Operating Temperature': '-40°C to +85°C',
+          'Package / Case': 'Case A',
+          'Supplier Device Package': 'Device Package A',
+          'Size / Dimension': '10mm x 5mm',
+          'Height - Seated (Max)': '3mm',
+          'Number of Terminations': 2,
+          'Failure Rate': '1%',
         },
         {
-          name: 'Ice cream sandwich',
-          calories: 237,
-          fat: 9.0,
-          carbs: 37,
-          protein: 4.3,
-          iron: 1,
+          'Mfr Part #': 'DEF456',
+          'Quantity Available': 50,
+          Price: 5.49,
+          Series: 'UVW',
+          Package: 'Package B',
+          'Product Status': 'Backordered',
+          Resistance: '220 Ohms',
+          Tolerance: '10%',
+          'Power (Watts)': 0.5,
+          Composition: 'Metal Film',
+          Features: 'Low noise',
+          'Temperature Coefficient': '±50 ppm/°C',
+          'Operating Temperature': '-20°C to +70°C',
+          'Package / Case': 'Case B',
+          'Supplier Device Package': 'Device Package B',
+          'Size / Dimension': '7mm x 3mm',
+          'Height - Seated (Max)': '2mm',
+          'Number of Terminations': 3,
+          'Failure Rate': '0.5%',
         },
         {
-          name: 'Eclair',
-          calories: 262,
-          fat: 16.0,
-          carbs: 23,
-          protein: 6.0,
-          iron: 7,
-        },
-        {
-          name: 'Cupcake',
-          calories: 305,
-          fat: 3.7,
-          carbs: 67,
-          protein: 4.3,
-          iron: 8,
-        },
-        {
-          name: 'Gingerbread',
-          calories: 356,
-          fat: 16.0,
-          carbs: 49,
-          protein: 3.9,
-          iron: 16,
-        },
-        {
-          name: 'Jelly bean',
-          calories: 375,
-          fat: 0.0,
-          carbs: 94,
-          protein: 0.0,
-          iron: 0,
-        },
-        {
-          name: 'Lollipop',
-          calories: 392,
-          fat: 0.2,
-          carbs: 98,
-          protein: 0,
-          iron: 2,
-        },
-        {
-          name: 'Honeycomb',
-          calories: 408,
-          fat: 3.2,
-          carbs: 87,
-          protein: 6.5,
-          iron: 45,
-        },
-        {
-          name: 'Donut',
-          calories: 452,
-          fat: 25.0,
-          carbs: 51,
-          protein: 4.9,
-          iron: 22,
-        },
-        {
-          name: 'KitKat',
-          calories: 518,
-          fat: 26.0,
-          carbs: 65,
-          protein: 7,
-          iron: 6,
+          'Mfr Part #': 'GHI789',
+          'Quantity Available': 200,
+          Price: 2.99,
+          Series: 'PQR',
+          Package: 'Package C',
+          'Product Status': 'Discontinued',
+          Resistance: '1k Ohms',
+          Tolerance: '1%',
+          'Power (Watts)': 0.25,
+          Composition: 'Thick Film',
+          Features: 'High power handling',
+          'Temperature Coefficient': '±200 ppm/°C',
+          'Operating Temperature': '-10°C to +60°C',
+          'Package / Case': 'Case C',
+          'Supplier Device Package': 'Device Package C',
+          'Size / Dimension': '5mm x 2mm',
+          'Height - Seated (Max)': '1mm',
+          'Number of Terminations': 1,
+          'Failure Rate': '0.2%',
         },
       ],
     }
   },
 }
 </script>
+<style>
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
 
-<style scoped>
-::v-deep .customPagination .v-pagination__item--active {
-  color: #01b7a1;
+.table {
+  min-width: 800px; /* Adjust the value as needed */
+}
+.table td {
+  white-space: nowrap;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div
+ <div
     class="container-fluid accordion-body category-scroll custom-container shadow mb-1"
   >
     <h5 class="accordion-header m-2" id="headingOne">
@@ -19,59 +19,13 @@
           />
           <label class="form-check-label">{{ item }}</label>
           <p class="font-light">
-            <!-- ({{ items.filter((r) => r == item).length }}) -->
           </p>
         </div>
       </li>
+      <ul class="list-group">
     </ul>
-    <!-- <ul class="list-group">
-      <li class="list-group-item">
-        <input
-          class="form-check-input me-1"
-          type="checkbox"
-          value=""
-          aria-label="..."
-        />
-        First checkbox
-      </li>
-      <li class="list-group-item">
-        <input
-          class="form-check-input me-1"
-          type="checkbox"
-          value=""
-          aria-label="..."
-        />
-        Second checkbox
-      </li>
-      <li class="list-group-item">
-        <input
-          class="form-check-input me-1"
-          type="checkbox"
-          value=""
-          aria-label="..."
-        />
-        Third checkbox
-      </li>
-      <li class="list-group-item">
-        <input
-          class="form-check-input me-1"
-          type="checkbox"
-          value=""
-          aria-label="..."
-        />
-        Fourth checkbox
-      </li>
-      <li class="list-group-item">
-        <input
-          class="form-check-input me-1"
-          type="checkbox"
-          value=""
-          aria-label="..."
-        />
-        Fifth checkbox
-      </li>
-    </ul> -->
-  </div>
+  </ul>
+</div>
 </template>
 
 <script>
@@ -102,13 +56,6 @@ export default {
       return this.selectedItems.length
     },
   },
-  methods: {
-    // toggleFilterBar() {
-    //   console.log(this.showFilters, 'hello filter')
-    //   this.showFilters = !this.showFilters
-    // },
-  },
-
   watch: {
     selectedItems: {
       handler(newValue) {
@@ -135,10 +82,10 @@ export default {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 .line {
   border: 1px solid #a7a7a7;
   padding: 0 !important;
   margin: 0;
 }
+</style>
 </style>
