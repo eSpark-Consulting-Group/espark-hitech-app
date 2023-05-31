@@ -56,13 +56,17 @@ export default {
     {
       src: '~/plugins/mixins.js',
     },
+    {
+      src: '~/plugins/vuetify',
+      mode: 'client',
+    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ['@nuxtjs/vuetify'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -71,7 +75,6 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/i18n',
-    '@nuxtjs/vuetify',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
