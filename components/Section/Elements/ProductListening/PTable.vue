@@ -151,30 +151,31 @@ export default {
   watch: {
     items() {
       this.calculateTotalPages()
+      this.changePage(1)
     },
   },
   created() {
     this.calculateTotalPages()
   },
   methods: {
-    // changePage(page) {
-    //   if (page >= 1 && page <= this.totalPages) {
-    //     this.currentPage = page
-    //   }
-    // },
-    changePage(toPage) {
-      if (toPage > 0 && toPage <= this.totalPages) {
-        const filteredItems = this.filteredItems
-        const totalPages = Math.ceil(filteredItems.length / this.cardsToShow)
-
-        if (toPage > totalPages) {
-          toPage = totalPages
-        }
-
-        this.currentPage = toPage
-        this.calculateTotalPages()
+    changePage(page) {
+      if (page >= 1 && page <= this.totalPages) {
+        this.currentPage = page
       }
     },
+    // changePage(toPage) {
+    //   if (toPage > 0 && toPage <= this.totalPages) {
+    //     const filteredItems = this.filteredItems
+    //     const totalPages = Math.ceil(filteredItems.length / this.cardsToShow)
+
+    //     if (toPage > totalPages) {
+    //       toPage = totalPages
+    //     }
+
+    //     this.currentPage = toPage
+    //     this.calculateTotalPages()
+    //   }
+    // },
     calculateTotalPages() {
       this.totalPages = Math.ceil(this.items.length / this.cardsToShow)
     },
@@ -190,7 +191,6 @@ export default {
       if (this.sortColumn) {
         // console.log('sorting', this.items)
         return this.items.slice().sort((a, b) => {
-          this.changePage(1)
           const valueA = a[this.sortColumn]
           const valueB = b[this.sortColumn]
           if (valueA < valueB) return this.sortOrder === 'asc' ? -1 : 1

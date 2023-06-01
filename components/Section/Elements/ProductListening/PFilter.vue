@@ -2,12 +2,15 @@
   <div
     class="container-fluid accordion-body category-scroll custom-container shadow mb-1"
   >
-    <h5 class="accordion-header m-2" id="headingOne">
-      <div>
-        {{ title }}
-      </div>
-    </h5>
-    <div class="line"></div>
+    <div class="sticky-header">
+      <h5 class="accordion-header m-2" id="headingOne">
+        <div>
+          {{ title }}
+        </div>
+      </h5>
+      <div class="line"></div>
+    </div>
+
     <ul class="category-list mr-2">
       <li v-for="(item, i) in new Set(items)" :key="i">
         <div class="form-check ps-0 custome-form-check">
@@ -95,5 +98,11 @@ export default {
   border: 1px solid #a7a7a7;
   padding: 0 !important;
   margin: 0;
+}
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff; /* Add your desired background color */
+  z-index: 999; /* Adjust the z-index as needed */
 }
 </style>

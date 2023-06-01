@@ -9,7 +9,7 @@
             style="margin-right: 1rem !important"
             @click.prevent="clearfilter"
           >
-            Filter
+            Clear Filter
           </button>
 
           <div class="filter-button">
