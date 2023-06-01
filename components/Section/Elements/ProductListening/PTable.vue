@@ -1,36 +1,63 @@
 <template>
-  <div class="table-container mt-4">
-    <table class="table table-striped">
-      <thead>
-        <tr class="table-head">
-          <th
-            scope="col"
-            v-for="(key, index) in Object.keys(filteredItems[0])"
-            :key="index"
-            :class="{ sorted: sortColumn === key }"
-            @click="sortTable(key)"
-            style="background-color: #01b7a1; color: white"
-          >
-            {{ key }}
-            <span class="sort-icon" v-if="sortColumn === key">
-              <i
-                class="fas"
-                :class="sortOrder === 'asc' ? 'fa-sort-up' : 'fa-sort-down'"
-              ></i>
-            </span>
-          </th>
-        </tr>
-      </thead>
+  <div>
+    <div class="table-container mt-4">
+      <table class="table table-striped">
+        <thead>
+          <tr class="table-head">
+            <th
+              scope="col"
+              v-for="(key, index) in Object.keys(items[0])"
+              :key="index"
+              :class="{ sorted: sortColumn === key }"
+              @click="sortTable(key)"
+              style="
+                background-color: #01b7a1;
+                color: white;
+                border: 1px solid #fff;
+                white-space: nowrap;
+                padding-left: 0px;
+              "
+            >
+              <div
+                class="d-flex justify-content-between"
+                style="margin-right: 0px; margin-left: 0px"
+              >
+                <div style="padding-left: 1rem">
+                  {{ key }}
+                </div>
+                <div>
+                  <span class="sort-icon" v-if="sortColumn === key">
+                    <i
+                      class="fas"
+                      :class="
+                        sortOrder === 'asc' ? 'fa-sort-up' : 'fa-sort-down'
+                      "
+                    ></i>
+                  </span>
+                  <span class="sort-icon" v-else>
+                    <i class="fas fa-sort-down"></i>
+                  </span>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
 
-      <tbody>
-        <tr v-for="(item, index) in paginatedItems" :key="index">
-          <td v-for="value in Object.values(item)" :key="value">
-            {{ value }}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
+        <tbody>
+          <tr v-for="(item, index) in paginatedItems" :key="index">
+            <td v-for="value in Object.values(item)" :key="value">
+              <a
+                href="javascript:void(0)"
+                @click.prevent="$router.push('/product/' + 1)"
+                class="font-default"
+              >
+                {{ value }}
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <nav class="page-section" v-if="totalPages > 1">
       <ul class="pagination">
         <li class="page-item">
@@ -74,6 +101,7 @@
 </template>
 
 <script>
+// item['Mfr Part #']
 export default {
   props: {
     title: {
@@ -90,7 +118,7 @@ export default {
       currentPage: 1,
       totalPages: 1,
       cardsToShow: 3,
-      sortColumn: null,
+      sortColumn: 'defaultColumnName',
       sortOrder: 'asc',
       filter: null,
     }
@@ -129,9 +157,22 @@ export default {
     this.calculateTotalPages()
   },
   methods: {
-    changePage(page) {
-      if (page >= 1 && page <= this.totalPages) {
-        this.currentPage = page
+    // changePage(page) {
+    //   if (page >= 1 && page <= this.totalPages) {
+    //     this.currentPage = page
+    //   }
+    // },
+    changePage(toPage) {
+      if (toPage > 0 && toPage <= this.totalPages) {
+        const filteredItems = this.filteredItems
+        const totalPages = Math.ceil(filteredItems.length / this.cardsToShow)
+
+        if (toPage > totalPages) {
+          toPage = totalPages
+        }
+
+        this.currentPage = toPage
+        this.calculateTotalPages()
       }
     },
     calculateTotalPages() {
@@ -147,7 +188,9 @@ export default {
     },
     sortItems() {
       if (this.sortColumn) {
+        // console.log('sorting', this.items)
         return this.items.slice().sort((a, b) => {
+          this.changePage(1)
           const valueA = a[this.sortColumn]
           const valueB = b[this.sortColumn]
           if (valueA < valueB) return this.sortOrder === 'asc' ? -1 : 1
@@ -155,7 +198,7 @@ export default {
           return 0
         })
       }
-      // console.log('sorting', this.paginatedItems)
+      // console.log('sorting', this.items)
       return this.items
     },
   },

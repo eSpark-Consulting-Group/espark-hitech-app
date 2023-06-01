@@ -14,7 +14,7 @@
           <input
             class="checkbox_animated check-it"
             type="checkbox"
-            v-model="selectedItems"
+            v-model="localSelectedItems"
             :value="item"
           />
           <label class="form-check-label">{{ item }}</label>
@@ -38,6 +38,10 @@ export default {
       type: Array,
       default: [],
     },
+    selectedItems: {
+      type: Array,
+      default: () => [],
+    },
   },
   components: { icons },
   data() {
@@ -45,23 +49,28 @@ export default {
       selected: null,
       visible: false,
       showFilters: false,
-      selectedItems: [],
+      localSelectedItems: this.selectedItems.slice(),
     }
   },
   computed: {
     selectedItemsCount() {
-      console.log(this.selectedItems.length)
+      // console.log(this.selectedItems.length)
 
-      return this.selectedItems.length
+      return this.localSelectedItems.length
     },
   },
   watch: {
-    selectedItems: {
-      handler(newValue) {
-        console.log('Selected Items:', newValue)
-        this.$emit('submit', newValue)
-      },
-      deep: true,
+    localSelectedItems(newValue) {
+      // console.log('Selected Items:', newValue)
+      this.$emit('update:selectedItems', newValue) // Emit an event to update the prop value
+      this.$emit('submit', newValue)
+    },
+    selectedItems(newValue) {
+      if (
+        JSON.stringify(newValue) !== JSON.stringify(this.localSelectedItems)
+      ) {
+        this.localSelectedItems = newValue.slice() // Update local property when prop changes
+      }
     },
   },
 }

@@ -3,23 +3,33 @@
     <div class="container">
       <div class="row g-4">
         <!-- filter button -->
-        <div class="filter-button">
-          <!-- <button
+        <div class="d-flex justify-content-end align-items-center">
+          <button
+            class="danger-button danger-center btn btn-sm filter-btn mr-2"
+            style="margin-right: 1rem !important"
+            @click.prevent="clearfilter"
+          >
+            Filter
+          </button>
+
+          <div class="filter-button">
+            <!-- <button
             class="danger-button danger-center btn btn-sm filter-btn"
             @click.prevent="toggleFilterBar"
           >
             Filter
           </button> -->
-          <div class="form-check form-switch">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="flexSwitchCheckChecked"
-              v-model="isChecked"
-            />
-            <label class="form-check-label" for="flexSwitchCheckChecked"
-              >stacked/scroll</label
-            >
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="flexSwitchCheckChecked"
+                v-model="isChecked"
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked"
+                >stacked/scroll</label
+              >
+            </div>
           </div>
         </div>
         <div
@@ -36,14 +46,18 @@
               :items="getValuesByKey(key)"
               :title="key"
               @submit="handleFilterSubmit(key, $event)"
-            />
+              :selectedItems="selectedItems[key]"
+            >
+            </PFilter>
           </div>
         </div>
         <!-- filter button -->
 
         <!-- label and featured section -->
-
-        <div class="col-12">
+        <div class="title mb-0">
+          <h2>Products</h2>
+        </div>
+        <div class="col-12 mt-0">
           <PTable :items="getitems" />
         </div>
         <!-- <ShopOptions
@@ -112,7 +126,7 @@ export default {
       // showFilters: false,
       filtersList: [],
       filterValues: {},
-
+      selectedItems: {},
       items: item.items,
     }
   },
@@ -131,7 +145,7 @@ export default {
         return true
       })
       this.filtersList = filteredItems
-      console.log('slicer', filteredItems)
+      // console.log('slicer', filteredItems)
       return filteredItems
     },
     checkboxClass() {
@@ -161,13 +175,19 @@ export default {
     // this.$store.dispatch("filters/setCategory", this.category);
     this.cards = this.initCards.filter((item) => item.category != 'vr')
     this.setBreadcrumbs({
-      pageParent: 'Category - Listing',
-      pageName: 'Electronic Store - Categories',
+      pageParent: 'Product Listening',
+      pageName: 'Electronic Store - Product listening',
     })
     // this.getitems = this.items
     // this.filtersList = this.items
   },
   methods: {
+    clearfilter() {
+      // console.log('clear')
+      for (const key in this.selectedItems) {
+        this.selectedItems[key] = []
+      }
+    },
     // getitems() {
     //   return this.items
     // },
@@ -177,7 +197,8 @@ export default {
       } else {
         this.$delete(this.filterValues, key)
       }
-      console.log('Filter Values:', this.filterValues)
+      this.$set(this.selectedItems, key, selectedValues)
+      // console.log('Filter Values:', this.filterValues)
     },
     getValuesByKey(key) {
       return this.filtersList.map((item) => item[key])
@@ -286,5 +307,15 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.form-check-input:checked {
+  background-color: #01b7a1;
+  border-color: #01b7a1;
+}
+
+.form-check-input {
+  background-color: grey;
+  border-color: grey;
 }
 </style>

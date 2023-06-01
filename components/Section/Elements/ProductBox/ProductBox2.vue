@@ -4,7 +4,7 @@
     <div class="img-wrapper">
       <div @click="gotoProduct">
         <a
-          @click="$router.push('/product/' + product.id)"
+          @click="$router.push('/product_listening/' + product.id)"
           class="front sliderBackground bg-size"
           :style="{
             'background-image': `url(${getImageUrl(product.images[0].src)})`,
@@ -19,7 +19,7 @@
       </div>
       <div @click="gotoProduct">
         <a
-          @click="$router.push('/product/' + product.id)"
+          @click="$router.push('/product_listening/' + product.id)"
           class="back sliderBackground bg-size"
           :style="{
             'background-image': `url(${getImageUrl(
@@ -107,7 +107,7 @@
       <div class="main-price">
         <a
           href="javascript:void(0)"
-          @click.prevent="$router.push('/product/' + product.id)"
+          @click.prevent="$router.push('/product_listening/' + product.id)"
           class="font-default"
         >
           <h5>{{ product.name }}</h5>
