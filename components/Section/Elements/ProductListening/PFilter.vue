@@ -1,8 +1,15 @@
 <template>
   <div class="container-fluid accordion-body custom-container shadow mb-1">
     <div class="sticky-header">
-      <h5 class="accordion-header m-2" id="headingOne">
-        <div>
+      <h5
+        class="accordion-header m-2"
+        id="headingOne"
+        style="
+          font-size: calc(12px + 2 * (100vw - 320px) / 1600) !important;
+          font-weight: bold;
+        "
+      >
+        <div style="white-space: nowrap">
           {{ title }}
         </div>
       </h5>
