@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="container-fluid accordion-body category-scroll custom-container shadow mb-1"
-  >
+  <div class="container-fluid accordion-body custom-container shadow mb-1">
     <div class="sticky-header">
       <h5 class="accordion-header m-2" id="headingOne">
         <div>
@@ -11,7 +9,7 @@
       <div class="line"></div>
     </div>
 
-    <ul class="category-list mr-2">
+    <ul class="category-list mr-2 category-scroll">
       <li v-for="(item, i) in new Set(items)" :key="i">
         <div class="form-check ps-0 custome-form-check">
           <input
@@ -84,9 +82,11 @@ export default {
   background: #ffffff !important;
   border-radius: 5px;
   border: 1px solid #a7a7a7;
+  min-width: 10rem;
 }
 .category-list {
   padding: 0.7rem !important;
+  padding-top: 0px !important;
 }
 .category-list li {
   display: block;

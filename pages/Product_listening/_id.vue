@@ -131,6 +131,10 @@ export default {
     }
   },
   computed: {
+    isClearButtonDisabled() {
+      // Check if the selectedItems object is empty
+      // return Object.keys(this.selectedItems).length === 0
+    },
     getitems() {
       if (this.filterValues === null) {
         this.filtersList = this.items
@@ -317,5 +321,9 @@ export default {
 .form-check-input {
   background-color: grey;
   border-color: grey;
+}
+.disabled {
+  background-color: gray; /* Apply your desired disabled color here */
+  cursor: not-allowed; /* Show a disabled cursor on hover */
 }
 </style>

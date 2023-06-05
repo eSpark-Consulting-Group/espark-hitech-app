@@ -211,10 +211,6 @@ export default {
   max-width: 100%;
 }
 
-.table {
-  min-width: 800px; /* Adjust the value as needed */
-}
-
 .table td {
   white-space: nowrap;
 }
