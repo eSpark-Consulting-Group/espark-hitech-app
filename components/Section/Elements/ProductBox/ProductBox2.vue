@@ -151,7 +151,7 @@ export default {
   methods: {
     gotoProduct() {
       this.$router.push({
-        path: '/product/' + this.product.id,
+        path: '/product_listening/' + this.product.id,
       })
     },
     toggleQuickViewModal(productId) {

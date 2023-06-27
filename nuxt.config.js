@@ -71,12 +71,26 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/i18n',
+    '@nuxtjs/proxy',
   ],
+  proxy: {
+    '/api/': {
+      target: 'http://101.53.248.103:8010',
+      pathRewrite: {
+        '^/api/': '/',
+      },
+    },
+  },
 
+  routeRules: {
+    '/web/v1/**': {
+      proxy: { to: 'http://101.53.248.103:8010/api/v1/**' },
+    },
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: '/101.53.248.103:8010',
   },
 
   i18n: {

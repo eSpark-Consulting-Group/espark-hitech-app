@@ -164,6 +164,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import axios from 'axios'
 import ProductBox from '../../components/Section/Elements/ProductBox/ProductBox2.vue'
 import ProBoxSkeletonLoader from '../../components/Section/Elements/ProductBox/ProBoxSkeletonLoader.vue'
 import products from '../../static/DummyData/products.json'
@@ -225,16 +226,37 @@ export default {
   },
   watch: {
     initCards: function () {
-      this.cards = this.initCards.filter((item) => item.category != 'vr')
+      this.cards = this.initCards //.filter((item) => item.category != 'vr')
     },
     cards: function () {
       this.totalPages = Math.ceil(this.cards.length / this.cardsToShow)
       //   this.changePage(1)
     },
   },
+  async fetch() {
+    const url = 'http://101.53.248.103:8010/api/v1/c/Products'
+    axios
+      .get(url)
+      .then((response) => {
+        this.initCards = response.data
+        console.log(this.initCards)
+        console.log(response.data)
+      })
+      .catch(function (error) {
+        console.log('error', error)
+      })
+  },
+  mounted() {},
   created() {
+    // axios.get('/api/v1/c/Products').then((response) => {
+    //   console.log(response.data)
+    //   console.log(response.status)
+    //   console.log(response.statusText)
+    //   console.log(response.headers)
+    //   console.log(response.config)
+    // })
     // this.$store.dispatch("filters/setCategory", this.category);
-    this.cards = this.initCards.filter((item) => item.category != 'vr')
+    this.cards = this.initCards //.filter((item) => item.category != 'vr')
     this.setBreadcrumbs({
       pageParent: 'Category - Listing',
       pageName: 'Electronic Store - Categories',
