@@ -234,17 +234,17 @@ export default {
     },
   },
   async fetch() {
-    const url = 'http://101.53.248.103:8010/api/v1/c/Products'
-    axios
-      .get(url)
-      .then((response) => {
-        this.initCards = response.data
-        console.log(this.initCards)
-        console.log(response.data)
-      })
-      .catch(function (error) {
-        console.log('error', error)
-      })
+    // const url = 'http://101.53.248.103:8010/api/v1/c/Products'
+    // axios
+    //   .get(url)
+    //   .then((response) => {
+    //     this.initCards = response.data
+    //     console.log(this.initCards)
+    //     console.log(response.data)
+    //   })
+    //   .catch(function (error) {
+    //     console.log('error', error)
+    //   })
   },
   mounted() {},
   created() {
