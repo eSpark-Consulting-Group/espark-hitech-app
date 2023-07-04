@@ -377,7 +377,7 @@ export default {
     },
     BackStep() {
       this.currentStep = this.currentStep - 1
-      if (this.currentStep === 1) {
+      if (this.currentStep <= 1) {
         this.currentStep = 1
       }
     },
