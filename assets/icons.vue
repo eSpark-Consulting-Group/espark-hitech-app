@@ -242,6 +242,12 @@ export default {
 .theme-color {
   fill: var(--theme-color);
 }
+.s {
+  svg {
+    padding-bottom: 0.2rem !important;
+    width: 0.9rem !important;
+  }
+}
 .sm {
   svg {
     width: 1rem !important;

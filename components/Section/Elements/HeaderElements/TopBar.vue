@@ -5,7 +5,7 @@
         <div class="col-auto d-xl-block d-none">
           <ul class="border-list">
             <li>eSpark Hi-Tech Store always free delivery</li>
-            <li>New Customer Extra 50% OFF</li>
+            <!-- <li>New Customer Extra 50% OFF</li> -->
           </ul>
         </div>
         <div class="col-auto d-sm-block d-none" v-if="offerCode">

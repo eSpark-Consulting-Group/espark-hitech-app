@@ -1,8 +1,8 @@
 <template>
-  <section class="section-b-space">
+  <section class="section-b-space" style="background: #e7e7e7">
     <div class="container">
       <div class="row g-4">
-        <div class="col-lg-8">
+        <div class="col-lg-8 checkout-section p-3">
           <h3 class="mb-3">Billing address</h3>
           <form class="needs-validation">
             <TopForm @isFormValid="isFormValid" />
@@ -25,12 +25,13 @@
 
             <h3 class="mb-3">{{ Payment }}</h3>
 
-            <!-- <paymentForm @changePaymentMethod="changePaymentMethod" /> -->
+            <paymentForm @changePaymentMethod="changePaymentMethod" />
+            <hr class="mb-2" />
             <button
               v-if="paymentMethod === 'stripe'"
               class="btn btn-solid-default mt-4"
               type="button"
-              :disabled="!validInfo"
+              :disabled="validInfo"
               @click.prevent="order"
             >
               {{ Continuecheckout }}
@@ -48,7 +49,7 @@
 import { mapGetters } from 'vuex'
 import TopForm from '../../components/Section/Elements/CheckOut/TopForm'
 import CheckoutCart from '../../components/Section/Elements/CheckOut/CheckoutCart.vue'
-
+import paymentForm from '../../components/Section/Elements/CheckOut/paymentForm'
 export default {
   data() {
     return {
@@ -65,6 +66,7 @@ export default {
   components: {
     TopForm,
     CheckoutCart,
+    paymentForm,
   },
   computed: {
     ...mapGetters({
@@ -91,3 +93,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.checkout-section {
+  background: #fff !important;
+  border-radius: 5px;
+}
+</style>

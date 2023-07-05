@@ -1,6 +1,6 @@
 <template>
   <div class="col-lg-4">
-    <div class="your-cart-box">
+    <div class="your-cart-box p-3">
       <h3 class="mb-3 d-flex text-capitalize">
         {{ Yourcart
         }}<span class="badge bg-theme new-badge">{{ cartItems.length }}</span>
@@ -35,7 +35,7 @@
           <span class="fw-bold">Your Cart Is Empty</span>
         </li>
       </ul>
-
+      <!-- 
       <form @click="submit" class="card border-0">
         <div class="input-group custome-imput-group">
           <input type="text" class="form-control" placeholder="Promo code" />
@@ -45,7 +45,7 @@
             </button>
           </div>
         </div>
-      </form>
+      </form> -->
     </div>
   </div>
 </template>
@@ -79,3 +79,9 @@ export default {
   },
 }
 </script>
+<style scoped>
+.your-cart-box {
+  background: #ffff;
+  border-radius: 5px;
+}
+</style>

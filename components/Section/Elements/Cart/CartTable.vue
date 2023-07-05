@@ -1,7 +1,7 @@
 <template>
   <div class="col-sm-12">
     <div class="table-responsive mt-4">
-      <table class="table cart-table">
+      <table class="table cart-table table-color">
         <thead>
           <tr class="table-head">
             <th scope="col">image</th>
@@ -108,3 +108,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.table-color {
+  background: #ffff;
+  border-radius: 5px;
+}
+</style>

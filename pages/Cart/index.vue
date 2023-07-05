@@ -5,22 +5,31 @@
         <!-- when cart is empty -->
         <div
           v-if="cartItems.length === 0"
-          class="d-flex flex-column align-items-center justify-content-center"
+          class="col-md-12 justify-content-center align-items-center empty-cart p-3"
         >
-          <img
-            :src="require('@/assets/images/cartEmpty.png')"
-            class="img-fluid"
-          />
-          <button
-            type="button"
-            class="btn btn-solid-default btn-block mt-4"
-            @click="redirect('/')"
+          <div
+            class="d-flex flex-column align-items-center justify-content-center"
           >
-            <span>Continue Shopping</span>
-          </button>
-          <!-- when cart is empty -->
+            <img
+              :src="require('@/assets/images/cartEmptynew.png')"
+              class="img-fluid"
+              style="max-width: 30%"
+            />
+            <div class="details-image-concept m-0">
+              <h2>Your shopping Cart is empty</h2>
+            </div>
+            <button
+              type="button"
+              class="btn btn-solid-default btn-block mt-4"
+              @click="redirect('/')"
+            >
+              <span>Continue Shopping</span>
+            </button>
+          </div>
         </div>
-        <CartDetails v-if="cartItems.length != 0" />
+        <div>
+          <CartDetails v-if="cartItems.length != 0" />
+        </div>
       </div>
     </div>
   </section>
@@ -46,3 +55,19 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+@media (min-width: 1430px) {
+  .container {
+    max-width: 1480px;
+  }
+
+  .cart-section {
+    background: #e7e7e7;
+  }
+  .empty-cart {
+    background: #ffff;
+    border-radius: 5px;
+  }
+}
+</style>

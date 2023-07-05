@@ -209,3 +209,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.cart-dropdown span {
+  font-size: calc(10px + 2 * (100vw - 320px) / 1600) !important;
+}
+</style>

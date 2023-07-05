@@ -40,7 +40,7 @@
         }}</span>
       </ValidationProvider>
     </div>
-    <div class="col-md-6">
+    <!-- <div class="col-md-6">
       <ValidationProvider
         class="d-block"
         rules="required"
@@ -62,31 +62,33 @@
           errors[0]
         }}</span>
       </ValidationProvider>
+    </div> -->
+
+    <div class="col-md-12">
+      <div class="col-md-6">
+        <ValidationProvider
+          rules="required|email"
+          v-slot="{ errors }"
+          name="Email"
+          class="d-block"
+        >
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            v-model="information.emailAddress"
+            id="email"
+            placeholder="example@example.com"
+            required
+          />
+          <span class="validate-error text-danger" v-if="errors[0]">{{
+            errors[0]
+          }}</span>
+        </ValidationProvider>
+      </div>
     </div>
 
-    <div class="col-md-6">
-      <ValidationProvider
-        rules="required|email"
-        v-slot="{ errors }"
-        name="Email"
-        class="d-block"
-      >
-        <label for="email" class="form-label">Email address</label>
-        <input
-          type="email"
-          class="form-control"
-          v-model="information.emailAddress"
-          id="email"
-          placeholder="example@example.com"
-          required
-        />
-        <span class="validate-error text-danger" v-if="errors[0]">{{
-          errors[0]
-        }}</span>
-      </ValidationProvider>
-    </div>
-
-    <div class="col-md-6">
+    <div class="col-md-12">
       <ValidationProvider
         class="d-block"
         rules="required"
@@ -112,7 +114,7 @@
       </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-12">
       <label for="address2" class="form-label">Address 2</label>
       <input
         type="text"
@@ -155,26 +157,28 @@
       </select>
       <div class="invalid-feedback">Please provide a valid state.</div>
     </div>
-    <div class="col-md-3">
-      <ValidationProvider
-        rules="required"
-        class="d-block"
-        v-slot="{ errors }"
-        name="Postal Code"
-      >
-        <label for="zip" class="form-label">Zip</label>
-        <input
-          type="text"
-          class="form-control"
-          v-model="information.zipCode"
-          id="zip"
-          aria-describedby="emailHelp"
-          placeholder="1234 Main St"
-        />
-        <span class="validate-error text-danger" v-if="errors[0]">{{
-          errors[0]
-        }}</span>
-      </ValidationProvider>
+    <div class="col-md-12">
+      <div class="col-md-3">
+        <ValidationProvider
+          rules="required"
+          class="d-block"
+          v-slot="{ errors }"
+          name="Postal Code"
+        >
+          <label for="zip" class="form-label">Zip</label>
+          <input
+            type="text"
+            class="form-control"
+            v-model="information.zipCode"
+            id="zip"
+            aria-describedby="emailHelp"
+            placeholder="1234 Main St"
+          />
+          <span class="validate-error text-danger" v-if="errors[0]">{{
+            errors[0]
+          }}</span>
+        </ValidationProvider>
+      </div>
     </div>
   </div>
 </template>
