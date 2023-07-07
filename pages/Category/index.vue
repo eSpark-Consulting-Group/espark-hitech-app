@@ -306,7 +306,7 @@ export default {
 <style scoped>
 .row-cols-2 > * {
   flex: 0 0 auto;
-  width: 20%;
+  width: 25%;
 }
 @media (min-width: 576px) {
   .container {
@@ -351,7 +351,7 @@ export default {
   }
   .row-cols-xxl-4 > * {
     flex: 0 0 auto;
-    width: 10.5%;
+    width: 12.5%;
   }
 }
 

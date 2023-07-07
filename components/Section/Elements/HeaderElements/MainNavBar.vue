@@ -14,7 +14,7 @@
             class="nav-menu"
             :style="{ right: openMobileNav ? '0px' : '-410px' }"
           >
-            <li class="back-btn d-xl-none" @click="toggleMobileNav">
+            <li class="back-btn d-md-none" @click="toggleMobileNav">
               <div class="close-btn">
                 Menu
                 <span class="mobile-back"
@@ -46,7 +46,7 @@
                   ]"
                   @click.prevent="openMobileViewList(items.title)"
                 >
-                  <span
+                  <!-- <span
                     class="according-menu"
                     v-if="
                       openMobileNav && mobileListDropdown[0] !== items.title
@@ -59,9 +59,9 @@
                       mobileListDropdown[0] === items.title && openMobileNav
                     "
                     >-</span
-                  >
+                  > -->
 
-                  <span v-if="items.title != 'VOXO PLUS'">
+                  <span>
                     <!-- {{ $t(items.title) }} -->
                     {{ items.title }}
                     <span
@@ -105,25 +105,6 @@
                 </li>
               </ul>
             </li>
-
-            <li
-              class="mobile-poster d-flex d-xl-none"
-              :style="{ right: openMobileNav ? '0px' : '-410px' }"
-            >
-              <img src="~assets/images/pwa.png" class="img-fluid" alt="" />
-              <div class="mobile-contain">
-                <h5>{{ EnjoyExperience }}</h5>
-                <p class="font-light">
-                  {{ EnjoyExperienceDescription }}
-                </p>
-                <a
-                  href="javascript:void(0)"
-                  id="installApp"
-                  class="btn btn-solid-default btn-spacing w-100"
-                  >ADD TO HOMESCREEN</a
-                >
-              </div>
-            </li>
           </ul>
         </div>
       </div>
@@ -132,7 +113,7 @@
 </template>
 
 <script>
-// import { mapState } from "vuex";
+import { mapState } from 'vuex'
 export default {
   props: ['openMobileNavProp', 'hideToggleBars'],
   data() {
@@ -223,15 +204,14 @@ export default {
           path: '/Contact_Us',
         },
       ],
-      openMobileNav: false,
     }
   },
-  // computed: {
-  //   ...mapState({
-  //     menuList: (state) => state.menu,
-  //     // openMobileNav: (state) => state.clickEvents.shopFilterBar,
-  //   }),
-  // },
+  computed: {
+    ...mapState({
+      // menuList: (state) => state.menu,
+      openMobileNav: (state) => state.clickEvents.showMenuBar,
+    }),
+  },
   watch: {
     openMobileNavProp: function () {
       if (this.openMobileNavProp) this.openMobileNav = this.openMobileNavProp
@@ -262,7 +242,8 @@ export default {
       }
     },
     toggleMobileNav() {
-      // this.$store.dispatch('clickEvents/toggleShopFilterBar')
+      this.openMobileNav = !this.openMobileNav
+      this.$store.dispatch('clickEvents/toggleShopMenuBar')
     },
 
     changePage(path) {

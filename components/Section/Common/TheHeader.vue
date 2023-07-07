@@ -30,7 +30,7 @@
                   </nuxt-link>
                 </div> -->
                 <!-- <categoryList1 :headerButtonVisible="true" v-if="mobileView" /> -->
-                <CategoryMenu />
+                <!-- <CategoryMenu /> -->
               </div>
               <MainNavBar />
               <MenuSearch @openSearchBar="toggleSearchbar" />

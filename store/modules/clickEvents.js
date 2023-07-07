@@ -34,6 +34,8 @@ const state = {
   showEditProfileModal: false,
   showVideoModal: false,
   showNewsLetterModal: false,
+  showMenuBar: false,
+  overlayMenu: false,
 }
 
 // getters
@@ -86,6 +88,8 @@ const mutations = {
     state.showEditProfileModal = false
     state.showVideoModal = false
     state.showNewsLetterModal = false
+    state.overlayMenu = false
+    state.showMenuBar = false
   },
   changeProductId(state, payload) {
     if (payload != undefined || payload > 1) {
@@ -106,6 +110,10 @@ const mutations = {
   },
   toggleShopFilterBar(state) {
     state.shopFilterBar = !state.shopFilterBar
+    state.overlay = !state.overlay
+  },
+  toggleShopMenuBar(state) {
+    state.showMenuBar = !state.showMenuBar
     state.overlay = !state.overlay
   },
   toggleShopFilterBarNoOverlay(state) {
@@ -190,6 +198,9 @@ const actions = {
   closeOverlay({ commit }) {
     commit('closeOverlay')
   },
+  closeMenuOverlay({ commit }) {
+    commit('closeMenuOverlay')
+  },
   toggleQuickViewModal({ commit }) {
     commit('toggleQuickViewModal')
   },
@@ -198,6 +209,9 @@ const actions = {
   },
   toggleShopFilterBar({ commit }) {
     commit('toggleShopFilterBar')
+  },
+  toggleShopMenuBar({ commit }) {
+    commit('toggleShopMenuBar')
   },
   toggleShopFilterBarNoOverlay({ commit }) {
     commit('toggleShopFilterBarNoOverlay')

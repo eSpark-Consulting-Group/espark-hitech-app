@@ -6,6 +6,7 @@
       <Nuxt />
     </transition>
     <!-- <NewsSubscribe v-if="this.$route.path != '/'" /> -->
+
     <TheFooter />
     <MobileMenu />
     <!-- v-scroll-to="'#body-content'" -->
@@ -14,6 +15,11 @@
         <i class="fas fa-chevron-up"></i>
       </a>
     </div>
+    <div
+      class="bg-overlay show"
+      v-if="overlay"
+      @click.prevent="closeOverlay"
+    ></div>
     <!-- <ClientOnly>
      
     </ClientOnly> -->
@@ -21,6 +27,7 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
 import TheHeader from '../components/Section/Common/TheHeader.vue'
 import Breadcrumb from '../components/Section/Elements/HeaderElements/Breadcrumb.vue'
 import NewsSubscribe from '../components/Section/Elements/HomePageElements/Banners/NewsSubscribe.vue'
@@ -43,6 +50,11 @@ export default {
         '/page/comming_soon',
       ],
     }
+  },
+  computed: {
+    ...mapState({
+      overlay: (state) => state.clickEvents.overlay,
+    }),
   },
   watch: {
     $route(n, o) {
@@ -77,6 +89,9 @@ export default {
     }
   },
   methods: {
+    closeOverlay() {
+      this.$store.dispatch('clickEvents/closeOverlay')
+    },
     scrollOnTop() {
       document.body.scrollTop = 0
       document.documentElement.scrollTop = 0

@@ -24,15 +24,15 @@ header {
           + li {
             margin-left: 30px;
 
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               margin-left: unset;
               margin-right: 30px;
             }
 
-            @include mq-max(xl) {
+            @include mq-max(md) {
               margin-left: 0;
 
-              [dir="rtl"] & {
+              [dir='rtl'] & {
                 margin-left: unset;
                 margin-right: 0;
               }
@@ -68,7 +68,7 @@ header {
           background-color: $white;
           width: 300px !important;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             left: unset;
             right: 0;
           }
@@ -95,7 +95,7 @@ header {
               transition: all 0.5s ease;
               position: relative;
 
-              [dir="rtl"] & {
+              [dir='rtl'] & {
                 padding: 3px 40px 3px 25px;
                 direction: rtl;
               }
@@ -109,7 +109,7 @@ header {
                 margin-left: 8px;
                 position: relative;
 
-                [dir="rtl"] & {
+                [dir='rtl'] & {
                   margin-left: unset;
                   margin-right: 8px;
                 }
@@ -158,7 +158,7 @@ header {
                 margin-left: 3px;
                 color: var(--theme-color) !important;
 
-                [dir="rtl"] & {
+                [dir='rtl'] & {
                   margin-left: unset;
                   margin-right: 3px;
                 }
@@ -188,7 +188,7 @@ header {
           width: 100%;
           border-radius: 4px;
 
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             direction: rtl;
           }
 
@@ -200,13 +200,13 @@ header {
               top: 0;
               left: 0;
               @include pseudowh;
-              background-image: url("~assets/images/voxo.png");
+              background-image: url('~assets/images/voxo.png');
               background-position: center;
               background-repeat: no-repeat;
               background-size: cover;
               z-index: -1;
 
-              [dir="rtl"] & {
+              [dir='rtl'] & {
                 transform: scaleX(-1);
               }
 
@@ -430,7 +430,7 @@ header {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .responsive-btn {
     display: none;
   }
@@ -507,22 +507,21 @@ header {
           }
 
           &.dropdown {
-            .menu-title, .caret {
+            .menu-title,
+            .caret {
               position: relative;
               padding-right: 18px;
-
             }
-            .caret{
+            .caret {
               &::after {
                 position: absolute;
-                content: "\f078";
+                content: '\f078';
                 @include font;
                 right: 0;
                 @include center(vertical);
                 font-weight: 600;
                 font-size: 12px;
               }
-
             }
           }
 
@@ -553,16 +552,18 @@ header {
     }
   }
 
-  .toggle-nav {
-    display: none;
-  }
-
   .mobile-back {
     display: none !important;
   }
 }
 
-@include mq-max(xl) {
+@media (min-width: 768px) {
+  .toggle-nav {
+    display: none;
+  }
+}
+
+@include mq-max(md) {
   header {
     .main-navbar {
       .nav-menu {
@@ -617,7 +618,7 @@ header {
               position: absolute;
 
               &:before {
-                content: "+";
+                content: '+';
                 font-family: inherit;
                 position: relative;
               }
@@ -664,7 +665,7 @@ header {
                   border-radius: 50%;
                   background-color: $black1;
 
-                  [dir="rtl"] & {
+                  [dir='rtl'] & {
                     left: unset;
                     right: 20px;
                   }
@@ -870,7 +871,7 @@ header {
     right: 20px;
     top: 10px;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       right: unset;
       left: 20px;
     }

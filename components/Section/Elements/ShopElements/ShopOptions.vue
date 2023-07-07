@@ -58,10 +58,7 @@
               <img src="~assets/svg/grid-3.svg" class="img-fluid" alt="" />
             </a>
           </li> -->
-          <li
-            class="grid-btn d-lg-inline-block d-none"
-            :class="cardsLayout == 4 ? 'active' : ''"
-          >
+          <li class="list-btn" :class="cardsLayout == 6 ? 'active' : ''">
             <a href="javascript:void(0)" @click.prevent="changeCardLayout(4)">
               <img src="~assets/svg/grid.svg" class="img-fluid" alt="" />
             </a>
@@ -128,3 +125,11 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+@media (max-width: 1400px) {
+  /* .filter-options {
+    max-width: 80%;
+  } */
+}
+</style>

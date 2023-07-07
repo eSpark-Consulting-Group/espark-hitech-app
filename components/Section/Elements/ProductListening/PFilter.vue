@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid accordion-body custom-container shadow mb-1">
-    <div class="sticky-header">
+    <div class="">
       <h5
         class="accordion-header m-2"
         id="headingOne"

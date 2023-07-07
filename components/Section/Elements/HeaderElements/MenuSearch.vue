@@ -174,6 +174,8 @@ export default {
   components: { icons },
   data() {
     return {
+      isHovered: false,
+      isActive: false,
       isCartOpen: false,
       searchBarOpen: false,
       Total: 'Total',
@@ -194,10 +196,19 @@ export default {
     },
   },
   methods: {
+    handleMouseOver() {
+      this.isCartOpen = true
+      console.log('hover OVer In', this.isCartOpen)
+    },
+    handleMouseOut() {
+      // this.isCartOpen = false
+      console.log('hover OVer out', this.isCartOpen)
+    },
     removeItem(productId) {
       // this.$store.dispatch("cart/removeCartItem", productId);
     },
     toggleCart() {
+      this.isActive = !this.isActive
       this.isCartOpen = !this.isCartOpen
     },
     openSearchBar() {
