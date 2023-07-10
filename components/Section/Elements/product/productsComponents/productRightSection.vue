@@ -1,6 +1,6 @@
 <template>
   <div class="col-md-8" :class="rightSectionClasses ? rightSectionClasses : ''">
-    <div class="row justify-content-center g-4">
+    <div class="details-items row justify-content-flex-start g-4">
       <div class="cloth-details-size col-md-7">
         <!-- <productCount /> -->
 
@@ -77,8 +77,12 @@
         <!-- <shareIt /> -->
         <slot></slot>
       </div>
+      <!-- <a @click.prevent="addToWishlist(currentProduct)" class="btn btn-solid">
+          <i class="fa fa-bookmark fz-16 me-2"></i>
+          <span>wishlist </span>
+        </a> -->
       <div class="cloth-details-size col-md-5">
-        <div class="details-image-concept m-0">
+        <div class="details-image-concept m-0 mb-2">
           <h3>Can ship immediately</h3>
         </div>
         <selectSize
@@ -88,10 +92,6 @@
           @setSelectedSize="setSelectedSize"
         />
         <div class="product-buttons mt-2">
-          <!-- <a @click.prevent="addToWishlist(currentProduct)" class="btn btn-solid">
-          <i class="fa fa-bookmark fz-16 me-2"></i>
-          <span>wishlist </span>
-        </a> -->
           <a
             href="javascript:void(0)"
             @click="addToCart(currentProduct)"
@@ -106,7 +106,7 @@
         <div class="details-image-concept bag-border m-0">
           <h3>Bag</h3>
         </div>
-        <!-- <productCount /> -->
+
         <table class="table table-bag">
           <thead>
             <tr>
@@ -123,18 +123,6 @@
             </tr>
           </tbody>
         </table>
-
-        <!-- <ul class="product-count shipping-order">
-          <li>
-            <img
-              src="~assets/images/gif/truck.png"
-              class="img-fluid"
-              alt="image"
-            />
-            <span class="lang">Free shipping for orders above $500 USD</span>
-          </li>
-        </ul> -->
-        <slot></slot>
       </div>
     </div>
   </div>
@@ -256,5 +244,11 @@ export default {
 }
 .table-bag td {
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .details-items .cloth-details-size {
+    text-align: start !important;
+  }
 }
 </style>

@@ -34,5 +34,13 @@
 </template>
 
 <script>
-  export default {};
+export default {}
 </script>
+
+<style scoped>
+@media (max-width: 767px) {
+  .product-icon {
+    justify-content: flex-start;
+  }
+}
+</style>
