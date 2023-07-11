@@ -83,7 +83,7 @@ export default {
     return {
       selectedSortingCriteria: 'default',
       cardsLayout: 4,
-      productsPerPage: [12, 24, 50],
+      productsPerPage: [16, 24, 64],
       sortingCriterias: [
         { criteria: 'default', displayName: 'Default' },
         { criteria: 'byPrice', displayName: 'Sort By Price' },
