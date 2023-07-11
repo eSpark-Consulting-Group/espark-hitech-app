@@ -1,11 +1,15 @@
 <template>
   <div
-    class="home-slider sliderBackground bg-size"
+    class="home-slider sliderBackground bg-size img-fluid"
     :style="{
       'background-image': `url(${getImageUrl(slide.image)})`,
     }"
   >
-    <img :src="getImageUrl(slide.image)" class="bg-img d-none" alt="" />
+    <!-- <img
+      :src="getImageUrl(slide.image)"
+      class="bg-img d-none img-fluid"
+      alt=""
+    /> -->
     <div class="home-wrap">
       <div class="discover-block d-sm-block d-none" style="padding-bottom: 10%">
         <div class="d-flex">
@@ -61,6 +65,19 @@ export default {
 </script>
 
 <style scoped>
+.img-fluid {
+  max-width: 100% !important;
+}
+@media (max-width: 768px) {
+  .img-fluid {
+    max-width: 100% !important;
+  }
+
+  .bg-img {
+    width: 360px;
+    height: auto;
+  }
+}
 .buton1 {
   position: absolute;
   bottom: 25%;

@@ -60,7 +60,7 @@
     </div>
     <nav class="page-section" v-if="totalPages > 1">
       <ul class="pagination">
-        <li class="page-item">
+        <li class="page-item icons">
           <a
             href="javascript:void(0)"
             class="page-link"
@@ -85,7 +85,7 @@
           </a>
         </li>
 
-        <li class="page-item">
+        <li class="page-item icons">
           <a
             href="javascript:void(0)"
             class="page-link"
@@ -221,6 +221,10 @@ export default {
 .table th.sorted {
   background-color: #02a895;
   color: white;
+}
+.icons a:focus,
+.icons a:active {
+  background-color: #ffff !important;
 }
 
 .sort-icon {

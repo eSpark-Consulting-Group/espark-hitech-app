@@ -76,6 +76,7 @@
             <ShopOptions
               :setCardsLayout="setCardsLayout"
               @changeCardLayout="changeCardLayout"
+              @changeProductsPerPage="changeProductsPerPage"
             />
             <!--   @changeProductsPerPage="changeProductsPerPage"-->
           </div>
@@ -163,7 +164,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import axios from 'axios'
 import ProductBox from '../../components/Section/Elements/ProductBox/ProductBox2.vue'
 import ProBoxSkeletonLoader from '../../components/Section/Elements/ProductBox/ProBoxSkeletonLoader.vue'
@@ -209,15 +210,15 @@ export default {
       totalCards: 8,
       currentPage: 1,
       totalPages: 2,
-      initCards: products.data,
+      // initCards: products.data,
       // showFilters: false,
       filtersList: [],
     }
   },
   computed: {
-    // ...mapGetters({
-    //   initCards: "filters/cardsToReturn",
-    // }),
+    ...mapGetters({
+      initCards: 'filters/cardsToReturn',
+    }),
     ...mapState({
       showFilters: (state) => state.clickEvents.shopFilterBar,
       // filtersList: (state) => state.filters.filtersList,
@@ -292,6 +293,12 @@ export default {
       if (this.filterHide)
         this.$store.dispatch('clickEvents/toggleShopFilterBarNoOverlay')
       else this.$store.dispatch('clickEvents/toggleShopFilterBar')
+    },
+
+    changeProductsPerPage(productsToShow) {
+      this.cardsToShow = productsToShow
+      this.totalPages = Math.ceil(this.cards.length / this.cardsToShow)
+      this.calculatePages()
     },
   },
   mounted() {

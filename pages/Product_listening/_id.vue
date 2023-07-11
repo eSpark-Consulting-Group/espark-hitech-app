@@ -179,8 +179,8 @@ export default {
     // this.$store.dispatch("filters/setCategory", this.category);
     this.cards = this.initCards.filter((item) => item.category != 'vr')
     this.setBreadcrumbs({
-      pageParent: 'Product Listening',
-      pageName: 'Electronic Store - Product listening',
+      pageParent: 'Product Listing',
+      pageName: 'Electronic Store - Product Listing',
     })
     // this.getitems = this.items
     // this.filtersList = this.items

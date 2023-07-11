@@ -96,10 +96,10 @@ export default {
   },
   watch: {
     selectedSortingCriteria: function () {
-      // this.$store.dispatch(
-      //   "filters/setsSortingCriteria",
-      //   this.selectedSortingCriteria
-      // );
+      this.$store.dispatch(
+        'filters/setsSortingCriteria',
+        this.selectedSortingCriteria
+      )
       this.$router.push({
         path: this.$route.path,
         query: { ...this.$route.query, sortBy: this.selectedSortingCriteria },
@@ -107,9 +107,9 @@ export default {
     },
   },
   computed: {
-    // ...mapGetters({
-    //   sortingCriterias: "filters/sortingCriterias",
-    // }),
+    ...mapGetters({
+      sortingCriterias: 'filters/sortingCriterias',
+    }),
   },
   methods: {
     changeCardLayout(layout) {
@@ -117,7 +117,7 @@ export default {
       this.$emit('changeCardLayout', this.cardsLayout)
     },
     changeProductsPerPage(event) {
-      // this.$emit("changeProductsPerPage", event.target.value);
+      this.$emit('changeProductsPerPage', event.target.value)
     },
   },
   mounted() {

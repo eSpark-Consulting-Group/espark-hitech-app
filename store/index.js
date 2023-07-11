@@ -16,6 +16,7 @@ import Vuex from 'vuex'
 import breadcrumbs from './modules/breadcrumbs'
 import cart from './modules/cart'
 import clickEvents from './modules/clickEvents'
+import filters from './modules/filters'
 
 const createStore = () => {
   return new Vuex.Store({
@@ -23,6 +24,7 @@ const createStore = () => {
       breadcrumbs,
       cart,
       clickEvents,
+      filters,
       // layout,
       // firebase,
       // banners,
