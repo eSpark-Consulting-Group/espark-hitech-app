@@ -116,7 +116,7 @@
 
           <nav class="page-section" v-if="cards.length != 0">
             <ul class="pagination">
-              <li class="page-item">
+              <li class="page-item icons">
                 <a
                   href="javascript:void(0)"
                   class="page-link"
@@ -139,7 +139,7 @@
                 </a>
               </li>
 
-              <li class="page-item">
+              <li class="page-item icons">
                 <a
                   href="javascript:void(0)"
                   class="page-link"
@@ -206,7 +206,7 @@ export default {
       cardsLayout: 4,
       cards: [],
       pages: [],
-      cardsToShow: 36,
+      cardsToShow: 24,
       totalCards: 8,
       currentPage: 1,
       totalPages: 2,
@@ -365,5 +365,13 @@ export default {
 .container {
   margin: 0px;
   padding: 0 1.5rem 0 1.5rem;
+}
+
+.icons a:focus,
+.icons a:active {
+  background-color: #ffff !important;
+}
+.page-link:focus {
+  background-color: #01b7a1 !important;
 }
 </style>
