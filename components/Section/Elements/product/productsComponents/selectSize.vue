@@ -117,4 +117,8 @@ export default {
 .product-title-2 {
   margin-top: 0 !important;
 }
+
+.input-group {
+  flex-wrap: nowrap !important;
+}
 </style>

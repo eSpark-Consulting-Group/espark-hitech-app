@@ -32,7 +32,7 @@
                   <td>15 x 15 x 3 cm; 250 Grams</td>
                 </tr>
                 <tr>
-                  <th>DateFirstAvailable</th>
+                  <th>Date First Available</th>
                   <td>5 April 2021</td>
                 </tr>
                 <tr>
@@ -52,7 +52,7 @@
                   <td>15 x 15 x 3 cm; 250 Grams</td>
                 </tr>
                 <tr>
-                  <th>DateFirstAvailable</th>
+                  <th>Date First Available</th>
                   <td>5 April 2021</td>
                 </tr>
                 <tr>
@@ -231,18 +231,21 @@ export default {
 
 <style scoped>
 .tab-pane .pro .table-part tr th {
-  /* border: 1px solid #ced4da; */
-  /* background-color: #eff2f7; */
-}
-/* .tab-pane .pro .table-part tr td {
   border: 1px solid #ced4da;
-} */
+  background-color: #f7f6f6;
+}
+.tab-pane .pro .table-part tr td {
+  border: 1px solid #ced4da;
+}
 
 .bag-border {
   padding-bottom: 1rem;
   border-bottom: 1px dashed #ddd;
 }
 .table-bag td {
+  text-align: center;
+}
+.table-bag th {
   text-align: center;
 }
 

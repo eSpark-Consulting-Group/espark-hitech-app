@@ -71,7 +71,7 @@
                     <td>15 x 15 x 3 cm; 250 Grams</td>
                   </tr>
                   <tr>
-                    <th>DateFirstAvailable</th>
+                    <th>Date First Available</th>
                     <td>5 April 2021</td>
                   </tr>
                   <tr>
@@ -701,5 +701,16 @@ export default {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
+}
+
+@media (max-width: 991px) {
+  .cloth-review .nav-tabs {
+    flex-wrap: wrap !important;
+    justify-content: center;
+  }
+  .tab-wrap .nav-tabs .nav-link {
+    padding-bottom: 2px !important;
+    margin-bottom: 10px !important;
+  }
 }
 </style>

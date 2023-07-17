@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col">
           <div class="title text-center">
-            <h5>{{ $t( JustForYou) }}</h5>
+            <h5>{{ $t(JustForYou) }}</h5>
             <h2>{{ $t(OurCollection) }}</h2>
           </div>
           <div class="tab-wrap">
@@ -568,3 +568,15 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+@media (max-width: 991px) {
+  .tab-wrap .nav-tabs {
+    flex-wrap: wrap !important;
+  }
+  .tab-wrap .nav-tabs .nav-link {
+    padding-bottom: 2px !important;
+    margin-bottom: 10px !important;
+  }
+}
+</style>
