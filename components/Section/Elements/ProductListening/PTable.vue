@@ -71,7 +71,7 @@
           </a>
         </li>
         <li
-          class="page-item"
+          class="page-item center-items"
           v-for="page in pages"
           :key="page"
           :class="page === currentPage ? 'active' : ''"
@@ -205,7 +205,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .table-container {
   overflow-x: auto;
   max-width: 100%;
@@ -217,6 +217,14 @@ export default {
 
 .page-link:focus {
   background-color: #01b7a1 !important;
+}
+.center-items a:hover {
+  background-color: #eff2f7 !important;
+  color: #02a895 !important;
+}
+.center-items a:active {
+  background-color: #02a895 !important;
+  color: #ffff !important;
 }
 .table th.sorted {
   background-color: #02a895;

@@ -23,7 +23,7 @@
             <td>
               <nuxt-link :to="'/' + item.id">{{ item.itemName }}</nuxt-link>
               <div class="mobile-cart-content row">
-                <div class="col">
+                <div class="col-6 col-sm-8">
                   <div class="qty-box">
                     <div class="input-group">
                       <input
@@ -39,14 +39,14 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-6 col-sm-2">
                   <h2>
                     <!-- {{ selectedCurrencySymbol
                     }}{{ (item.price * item.quantity).toFixed(2) }} -->
                     {{ (item.price * item.quantity).toFixed(2) }}
                   </h2>
                 </div>
-                <div class="col">
+                <div class="col-6 col-sm-2">
                   <h2 class="td-color">
                     <!-- @click.prevent="removeItem(item.id)" -->
                     <a href="javascript:void(0)">
@@ -113,5 +113,14 @@ export default {
 .table-color {
   background: #ffff;
   border-radius: 5px;
+}
+
+@media (max-width: 575px) {
+  .mobile-cart-content {
+    display: block;
+  }
+  .mobile-cart-content .col-6 {
+    margin-bottom: 10px;
+  }
 }
 </style>

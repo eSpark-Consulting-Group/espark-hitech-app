@@ -126,7 +126,7 @@
                 </a>
               </li>
               <li
-                class="page-item"
+                class="page-item center-items"
                 v-for="i in pages"
                 :key="i"
                 :class="i === currentPage ? 'active' : ''"
@@ -371,7 +371,23 @@ export default {
 .icons a:active {
   background-color: #ffff !important;
 }
+/* .page-link a:focus {
+  background-color: #b74401 !important;
+  color: #ffff !important;
+}
+.page-link a:active {
+  background-color: #772f5b !important;
+  color: #ffff !important;
+} */
 .page-link:focus {
   background-color: #01b7a1 !important;
+}
+.center-items a:hover {
+  background-color: #eff2f7 !important;
+  color: #02a895 !important;
+}
+.center-items a:active {
+  background-color: #02a895 !important;
+  color: #ffff !important;
 }
 </style>
