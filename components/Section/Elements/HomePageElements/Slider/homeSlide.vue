@@ -1,16 +1,7 @@
 <template>
-  <div
-    class="home-slider sliderBackground bg-size img-fluid"
-    :style="{
-      'background-image': `url(${getImageUrl(slide.image)})`,
-    }"
-  >
-    <!-- <img
-      :src="getImageUrl(slide.image)"
-      class="bg-img d-none img-fluid"
-      alt=""
-    /> -->
-    <div class="home-wrap">
+  <div class="home-slider sliderBackground bg-size img-fluid">
+    <img :src="getImageUrl(slide.image)" class="bg-img w-100" alt="" />
+    <!-- <div class="home-wrap relative">
       <div class="discover-block d-sm-block d-none" style="padding-bottom: 10%">
         <div class="d-flex">
           <div class="discover-content">
@@ -25,7 +16,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- <div class="group-btn">
       <button
@@ -65,22 +56,38 @@ export default {
 </script>
 
 <style scoped>
-.img-fluid {
-  max-width: 100% !important;
+.home-slider {
+  height: auto !important;
 }
+.bg-img {
+  max-width: 1720px;
+  max-height: 820px;
+  width: 100%;
+  height: auto;
+}
+/* .img-fluid {
+  max-width: 100% !important;
+} */
+/* .home-slider {
+  height: auto !important;
+} */
+/* @media (max-width: 768px) {
+
+  ;
+} */
 @media (max-width: 768px) {
   .img-fluid {
     max-width: 100% !important;
   }
 
-  .bg-img {
+  /* .bg-img {
     width: 360px;
     height: auto;
-  }
+  } */
 }
 .buton1 {
   position: absolute;
-  bottom: 25%;
+  bottom: 2%;
   left: 5%;
   width: 210px;
   height: 42px;
