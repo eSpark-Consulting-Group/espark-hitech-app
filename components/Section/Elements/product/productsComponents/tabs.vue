@@ -713,4 +713,11 @@ export default {
     margin-bottom: 10px !important;
   }
 }
+
+@media (min-width: 992px) {
+  .tab-wrap .nav-tabs .nav-link {
+    padding-bottom: 12px !important;
+    margin-bottom: 10px !important;
+  }
+}
 </style>
