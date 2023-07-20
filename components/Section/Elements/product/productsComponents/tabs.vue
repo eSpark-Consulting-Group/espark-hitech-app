@@ -4,7 +4,7 @@
       <nav>
         <div class="nav nav-tabs" id="nav-tab">
           <button
-            class="nav-link"
+            class="nav-link text-wrap"
             :class="tabActive['description'] ? 'active' : ''"
             id="nav-home-tab"
             type="button"
@@ -14,7 +14,7 @@
           </button>
 
           <button
-            class="nav-link"
+            class="nav-link text-wrap"
             id="nav-speci-tab"
             :class="tabActive['Specifications'] ? 'active' : ''"
             type="button"
@@ -24,7 +24,7 @@
           </button>
 
           <button
-            class="nav-link"
+            class="nav-link text-wrap"
             id="nav-size-tab"
             :class="tabActive['sizingGuide'] ? 'active' : ''"
             type="button"
@@ -34,7 +34,7 @@
           </button>
 
           <button
-            class="nav-link"
+            class="nav-link text-wrap"
             id="nav-question-tab"
             :class="tabActive['q&a'] ? 'active' : ''"
             type="button"
@@ -703,21 +703,24 @@ export default {
   opacity: 0;
 }
 
+.nav-tabs .nav-link {
+  padding-bottom: 5px !important;
+  margin-bottom: 10px !important;
+}
 @media (max-width: 991px) {
   .cloth-review .nav-tabs {
     flex-wrap: wrap !important;
     justify-content: center;
   }
-  .tab-wrap .nav-tabs .nav-link {
+  .nav-tabs .nav-link {
     padding-bottom: 2px !important;
     margin-bottom: 10px !important;
   }
 }
 
-@media (min-width: 992px) {
-  .tab-wrap .nav-tabs .nav-link {
-    padding-bottom: 12px !important;
-    margin-bottom: 10px !important;
+@media (max-width: 1200px) {
+  .nav-link {
+    font-size: 14px !important;
   }
 }
 </style>

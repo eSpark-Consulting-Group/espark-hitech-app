@@ -248,6 +248,11 @@ export default {
 </script>
 
 <style scoped>
+.table-container {
+  /* height: 300px; */
+  /* Adjust the height as per your requirement */
+  overflow-y: auto;
+}
 .filter-button {
   display: block;
 }

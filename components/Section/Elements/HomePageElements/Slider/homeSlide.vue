@@ -57,6 +57,8 @@ export default {
 
 <style scoped>
 .home-slider {
+  display: flex !important;
+  justify-content: center !important;
   height: auto !important;
 }
 .bg-img {

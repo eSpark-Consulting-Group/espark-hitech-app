@@ -236,6 +236,7 @@ export default {
 }
 .tab-pane .pro .table-part tr td {
   border: 1px solid #ced4da;
+  padding-left: 10px;
 }
 
 .bag-border {

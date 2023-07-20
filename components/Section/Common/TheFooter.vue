@@ -3,7 +3,7 @@
     <div class="main-footer">
       <div class="container">
         <div class="row gy-4">
-          <div class="col-xl-4 col-lg-6 col-md-8">
+          <div class="col-xl-4 col-lg-4 col-md-6">
             <div class="footer-contact">
               <BrandLogo />
               <ul class="contact-lists">
@@ -39,10 +39,7 @@
               <div class="footer-title" @click="toggleFooterMenu(headings.id)">
                 <h3>{{ $t(headings.title) }}</h3>
               </div>
-              <div
-                class="footer-content"
-                :class="headings.menuOpen ? '' : 'd-none'"
-              >
+              <div class="footer-content">
                 <ul>
                   <li v-for="(links, index) in headings.items" :key="index">
                     <nuxt-link :to="{ path: links.path }" class="font-dark">{{
@@ -155,8 +152,8 @@ export default {
         //   ],
         // },
         {
-          id: 2,
-          menuOpen: true,
+          id: 1,
+          menuOpen: false,
           click: false,
           title: 'Get Help',
           linkClasses: ' col-xl-2 col-lg-2 col-md-4 col-sm-6',
