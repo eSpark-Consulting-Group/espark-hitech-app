@@ -33,7 +33,7 @@
           </div>
         </div>
         <div
-          class="col-12 d-flex mr-2"
+          class="col-12 d-flex mr-2 py-2"
           :class="isChecked ? 'table-container' : 'flex-container'"
         >
           <div

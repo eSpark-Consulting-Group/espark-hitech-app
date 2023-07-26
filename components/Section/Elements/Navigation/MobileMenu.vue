@@ -29,7 +29,7 @@ export default {
           icon: 'home',
         },
         {
-          path: '/shop',
+          path: '/category',
           name: 'Category',
           icon: 'bars',
         },
