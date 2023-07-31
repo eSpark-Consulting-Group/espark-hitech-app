@@ -1,4 +1,4 @@
-import Vuex from 'vuex'
+import Vuex from 'vuex';
 // import information from "../static/data/information.json";
 // import Banner from "../static/data/banners.json";
 // import Menu from "../static/data/menu.json";
@@ -13,10 +13,11 @@ import Vuex from 'vuex'
 // import layout from "./modules/layout";
 // import firebase from "./modules/firebase";
 // import banners from "./modules/banners";
-import breadcrumbs from './modules/breadcrumbs'
-import cart from './modules/cart'
-import clickEvents from './modules/clickEvents'
-import filters from './modules/filters'
+import breadcrumbs from './modules/breadcrumbs';
+import cart from './modules/cart';
+import clickEvents from './modules/clickEvents';
+import filters from './modules/filters';
+import products from './modules/products';
 
 const createStore = () => {
   return new Vuex.Store({
@@ -25,6 +26,7 @@ const createStore = () => {
       cart,
       clickEvents,
       filters,
+      products,
       // layout,
       // firebase,
       // banners,
@@ -33,7 +35,7 @@ const createStore = () => {
     mutations: {},
     actions: {},
     getters: {},
-  })
-}
+  });
+};
 
-export default createStore
+export default createStore;

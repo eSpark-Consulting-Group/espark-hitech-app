@@ -1,5 +1,5 @@
 :root {
-    --theme-color:#01b7a1 ;
+    --theme-color: #01b7a1;
     // #0163d2;
 }
 
@@ -80,7 +80,7 @@ $silver: #c0c0c0;
 $dark-silver: #cacaca;
 $gray-50: #ebebeb;
 $dodger-blue: #88d1f4;
-$light-red:#e3627b;
+$light-red: #e3627b;
 $light-purple: #a0768e;
 $bright-gray: #efefef;
 $gainsboro: #dedede;
@@ -119,16 +119,18 @@ $veg1: #51983c;
 
 // font family 
 $font_0: Rubik,
-sans-serif;
+    sans-serif;
 $font_1: sans-serif;
 $fontawesome: "Font Awesome 5 Free";
 
-$min-breakpoints: (lg: 992px,
+$min-breakpoints: (
+    lg: 992px,
     xl: 1200px,
     2xl: 1366px,
 );
 
-$max-breakpoints: (2xs: 360px,
+$max-breakpoints: (
+    2xs: 360px,
     xs: 480px,
     sm: 575px,
     md: 767px,

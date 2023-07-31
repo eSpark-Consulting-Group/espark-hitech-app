@@ -1,0 +1,251 @@
+{
+  "data": [
+    {
+      "categoryName": "Arduino Products",
+      "subCategories": [
+        {
+          "subCategoryName": "Arduino Boards",
+          "productCount": 2
+        }
+      ]
+    },
+    {
+      "categoryName": "Circuit Protections",
+      "subCategories": [
+        {
+          "subCategoryName": "Transient Voltage Suppressors (TVS)",
+          "productCount": 3
+        }
+      ]
+    },
+    {
+      "categoryName": "Connectors",
+      "subCategories": [
+        {
+          "subCategoryName": "Wire to Wire/Wire to Board Connectors",
+          "productCount": 1
+        },
+        {
+          "subCategoryName": "Battery Connectors",
+          "productCount": 1
+        },
+        {
+          "subCategoryName": "SIM Card Connectors",
+          "productCount": 1
+        },
+        {
+          "subCategoryName": "AC/DC Power Connectors",
+          "productCount": 1
+        },
+        {
+          "subCategoryName": "Screw Terminals",
+          "productCount": 3
+        },
+        {
+          "subCategoryName": "FFC/FPC Connectors",
+          "productCount": 1
+        },
+        {
+          "subCategoryName": "Memory Connectors",
+          "productCount": 3
+        },
+        {
+          "subCategoryName": "Headers and Wire Housings",
+          "productCount": 18
+        },
+        {
+          "subCategoryName": "RF/Coaxial Connectors",
+          "productCount": 2
+        },
+        {
+          "subCategoryName": "USB Connectors",
+          "productCount": 7
+        }
+      ]
+    },
+    {
+      "categoryName": "Discrete Semiconductors",
+      "subCategories": [
+        {
+          "subCategoryName": "Diodes",
+          "productCount": 18
+        },
+        {
+          "subCategoryName": "Transistors",
+          "productCount": 19
+        }
+      ]
+    },
+    {
+      "categoryName": "Electromechanical",
+      "subCategories": [
+        {
+          "subCategoryName": "Motor and Drives",
+          "productCount": 2
+        },
+        {
+          "subCategoryName": "Switches",
+          "productCount": 12
+        }
+      ]
+    },
+    {
+      "categoryName": "Electronics",
+      "subCategories": [
+        {
+          "subCategoryName": "Component",
+          "productCount": 6
+        }
+      ]
+    },
+    {
+      "categoryName": "Integrated Circuits (ICs)",
+      "subCategories": [
+        {
+          "subCategoryName": "Embedded Processors and Controllers",
+          "productCount": 13
+        },
+        {
+          "subCategoryName": "Power Management ICs",
+          "productCount": 29
+        },
+        {
+          "subCategoryName": "Transistors",
+          "productCount": 2
+        },
+        {
+          "subCategoryName": "Linear ICs",
+          "productCount": 14
+        },
+        {
+          "subCategoryName": "Signal Switches",
+          "productCount": 1
+        },
+        {
+          "subCategoryName": "Clock and Timing",
+          "productCount": 4
+        },
+        {
+          "subCategoryName": "Memory",
+          "productCount": 2
+        },
+        {
+          "subCategoryName": "RF Semiconductors and Devices",
+          "productCount": 13
+        },
+        {
+          "subCategoryName": "Interface ICs",
+          "productCount": 7
+        },
+        {
+          "subCategoryName": "Logic ICs",
+          "productCount": 17
+        },
+        {
+          "subCategoryName": "Data Converter ICs",
+          "productCount": 4
+        }
+      ]
+    },
+    {
+      "categoryName": "Mechanical",
+      "subCategories": [
+        {
+          "subCategoryName": "Tools",
+          "productCount": 1
+        },
+        {
+          "subCategoryName": "Hardware",
+          "productCount": 1
+        },
+        {
+          "subCategoryName": "Bracket",
+          "productCount": 1
+        }
+      ]
+    },
+    {
+      "categoryName": "Optoelectronics",
+      "subCategories": [
+        {
+          "subCategoryName": "Diodes",
+          "productCount": 19
+        },
+        {
+          "subCategoryName": "Optocouplers",
+          "productCount": 4
+        }
+      ]
+    },
+    {
+      "categoryName": "Passive Components",
+      "subCategories": [
+        {
+          "subCategoryName": "EMI / RFI Components",
+          "productCount": 5
+        },
+        {
+          "subCategoryName": "Capacitors",
+          "productCount": 1
+        },
+        {
+          "subCategoryName": "Inductors",
+          "productCount": 21
+        },
+        {
+          "subCategoryName": "Crystals and Oscillators",
+          "productCount": 6
+        }
+      ]
+    },
+    {
+      "categoryName": "Sensors",
+      "subCategories": [
+        {
+          "subCategoryName": "Magnetic Sensors",
+          "productCount": 4
+        },
+        {
+          "subCategoryName": "Load / Pressure / Force / Flex Sensors",
+          "productCount": 2
+        },
+        {
+          "subCategoryName": "Tilt Sensors",
+          "productCount": 1
+        },
+        {
+          "subCategoryName": "Other Sensors",
+          "productCount": 4
+        },
+        {
+          "subCategoryName": "Ultra Sonic Sensors",
+          "productCount": 2
+        },
+        {
+          "subCategoryName": "Temperature Sensors",
+          "productCount": 4
+        },
+        {
+          "subCategoryName": "Photo Electric Sensors",
+          "productCount": 6
+        },
+        {
+          "subCategoryName": "Current Sensors",
+          "productCount": 2
+        },
+        {
+          "subCategoryName": "Motion Sensors",
+          "productCount": 1
+        },
+        {
+          "subCategoryName": "Obstacle Sensors",
+          "productCount": 10
+        },
+        {
+          "subCategoryName": "Pulse Sensors",
+          "productCount": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,24 +1,22 @@
 <template>
-  <div class="col-xxl-2 col-lg-3 col-md-4"
-    :class="[filterBarClasses, { show: showFilters }]">  
+  <div class="col-xxl-2 col-lg-3 col-md-4" :class="[filterBarClasses, { show: showFilters }]">
     <!-- && !isMobileView  -->
     <div class="category-option" :class="[{ show: showFilters }]">
       <div class="button-close mb-3  ">
         <button class="btn p-0" @click.prevent="toggleFilterBar">
           <!-- <i class="fa-solid fa-arrow-left"></i> -->
-          <iconsVue name="left-arrow" size="sm"/>
-         <span class="ms-2">Close</span> 
+          <iconsVue name="left-arrow" size="sm" />
+          <span class="ms-2">Close</span>
         </button>
       </div>
-      <FilterBars :items="initCards.map((r) => r.brand)" title="Brands" />
-      <FilterBars :items="initCards.map((r) => r.brand)" title="Category" />
+      <FilterBars :items="data.map((prod) => prod.categoryName)" title="Category" />
     </div>
   </div>
 </template>
 
 <script>
-import { mapState} from "vuex";
-import products from '../../../../static/DummyData/products.json'
+import { mapState } from "vuex";
+import products from '../../../../static/DummyData/productsResponse.json'
 import FilterBars from './FilterBars.vue'
 import iconsVue from "../../../../assets/icons.vue";
 export default {
@@ -31,7 +29,7 @@ export default {
     'showPriceRange2',
     'isMobileView',
   ],
-  components: { FilterBars,iconsVue },
+  components: { FilterBars, iconsVue },
   data() {
     return {
       showSizeList: false,
@@ -55,7 +53,7 @@ export default {
       selectedDiscount: 0,
       // categories: [],
       // showFilters: true,
-      initCards: products.data,
+      data: products.data,
     }
   },
   computed: {
@@ -217,14 +215,14 @@ export default {
   width: 10px;
 }
 
-input[type='checkbox']:checked ~ div {
+input[type='checkbox']:checked~div {
   box-shadow: 0 0 0 2px rgb(0, 0, 0, 0.8);
 }
 
 .category-option .button-close button {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    color: #212529;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #212529;
 }
 </style>

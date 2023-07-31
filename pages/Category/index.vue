@@ -2,13 +2,8 @@
   <section class="section-b-space">
     <div class="container">
       <div class="row">
-        <ShopFiltersbar
-          :showFilterBar="showFilters"
-          v-if="filterbarPosition != 'right'"
-          :filterBarClasses="filterBarClasses"
-          :showSidebarCarousel="showSidebarCarousel"
-          :isMobileView="isMobileView"
-        />
+        <ShopFiltersbar :showFilterBar="showFilters" v-if="filterbarPosition != 'right'"
+          :filterBarClasses="filterBarClasses" :showSidebarCarousel="showSidebarCarousel" :isMobileView="isMobileView" />
         <!-- :showRating="showRating"
             :showPriceRange2="showPriceRange2"
             :showSizeListInComponent="showSizeListInComponent"
@@ -17,17 +12,11 @@
             :filterBarClasses="filterBarClasses"
             :showSidebarCarousel="showSidebarCarousel"
             :isMobileView="isMobileView" -->
-        <div
-          class="col-xxl-10 col-lg-9 col-12 ratio_30"
-          :class="[{ 'col-lg-12': showFilters }]"
-        >
+        <div class="col-xxl-10 col-lg-9 col-12 ratio_30" :class="[{ 'col-lg-12': showFilters }]">
           <!-- <slot name="topBanner"></slot> -->
           <!-- <TopShopBanner /> -->
           <div class="hide-button d-flex mb-3" v-if="filterHide">
-            <button
-              class="danger-button danger-center btn btn-sm filter-btn"
-              @click.prevent="toggleFilterBar"
-            >
+            <button class="danger-button danger-center btn btn-sm filter-btn" @click.prevent="toggleFilterBar">
               <span class="d-lg-inline-block" v-if="showFilters">{{
                 ShowFilter
               }}</span>
@@ -37,10 +26,7 @@
           <div class="row g-4">
             <!-- filter button -->
             <div class="filter-button">
-              <button
-                class="danger-button danger-center btn btn-sm filter-btn"
-                @click.prevent="toggleFilterBar"
-              >
+              <button class="danger-button danger-center btn btn-sm filter-btn" @click.prevent="toggleFilterBar">
                 Filter
               </button>
             </div>
@@ -53,125 +39,66 @@
                 <li v-for="(filter, index) in filtersList" :key="index">
                   <div class="label-tag">
                     <span>{{ filter }}</span>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      aria-label="Close"
-                      @click="removeFilter(filter)"
-                    ></button>
+                    <button type="button" class="btn-close" aria-label="Close" @click="removeFilter(filter)"></button>
                   </div>
                 </li>
                 <li>
                   <div class="label-tag" v-if="filtersList.length != 0">
-                    <a
-                      href="javascript:void(0)"
-                      @click.prevent="clearAllFilters"
-                      ><span>Clear All</span></a
-                    >
+                    <a href="javascript:void(0)" @click.prevent="clearAllFilters"><span>Clear All</span></a>
                   </div>
                 </li>
               </ul>
             </div>
 
-            <ShopOptions
-              :setCardsLayout="setCardsLayout"
-              @changeCardLayout="changeCardLayout"
-              @changeProductsPerPage="changeProductsPerPage"
-            />
-            <!--   @changeProductsPerPage="changeProductsPerPage"-->
           </div>
           <!-- label and featured section -->
 
           <!-- Prodcut setion -->
-          <div
-            class="row g-sm-4 g-3 gx-sm-4 gx-3 mt-1 custom-gy-5 product-style-2 ratio_asos product-list-section"
-            :class="[
-              { 'row-cols-2': cardsLayout == 2 },
-              { 'row-cols-md-3 row-cols-2': cardsLayout == 3 },
-              {
-                'row-cols-xxl-4 row-cols-xl-4 row-cols-md-4 row-cols-2':
-                  cardsLayout == 4,
-              },
-              {
-                'row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-2 ':
-                  cardsLayout == 5,
-              },
-              {
-                'list-style': cardsLayout == 6,
-              },
-            ]"
-          >
-            <div
-              v-for="(product, index) in cards.slice(
-                currentPage * cardsToShow - cardsToShow,
-                currentPage * cardsToShow
-              )"
-              :key="index"
-            >
-              <productBox :product="product" />
-            </div>
 
-            <!-- Prodcut setion -->
-          </div>
+          <ul class="row mt-3 product-list">
 
-          <nav class="page-section" v-if="cards.length != 0">
-            <ul class="pagination">
-              <li class="page-item icons">
-                <a
-                  href="javascript:void(0)"
-                  class="page-link"
-                  @click="changePage(currentPage - 1)"
-                >
-                  <i class="fas fa-chevron-left"></i>
-                </a>
-              </li>
-              <li
-                class="page-item center-items"
-                v-for="i in pages"
-                :key="i"
-                :class="i === currentPage ? 'active' : ''"
-              >
-                <a
-                  class="page-link"
-                  href="javascript:void(0)"
-                  @click.prevent="changePage(i)"
-                  >{{ i }}
-                </a>
-              </li>
+            <h1 class="product-list-title display-3 mb-4 mt-2">Product Categories ({{ totalProductsCount }})</h1>
 
-              <li class="page-item icons">
-                <a
-                  href="javascript:void(0)"
-                  class="page-link"
-                  @click="changePage(currentPage + 1)"
-                >
-                  <i class="fas fa-chevron-right"></i>
-                </a>
-              </li>
-            </ul>
-          </nav>
+            <li class="col-12 product-list-item" v-for="(product, index) in products" :key="index">
+              <h4 class="product-list-item-title pb-2">
+                <NuxtLink class="subproduct-list-item-title" :to="`/category/${product.categoryName}`">
+                  {{ product.categoryName }}
+                </NuxtLink>
+              </h4>
+              <ul class="row subproduct-list mt-2">
+                <li class="col-12 col-md-6 subproduct-list-item" v-for="(subCategory, index) in product.subCategories"
+                  :key="index">
+
+                  <NuxtLink class="subproduct-list-item-title"
+                    :to="`/product_listing/' + ${subCategory.subCategoryName}`">
+                    {{
+                      subCategory.subCategoryName + ' (' + (
+                        product.subCategories.length > 1 ? product.subCategories.length
+                          +
+                          ' items)' : product.subCategories.length + ' item)') }}</NuxtLink>
+                </li>
+              </ul>
+              <br />
+              <br />
+            </li>
+          </ul>
         </div>
-        <ShopFiltersbar
-          :showFilterBar="showFilters"
-          v-if="filterbarPosition == 'right'"
-          :filterBarClasses="filterBarClasses"
-          :showSidebarCarousel="showSidebarCarousel"
-          :isMobileView="isMobileView"
-        />
+        <ShopFiltersbar :showFilterBar="showFilters" v-if="filterbarPosition == 'right'"
+          :filterBarClasses="filterBarClasses" :showSidebarCarousel="showSidebarCarousel" :isMobileView="isMobileView" />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
-import axios from 'axios'
+import { mapState, mapGetters, mapActions } from 'vuex'
 import ProductBox from '../../components/Section/Elements/ProductBox/ProductBox2.vue'
 import ProBoxSkeletonLoader from '../../components/Section/Elements/ProductBox/ProBoxSkeletonLoader.vue'
-import products from '../../static/DummyData/products.json'
 import ShopOptions from '../../components/Section/Elements/ShopElements/ShopOptions.vue'
 import TopShopBanner from '../../components/Section/Elements/ShopElements/TopShopBanner.vue'
 import ShopFiltersbar from '../../components/Section/Elements/ShopElements/ShopFiltersBar.vue'
+import products from "../../static/DummyData/productsResponse.json"
+
 export default {
   head() {
     return {
@@ -213,17 +140,26 @@ export default {
       // initCards: products.data,
       // showFilters: false,
       filtersList: [],
+      products: []
     }
   },
   computed: {
     ...mapGetters({
       initCards: 'filters/cardsToReturn',
+      getCategories: 'products/getCategories',
+      isFetchingProduct: 'products/getLoading',
     }),
     ...mapState({
       showFilters: (state) => state.clickEvents.shopFilterBar,
       // filtersList: (state) => state.filters.filtersList,
       // appliedFiltersList: (state) => state.filters.appliedFilters,
     }),
+    productCategories() {
+      return this.getCategories
+    },
+    totalProductsCount() {
+      return this.products ? this.products.length : 0
+    },
   },
   watch: {
     initCards: function () {
@@ -235,35 +171,25 @@ export default {
     },
   },
   async fetch() {
-    // const url = 'http://101.53.248.103:8010/api/v1/c/Products'
-    // axios
-    //   .get(url)
-    //   .then((response) => {
-    //     this.initCards = response.data
-    //     console.log(this.initCards)
-    //     console.log(response.data)
-    //   })
-    //   .catch(function (error) {
-    //     console.log('error', error)
-    //   })
+    await this.$store.dispatch('products/fetchProductCategories');
   },
-  mounted() {},
+
   created() {
-    // axios.get('/api/v1/c/Products').then((response) => {
-    //   console.log(response.data)
-    //   console.log(response.status)
-    //   console.log(response.statusText)
-    //   console.log(response.headers)
-    //   console.log(response.config)
-    // })
+
     // this.$store.dispatch("filters/setCategory", this.category);
-    this.cards = this.initCards //.filter((item) => item.category != 'vr')
-    this.setBreadcrumbs({
-      pageParent: 'Category - Listing',
-      pageName: 'Electronic Store - Categories',
-    })
+    this.cards =
+      this.setBreadcrumbs({
+        pageParent: 'Category - Listing',
+        pageName: 'Electronic Store - products',
+      })
+
+    this.products = products.data
   },
   methods: {
+    ...mapActions({
+      fetchProductCategories: 'products/fetchProductCategories',
+    }),
+
     changeCardLayout(toLayout) {
       this.cardsLayout = toLayout
     },
@@ -311,33 +237,54 @@ export default {
 </script>
 
 <style scoped>
-.row-cols-2 > * {
+.row-cols-2>* {
   flex: 0 0 auto;
   width: 25%;
 }
+
+.product-list-item-title {
+  border-bottom: 2px solid #eff2f7;
+  font-weight: 500;
+  color: #02a895;
+}
+
+.subproduct-list-item-title {
+  color: #232323;
+}
+
+.subproduct-list-item-title:hover {
+  color: #02a895;
+  text-decoration: underline;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 100%;
   }
-  .row-cols-2 > * {
+
+  .row-cols-2>* {
     flex: 0 0 auto;
     width: 16.5%;
   }
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: 100%;
   }
-  .row-cols-md-4 > * {
+
+  .row-cols-md-4>* {
     flex: 0 0 auto;
     width: 16.5%;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     max-width: 100%;
   }
-  .row-cols-md-4 > * {
+
+  .row-cols-md-4>* {
     flex: 0 0 auto;
     width: 16.5%;
   }
@@ -347,16 +294,19 @@ export default {
   .container {
     max-width: 100%;
   }
-  .row-cols-l-4 > * {
+
+  .row-cols-l-4>* {
     flex: 0 0 auto;
     width: 16.5%;
   }
 }
+
 @media (min-width: 1400px) {
   .container {
     max-width: 100%;
   }
-  .row-cols-xxl-4 > * {
+
+  .row-cols-xxl-4>* {
     flex: 0 0 auto;
     width: 12.5%;
   }
@@ -371,6 +321,7 @@ export default {
 .icons a:active {
   background-color: #ffff !important;
 }
+
 /* .page-link a:focus {
   background-color: #b74401 !important;
   color: #ffff !important;
@@ -382,10 +333,12 @@ export default {
 .page-link:focus {
   background-color: #01b7a1 !important;
 }
+
 .center-items a:hover {
   background-color: #eff2f7 !important;
   color: #02a895 !important;
 }
+
 .center-items a:active {
   background-color: #02a895 !important;
   color: #ffff !important;
