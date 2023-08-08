@@ -56,6 +56,9 @@ export default {
     {
       src: '~/plugins/mixins.js',
     },
+    {
+      src: '~/plugins/vue-tel-input.js',
+    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

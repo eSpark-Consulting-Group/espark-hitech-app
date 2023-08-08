@@ -11,117 +11,92 @@
         />
       </div>
       <div class="box">
-        <div class="login-title1">
-          <h2>Register</h2>
-        </div>
+        <h2 class="text-center">Register</h2>
         <div v-if="currentStep === 1">
-          <div
-            class="row d-flex justify-content-start align-items-center h-100"
-          >
-            <div class="row align-items-center pt-4 pb-3">
-              <div class="col-md-3 ps-5">
-                <h6 class="mb-0 title">Full name</h6>
-              </div>
-              <div class="col-md-9 pe-5 ps-2">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="full name"
-                  id="name"
-                  class="form-control form-control-lg input-register"
-                  v-model="auth.name"
-                  @focus.prevent="select('name')"
-                  v-on:blur="handleFocusOut('name')"
-                />
-              </div>
+          <div class="row g-4 mt-md-1 mt-2">
+            <div class="col-md-6">
+              <label for="first" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="first"
+                placeholder="Enter Your First Name"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="last" class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="last"
+                placeholder="Enter Your Last Name"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label"> Email </label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter Your Email Address"
+                required
+              />
             </div>
 
-            <div class="row align-items-center py-3">
-              <div class="col-md-3 ps-5">
-                <h6 class="mb-0 title">Email address</h6>
-              </div>
-              <div class="col-md-9 pe-5 ps-2">
-                <input
-                  type="text"
-                  name="name"
-                  id="emailname"
-                  placeholder="name@example.com"
-                  class="form-control form-control-lg input-register"
-                  v-model="auth.email"
-                  @focus.prevent="select('email')"
-                  v-on:blur="handleFocusOut('email')"
-                />
-              </div>
+            <div class="col-md-6">
+              <label for="phone" class="form-label"> Phone </label>
+              <no-ssr>
+                <vue-tel-input v-model="auth.phone"></vue-tel-input>
+              </no-ssr>
             </div>
 
-            <div class="row align-items-center py-3">
-              <div class="col-md-3 ps-5">
-                <h6 class="mb-0 title">Password</h6>
-              </div>
-              <div class="col-md-9 pe-5 ps-2">
-                <input
-                  type="password"
-                  id="inputPassword6"
-                  placeholder="your password"
-                  class="form-control form-control-lg input-register"
-                  aria-describedby="passwordHelpInline"
-                />
-              </div>
+            <div class="col-6">
+              <label for="country" class="form-label"> Country </label>
+              <select
+                class="form-select form-control"
+                aria-label="Select Country"
+              >
+                <option selected>Select Country</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
             </div>
 
-            <div class="row align-items-center py-3">
-              <div class="col-md-3 ps-5">
-                <h6 class="mb-0 title">Phone Number</h6>
-              </div>
-              <div class="col-md-9 pe-5">
-                <input
-                  type="text"
-                  name="name"
-                  id="emailname"
-                  placeholder="phone"
-                  class="form-control form-control-lg input-register"
-                  v-model="auth.email"
-                  @focus.prevent="select('email')"
-                  v-on:blur="handleFocusOut('email')"
-                />
-              </div>
+            <div class="col-6">
+              <label for="city" class="form-label"> City </label>
+              <select class="form-select form-control" aria-label="Select City">
+                <option selected>Select City</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
             </div>
-            <div class="row align-items-center py-3">
-              <div class="col-md-5 ps-5">
-                <h6 class="mb-0 title">This account is for:</h6>
-              </div>
-              <div class="col-md-6 pe-5">
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inlineRadioOptions"
-                    id="inlineRadio1"
-                    value="option1"
-                  />
-                  <label class="form-check-label" for="inlineRadio1"
-                    >Bussiness</label
-                  >
-                </div>
 
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inlineRadioOptions"
-                    id="inlineRadio2"
-                    value="option2"
-                  />
-                  <label class="form-check-label" for="inlineRadio2"
-                    >Self</label
-                  >
-                </div>
-              </div>
+            <div class="col-12">
+              <label for="address" class="form-label"> Address </label>
+              <input
+                class="form-control"
+                id="address"
+                placeholder="Enter Your Address"
+                required
+              />
             </div>
-            <div class="flex d-flex"></div>
+
+            <div class="col-12 d-flex align-items-center">
+              <button
+                class="btn btn-solid-default btn fw-bold w-100"
+                type="submit"
+                @click.prevent="nextStep"
+              >
+                Register
+              </button>
+            </div>
           </div>
         </div>
-        <div v-if="currentStep === 2">
+        <!-- <div v-if="currentStep === 2">
           <div
             class="row d-flex justify-content-start align-items-center h-100"
           >
@@ -236,8 +211,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div v-if="currentStep === 3">
+        </div> -->
+        <div v-if="currentStep === 2">
           <div
             class="row d-flex justify-content-start align-items-center h-100"
           >
@@ -269,8 +244,8 @@
             </div>
           </div>
         </div>
-        <div v-if="currentStep !== 3">
-          <div class="flex d-flex justify-content-center gap-2">
+        <div v-if="currentStep !== 2">
+          <!-- <div class="flex d-flex justify-content-center gap-2">
             <div class="button login">
               <button href="javascript:void(0)" @click="BackStep">
                 <span>Back</span>
@@ -281,7 +256,7 @@
                 <span>Next</span>
               </button>
             </div>
-          </div>
+          </div> -->
           <hr
             size="1"
             width="100%"
@@ -325,16 +300,19 @@
         </div>
         <div v-else class="flex d-flex justify-content-center">
           <div class="flex d-flex justify-content-center gap-2">
-            <div class="button login">
-              <button href="javascript:void(0)" @click="BackStep">
-                <span>Back</span>
-              </button>
-            </div>
-            <div class="button login">
-              <button href="javascript:void(0)">
-                <span>Submit</span>
-              </button>
-            </div>
+            <button
+              class="btn btn-solid-default btn fw-bold"
+              href="javascript:void(0)"
+              @click="BackStep"
+            >
+              <span>Back</span>
+            </button>
+            <button
+              class="btn btn-solid-default btn fw-bold"
+              href="javascript:void(0)"
+            >
+              <span>Submit</span>
+            </button>
           </div>
         </div>
       </div>
@@ -354,7 +332,14 @@ export default {
     return {
       currentStep: 1,
       themeCss: '/demo2.css',
-      auth: { name: '', email: '', password: '', confirmPassword: '' },
+      auth: {
+        name: '',
+        phone: '',
+        phone: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+      },
       selected: {
         name: false,
         email: false,
@@ -407,21 +392,9 @@ export default {
   margin: 0;
   padding: 0;
 }
-.login-section::after {
-}
+
 .login-section {
   background: url('../../assets/images/electronics/slider/banner2.jpg');
-}
-
-.login-title1 h2 {
-  width: 100%;
-  line-height: 46px;
-  font-size: 2.5rem;
-  font-weight: 600;
-  letter-spacing: calc(0px + (2 - 0) * ((100vw - 320px) / (1920 - 320)));
-
-  display: flex;
-  justify-content: center;
 }
 
 .uper {
@@ -429,37 +402,15 @@ export default {
   justify-content: center;
   border-radius: 32px 32px 0px 0px;
   background: #e6f4f4;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .box {
   border-radius: 0px 0px 32px 32px !important;
-  padding: calc(10px + (60 - 30) * ((100vw - 320px) / (1920 - 320)))
-    calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320)));
-  background: #d1d1d1 !important;
 }
 .sign-category span {
   color: black;
-  background-color: #d1d1d1 !important ;
-}
-.input-register {
-  border: none;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.81);
-
-  display: flex;
-}
-.input1 {
-  position: relative;
-  margin-top: calc(180px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
-}
-
-.input {
-  input {
-    top: 0px !important;
-    padding: 1rem;
-  }
 }
 
 .materialContainer {
@@ -488,38 +439,31 @@ export default {
   }
 }
 
+::v-deep .vue-tel-input {
+  font-size: 14px;
+  padding: calc(3px + 6 * (100vw - 320px) / 1600)
+    calc(15px + 15 * (100vw - 320px) / 1600);
+  background-color: #fff;
+}
+
+::v-deep .vue-tel-input input {
+  background-color: inherit;
+}
+
+::v-deep .vue-tel-input:focus,
+::v-deep .vue-tel-input:focus-within,
+::v-deep .vue-tel-input input:focus,
+::v-deep .vue-tel-input input:focus-within {
+  background-color: #eff2f7;
+  border-color: #ced4da;
+  box-shadow: none;
+  color: #212529;
+}
+
 .button {
   width: fit-content !important;
 }
-
-.select {
-  font-size: 14px;
-  padding: calc(8px + 6 * (100vw - 320px) / 1600)
-    calc(15px + 15 * (100vw - 320px) / 1600);
-}
-.email {
-  font-size: 14px;
-  padding: calc(8px + 6 * (100vw - 320px) / 1600)
-    calc(15px + 15 * (100vw - 320px) / 1600);
-}
-
 .resend-text strong {
   font-weight: bold;
 }
-
-/* // .login-title1 ::before {
-//   @include pos;
-//   width: 5px;
-//   height: 100%;
-//   top: 0;
-//   left: calc(-10px + (-10 - 10) * ((100vw - 320px) / (1920 - 320)));
-//   background: #51983c;
-// }
-
-// h2 {
-//   font-size: calc(27px + (28 - 27) * ((100vw - 320px) / (1920 - 320)));
-//   margin-left: calc(10px + (0 - 10) * ((100vw - 320px) / (1920 - 320)));
-//   margin-top: -2px;
-//   color: #51983c !important;
-// } */
 </style>

@@ -241,7 +241,7 @@
       top: 0;
       opacity: 1;
       float: left;
-      padding: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)))
+      padding: calc(16px + (60 - 30) * ((100vw - 320px) / (1920 - 320)))
         calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320)));
       width: 100%;
       background: $white;
