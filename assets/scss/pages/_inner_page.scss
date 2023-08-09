@@ -299,7 +299,7 @@
     }
 
     .social-media {
-      padding: 15px calc(10px + (25 - 10) * ((100vw - 320px) / (1920 - 320)));
+      padding: 8px;
       border-radius: 4px;
       box-shadow: 0 0 10px rgba($gray, $alpha: 0.6);
       @include flex_common;
