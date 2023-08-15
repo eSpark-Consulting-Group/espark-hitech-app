@@ -2,6 +2,9 @@
   <section class="section-b-space">
     <div class="container">
       <div class="row g-4">
+        <div class="col-12">
+          <span> All fields marked with (*) are required </span>
+        </div>
         <div class="col-12 col-md-8">
           <ValidationObserver v-slot="{ invalid }" class="w-100">
             <div class="row">
@@ -274,9 +277,7 @@
                   name="City"
                   class="d-block"
                 >
-                  <label for="address2" class="form-label"
-                    >City<sup>*</sup></label
-                  >
+                  <label for="city" class="form-label">City<sup>*</sup></label>
                   <input
                     type="text"
                     class="form-control"
@@ -343,7 +344,7 @@
                     class="btn btn-solid-default btn fw-bold mt-2"
                     type="submit"
                     :disabled="invalid"
-                    @click="submit"
+                    @click.prevent="submit"
                   >
                     Register
                   </button>
@@ -429,11 +430,10 @@ export default {
 .form-label {
   font-weight: 500;
   color: black;
-}
-
-.form-label sup {
-  font-size: 18px !important;
-  top: 0 !important;
+  sup {
+    font-size: 18px;
+    top: 0;
+  }
 }
 
 ::v-deep .vue-tel-input {
