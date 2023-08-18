@@ -1,7 +1,7 @@
 <template>
   <section class="section-b-space">
     <div class="container">
-      <div class="row g-4">
+      <div class="row g-4 justify-content-between">
         <div class="col-12">
           <span> All fields marked with (*) are required </span>
         </div>
@@ -353,7 +353,40 @@
             </div>
           </ValidationObserver>
         </div>
-        <div class="col-12 col-md-4"></div>
+        <div class="col-12 col-md-4 col-xl-3">
+          <div class="p-3 summary">
+            <h4 class="fw-bold">Summary</h4>
+            <hr />
+
+            <div class="row gy-2">
+              <div class="col-12 summary-item">
+                <strong>Web ID:</strong> 1213123
+              </div>
+              <div class="col-12 summary-item">
+                <strong>Items in Cart:</strong> 2
+              </div>
+              <div class="col-12 summary-item">
+                <strong>Subtotal:</strong> 1000
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 summary mt-3">
+            <div class="row">
+              <div class="col-12 summary-item d-flex align-items-center">
+                <img
+                  class="me-3"
+                  :src="require('@/assets/svg/encrypted-solid.svg')"
+                  alt="encrypted icon"
+                />
+
+                <span class="text-center">
+                  Your data will be encrypted & transmitted securely.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -463,5 +496,14 @@ export default {
   border-color: #ced4da;
   box-shadow: none;
   color: #212529;
+}
+
+.summary {
+  background-color: #fbfbfb;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
 }
 </style>
