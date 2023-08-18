@@ -434,6 +434,7 @@
             </div>
           </ValidationObserver>
         </div>
+
         <div v-if="currentStep === 2">
           <div
             class="row d-flex justify-content-start align-items-center h-100"
@@ -466,6 +467,7 @@
             </div>
           </div>
         </div>
+
         <div v-if="currentStep !== 2">
           <hr
             size="1"
@@ -473,10 +475,11 @@
             color="black"
             style="margin-top: 2rem; position: relative"
           />
-          <p class="sign-category">
+          <div class="text-center">
             <span>Or sign up with</span>
-          </p>
-          <div class="row gx-md-2 gy-2">
+          </div>
+
+          <div class="row gy-2 g-md-0 gx-md-2 my-3">
             <div class="col-md-6">
               <a href="www.facebook.com">
                 <div class="social-media fb-media">
@@ -502,12 +505,13 @@
               </a>
             </div>
           </div>
-          <p>
-            <nuxt-link to="/auth/login" class="theme-color">{{
-              Alreadyhaveanaccount
-            }}</nuxt-link>
-          </p>
+
+          <div class="text-center">
+            Already have an account?
+            <nuxt-link to="/auth/login">Log In</nuxt-link>
+          </div>
         </div>
+
         <div v-else class="flex d-flex justify-content-center">
           <div class="flex d-flex justify-content-center gap-2">
             <button
@@ -654,10 +658,6 @@ export default {
 }
 
 .login {
-  display: flex;
-  justify-content: center;
-}
-.login {
   button {
     padding-right: 2.5rem !important;
     padding-left: 2.5rem !important;
@@ -692,10 +692,6 @@ export default {
   border-color: #ced4da;
   box-shadow: none;
   color: #212529;
-}
-
-.button {
-  width: fit-content !important;
 }
 .resend-text strong {
   font-weight: bold;
