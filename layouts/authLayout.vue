@@ -32,20 +32,8 @@ export default {
       ],
     }
   },
-  // watch: {
-  //   windowScroll: function () {
-  //     console.log(this.windowScroll)
-  //     if (this.windowScroll > 600) {
-  //       console.log('600')
-  //       this.showTapToTop = true
-  //     } else {
-  //       console.log('0000')
-  //       this.showTapToTop = false
-  //     }
-  //   },
-  // },
+ 
   mounted() {
-    console.log(process.browser)
     if (process.client) {
       window.addEventListener('scroll', this.handleScroll)
       this.noTapToTopArray.includes(this.$route.path)
@@ -60,7 +48,6 @@ export default {
   },
   methods: {
     scrollOnTop() {
-      console.log('asdasda', document)
       document.body.scrollTop = 0
       document.documentElement.scrollTop = 0
     },
@@ -70,7 +57,6 @@ export default {
       } else {
         this.showTapToTop = false
       }
-      // console.log(window.scrollY);
     },
   },
   created() {

@@ -13,11 +13,18 @@
         </div>
         <div class="box">
           <h2 class="text-center mb-3">Log In</h2>
-          <ValidationObserver v-slot="{ invalid }" class="w-100">
-            <div class="row g-2 mt-md-1 mt-2">
+          <ValidationObserver v-slot="{ invalid, handleSubmit }" class="w-100">
+            <form
+              class="row g-2 mt-md-1 mt-2"
+              @submit.prevent="handleSubmit(login)"
+            >
               <div class="col-12">
                 <ValidationProvider
-                  rules="required|email"
+                  mode="lazy"
+                  :rules="{
+                    regex:
+                      /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+                  }"
                   v-slot="{ errors }"
                   name="Email"
                   class="d-block"
@@ -29,6 +36,7 @@
                     v-model="values.email"
                     id="email"
                     name="email"
+                    required
                     placeholder="Enter Email"
                     autocomplete="email"
                   />
@@ -40,6 +48,7 @@
 
               <div class="col-12">
                 <ValidationProvider
+                  mode="lazy"
                   rules="required"
                   v-slot="{ errors }"
                   name="Password"
@@ -92,13 +101,12 @@
                 <button
                   class="btn btn-solid-default btn fw-bold w-100 mt-2"
                   type="submit"
-                  @click.prevent="login"
                   :disabled="invalid"
                 >
                   Log In
                 </button>
               </div>
-            </div>
+            </form>
           </ValidationObserver>
 
           <div class="my-3 text-center">
@@ -181,6 +189,12 @@ export default {
       title: 'Login',
       link: [{ rel: 'icon', type: 'image/x-icon', href: ' favicon.png' }],
     };
+  },
+
+  methods: {
+    login() {
+      this.$router.push('/');
+    },
   },
 };
 </script>

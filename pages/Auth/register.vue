@@ -13,11 +13,15 @@
       <div class="box">
         <h2 class="text-center mb-3">Register</h2>
         <div v-if="currentStep === 1">
-          <ValidationObserver v-slot="{ invalid }" class="w-100">
-            <div class="row g-2 mt-md-1 mt-2">
+          <ValidationObserver v-slot="{ invalid, handleSubmit }" class="w-100">
+            <form
+              class="row g-2 mt-md-1 mt-2"
+              @submit.prevent="handleSubmit(signup)"
+            >
               <div class="col-md-6">
                 <ValidationProvider
-                  rules="required"
+                  mode="lazy"
+                  rules="min:1|max:50|alpha_spaces|required"
                   v-slot="{ errors }"
                   name="First Name"
                   class="d-block"
@@ -37,7 +41,8 @@
               </div>
               <div class="col-md-6">
                 <ValidationProvider
-                  rules="required"
+                  mode="lazy"
+                  rules="min:1|max:50|alpha_spaces|required"
                   v-slot="{ errors }"
                   name="Last Name"
                   class="d-block"
@@ -57,7 +62,11 @@
               </div>
               <div class="col-12">
                 <ValidationProvider
-                  rules="required|email"
+                  mode="lazy"
+                  :rules="{
+                    regex:
+                      /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+                  }"
                   v-slot="{ errors }"
                   name="Email"
                   class="d-block"
@@ -68,6 +77,7 @@
                     class="form-control"
                     v-model="values.email"
                     id="email"
+                    required
                     placeholder="Enter Email"
                     autocomplete="email"
                   />
@@ -78,7 +88,11 @@
               </div>
               <div class="col-12">
                 <ValidationProvider
-                  rules="required"
+                  mode="lazy"
+                  :rules="{
+                    regex:
+                      /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,128}$/,
+                  }"
                   v-slot="{ errors }"
                   name="Password"
                   class="d-block"
@@ -102,6 +116,7 @@
 
               <div class="col-12">
                 <ValidationProvider
+                  mode="lazy"
                   rules="required"
                   v-slot="{ errors }"
                   name="Phone Number"
@@ -121,7 +136,7 @@
                 </ValidationProvider>
               </div>
 
-              <div class="col-6">
+              <div class="col-md-6">
                 <label for="country" class="form-label"> Country </label>
                 <select
                   class="form-select form-control"
@@ -133,8 +148,9 @@
                 </select>
               </div>
 
-              <div class="col-6">
+              <div class="col-md-6">
                 <ValidationProvider
+                  mode="lazy"
                   rules="required"
                   v-slot="{ errors }"
                   name="City"
@@ -402,7 +418,6 @@
 
               <div class="col-12">
                 <ValidationProvider
-                  rules="required"
                   v-slot="{ errors }"
                   name="Address"
                   class="d-block"
@@ -425,13 +440,12 @@
                 <button
                   class="btn btn-solid-default btn fw-bold w-100 mt-2"
                   type="submit"
-                  @click.prevent="signup"
                   :disabled="invalid"
                 >
                   Register
                 </button>
               </div>
-            </div>
+            </form>
           </ValidationObserver>
         </div>
 
@@ -455,7 +469,7 @@
                 id="emailname"
                 placeholder="name@example.com"
                 class="email input-register"
-                v-model="auth.email"
+                v-model="values.email"
                 @focus.prevent="select('email')"
                 v-on:blur="handleFocusOut('email')"
               />
@@ -599,12 +613,7 @@ export default {
       this.selected[textbox] = true;
     },
     signup() {
-      if (this.$refs.observer.validate()) {
-        console.log(this.values);
-        this.nextStep();
-      } else {
-        console.log('error', this.$refs.observer.errors);
-      }
+      this.nextStep();
     },
   },
 };
