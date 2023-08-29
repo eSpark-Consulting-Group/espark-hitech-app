@@ -20,7 +20,6 @@
             >
               <div class="col-md-6">
                 <ValidationProvider
-                  mode="lazy"
                   rules="min:1|max:50|alpha_spaces|required"
                   v-slot="{ errors }"
                   name="First Name"
@@ -41,7 +40,6 @@
               </div>
               <div class="col-md-6">
                 <ValidationProvider
-                  mode="lazy"
                   rules="min:1|max:50|alpha_spaces|required"
                   v-slot="{ errors }"
                   name="Last Name"
@@ -62,7 +60,6 @@
               </div>
               <div class="col-12">
                 <ValidationProvider
-                  mode="lazy"
                   :rules="{
                     regex:
                       /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
@@ -88,7 +85,6 @@
               </div>
               <div class="col-12">
                 <ValidationProvider
-                  mode="lazy"
                   :rules="{
                     regex:
                       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,128}$/,
@@ -109,15 +105,15 @@
                   />
 
                   <span class="validate-error text-danger" v-if="errors[0]">{{
-                    errors[0]
+                    errors[0] +
+                    ', Password must contain 8 characters, 1 uppercase, 1 lowercase, 1 number and 1 special character(#?!@$%^&*-)'
                   }}</span>
                 </ValidationProvider>
               </div>
 
               <div class="col-12">
                 <ValidationProvider
-                  mode="lazy"
-                  rules="required"
+                  rules="required|min:8|max:25"
                   v-slot="{ errors }"
                   name="Phone Number"
                   class="d-block"
@@ -128,6 +124,7 @@
                       v-model="values.phone"
                       placeholder="Enter Phone Number"
                       validCharactersOnly
+                      mode="international"
                     ></vue-tel-input>
                   </no-ssr>
                   <span class="validate-error text-danger" v-if="errors[0]">
@@ -150,7 +147,6 @@
 
               <div class="col-md-6">
                 <ValidationProvider
-                  mode="lazy"
                   rules="required"
                   v-slot="{ errors }"
                   name="City"
